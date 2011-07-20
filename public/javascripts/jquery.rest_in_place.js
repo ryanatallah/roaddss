@@ -10,7 +10,7 @@ RestInPlaceEditor.prototype = {
   // Public Interface Functions //////////////////////////////////////////////
   
   activate : function() {
-    this.oldValue = this.element.html().replace(/,/g,'').replace('$','');
+    this.oldValue = this.element.html().replace(/,/g,'').replace('$','').;
     this.element.addClass('rip-active');
     this.element.closest('tr').addClass('edit-row');
     this.element.unbind('click', this.clickHandler);
