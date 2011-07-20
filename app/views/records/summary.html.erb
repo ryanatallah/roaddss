@@ -7,10 +7,10 @@
 
 <div class="column export">
   <ul>
-    <li><a href="#" id="print-link"><span>Print</span></a></li>
-    <li><a class="save" href="<%= url_for summary_path(@record, :format => "pdf") %>"><span>Save (PDF)</span></a></li>
-    <li><a class="email" href="<%= url_for summary_report_path(@record) %>"><span>Email (PDF)</span></a></li>
-    <li><a href="<%= url_for user_savings_path(@record) %>" class="record-link"><span class="target">Page Link</span><span id="page-url" class="hidden" title="Click to select, then copy."><%= request.url %></span></a></li>
+    <li><a href="#" id="print-link"><span id="export-print">Print</span></a></li>
+    <li><a class="save" href="<%= url_for summary_path(@record, :format => "pdf") %>"><span id="export-save">Save (PDF)</span></a></li>
+    <li><a class="email" href="<%= url_for summary_report_path(@record) %>"><span id="export-email">Email (PDF)</span></a></li>
+    <li><a href="<%= url_for user_savings_path(@record) %>" class="record-link"><span id="export-link" class="target">Page Link</span><span id="page-url" class="hidden" title="Click to select, then copy."><%= request.url %></span></a></li>
   </ul>
 </div>
 

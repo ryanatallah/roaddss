@@ -14,7 +14,7 @@
 <div class="edit-container">
   <h4 id="customer-information"><span>Customer Information</span></h4>
   <div class="table-container">
-    <table id="customer-information">
+    <table class="no-alt-colors" id="customer-info-table">
       <tr>
         <td>Name</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="name"><%= @record.name %></td>
@@ -43,7 +43,7 @@
   </div>
   <h4 id="calculator-input"><span>Calculator Input</span></h4>
   <div class="table-container">
-    <table>
+    <table class="no-alt-colors">
       <tr>
         <td>Number of Weather Events</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="events"><%= @record.events %></td>
@@ -112,7 +112,7 @@
   </div>
   <h4 id="infrastructure"><span>Customer Labor &amp;<br>Infrastructure</span></h4>
   <div class="table-container">
-    <table>
+    <table class="no-alt-colors">
       <tr>
         <td>Decision Maker Rate</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_maker_rate"><%= @record.assumptions_setting.decision_maker_rate %></td>
@@ -171,7 +171,7 @@
   </div>
   <h4 id="maintenance"><span>Maintenance Fleet Vehicles</span></h4>
   <div class="table-container">
-    <table>
+    <table class="no-alt-colors">
       <tr>
         <td>Maintenance Vehicle Fuel Economy</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vehicle_mpg"><%= @record.assumptions_setting.vehicle_mpg %></td>
@@ -206,7 +206,7 @@
   </div>
   <h4 id="treatment"><span>Treatment</span></h4>
   <div class="table-container">
-    <table>
+    <table class="no-alt-colors">
       <tr>
         <td>Dry Material Cost</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="dry_material_cost"><%= @record.assumptions_setting.dry_material_cost %></td>
@@ -247,7 +247,7 @@
   </div>
   <h4 id="community"><span>Community &amp; Infrastructure</span></h4>
   <div class="table-container">
-    <table>
+    <table class="no-alt-colors">
       <tr>
         <td>Cost per Major Accident</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cost_per_major_accident"><%= @record.assumptions_setting.cost_per_major_accident %></td>
@@ -342,7 +342,7 @@
   </div>
   <h4 id="other"><span>Other</span></h4>
   <div class="table-container">
-    <table>
+    <table class="no-alt-colors">
       <tr class="non-editable">
         <td>Carbon Dioxide Emissions (from Diesel)</td>
         <td><%= @record.assumptions_setting.co2_diesel %></td>

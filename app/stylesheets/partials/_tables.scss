@@ -9,7 +9,7 @@ table {
       padding: 5px;
 
       &:nth-child(2) {
-        text-align: right;
+        text-align: right !important;
       }
     }
 
@@ -110,18 +110,18 @@ table {
     font-size: 13px;
     table-layout: fixed;
 
-    &#customer-information {
+    &#customer-info-table {
+      input {
+        width: 215px;
+        background: image-url("embed/input-medium.png") right;
+      }
+
       td:nth-child(1) {
         width: 140px;
       }
 
       td:nth-child(2) {
         width: 280px;
-
-        input {
-          width: 215px;
-          background: image-url("embed/input-medium.png") right;
-        }
       }
     }
 
@@ -147,13 +147,24 @@ table {
         }
       }
 
-      &:not([class="non-editable"]):hover {
+      &:hover {
         background: #edfffc;
         font-weight: bold;
         cursor: pointer;
 
         td span.edit {
           display: inline;
+          font-weight: normal;
+        }
+      }
+
+      &.non-editable:hover {
+        background: #fff;
+        font-weight: normal;
+        cursor: default;
+
+        td span.edit {
+          display: none;
           font-weight: normal;
         }
       }
@@ -174,6 +185,17 @@ table {
           }
         }
 
+        input {
+          width: 110px;
+          height: 25px;
+          background: image-url("embed/input-small.png") right;
+          border: none;
+          outline: none;
+          text-align: right;
+          padding: 0 5px 0 0;
+          margin: 0;
+        }
+
         &:nth-child(1) {
           width: 300px;
         }
@@ -181,17 +203,6 @@ table {
         &:nth-child(2) {
           color: #555;
           width: 120px;
-
-          input {
-            width: 110px;
-            height: 25px;
-            background: image-url("embed/input-small.png") right;
-            border: none;
-            outline: none;
-            text-align: right;
-            padding: 0 5px 0 0;
-            margin: 0;
-          }
         }
 
         &:nth-child(3) {

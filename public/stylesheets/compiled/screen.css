@@ -296,7 +296,7 @@ nav.secondary ul li a.current:hover {
 /* line 287, ../../../app/stylesheets/partials/_layout.scss */
 #tabs-container {
   width: 960px;
-  background: url('/images/embed/tabs-container.png?1310489799');
+  background: url('/images/embed/tabs-container.png?1311185405');
   background-repeat: no-repeat;
   background-position: bottom;
   margin-bottom: 50px;
@@ -921,7 +921,7 @@ table tr td {
 }
 /* line 11, ../../../app/stylesheets/partials/_tables.scss */
 table tr td:nth-child(2) {
-  text-align: right;
+  text-align: right !important;
 }
 /* line 16, ../../../app/stylesheets/partials/_tables.scss */
 table tr.sum {
@@ -1017,17 +1017,17 @@ table tr:nth-child(odd) {
   table-layout: fixed;
 }
 /* line 114, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table#customer-information td:nth-child(1) {
-  width: 140px;
-}
-/* line 118, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table#customer-information td:nth-child(2) {
-  width: 280px;
-}
-/* line 121, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table#customer-information td:nth-child(2) input {
+.edit-container table#customer-info-table input {
   width: 215px;
   background: url('/images/embed/input-medium.png?1310922648') right;
+}
+/* line 119, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table#customer-info-table td:nth-child(1) {
+  width: 140px;
+}
+/* line 123, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table#customer-info-table td:nth-child(2) {
+  width: 280px;
 }
 /* line 128, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container table tr {
@@ -1053,44 +1053,46 @@ table tr:nth-child(odd) {
   font-weight: normal;
 }
 /* line 150, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table tr:not([class="non-editable"]):hover {
+.edit-container table tr:hover {
   background: #edfffc;
   font-weight: bold;
   cursor: pointer;
 }
 /* line 155, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table tr:not([class="non-editable"]):hover td span.edit {
+.edit-container table tr:hover td span.edit {
   display: inline;
   font-weight: normal;
 }
 /* line 161, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr.non-editable:hover {
+  background: #fff;
+  font-weight: normal;
+  cursor: default;
+}
+/* line 166, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr.non-editable:hover td span.edit {
+  display: none;
+  font-weight: normal;
+}
+/* line 172, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container table tr td {
   padding: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-/* line 167, ../../../app/stylesheets/partials/_tables.scss */
+/* line 178, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container table tr td span {
   color: #9ca8a6;
   display: none;
 }
-/* line 171, ../../../app/stylesheets/partials/_tables.scss */
+/* line 182, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container table tr td span.edit {
   padding-left: 20px;
   background: url('/images/embed/icon-edit.png?1310794242') left top no-repeat;
 }
-/* line 177, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table tr td:nth-child(1) {
-  width: 300px;
-}
-/* line 181, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table tr td:nth-child(2) {
-  color: #555;
-  width: 120px;
-}
-/* line 185, ../../../app/stylesheets/partials/_tables.scss */
-.edit-container table tr td:nth-child(2) input {
+/* line 188, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td input {
   width: 110px;
   height: 25px;
   background: url('/images/embed/input-small.png?1310922015') right;
@@ -1100,11 +1102,20 @@ table tr:nth-child(odd) {
   padding: 0 5px 0 0;
   margin: 0;
 }
-/* line 197, ../../../app/stylesheets/partials/_tables.scss */
+/* line 199, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(1) {
+  width: 300px;
+}
+/* line 203, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(2) {
+  color: #555;
+  width: 120px;
+}
+/* line 208, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container table tr td:nth-child(3) {
   color: #888;
 }
-/* line 201, ../../../app/stylesheets/partials/_tables.scss */
+/* line 212, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container table tr td:nth-child(4) {
   width: 120px;
   white-space: normal;

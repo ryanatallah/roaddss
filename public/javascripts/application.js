@@ -98,6 +98,9 @@ function SelectText(element) {
 }
 
 $(function document() {
-  $("nav.secondary").sap();
+  if ($.browser.webkit || $.browser.mozilla || $.browser.opera) {
+    // sap breaks in IE
+    $("nav.secondary").sap();
+  }
 });
 

@@ -1,9 +1,9 @@
 <div id="export-all" class="export">
   <ul>
-    <li><a href="#" id="print-link"><span>Print</span></a></li>
-    <li><a class="save" href="<%= url_for all_path(@record, :format => "pdf") %>"><span>Save</span></a></li>
-    <li><a class="email" href="<%= url_for all_report_path(@record) %>"><span>Email</span></a></li>
-    <li><a href="<%= url_for all_path(@record) %>" class="record-link all"><span class="target">Link</span><span id="page-url" class="hidden" title="Click to select, then copy."><%= request.url %></span></a></li>
+    <li><a href="#" id="print-link"><span id="export-print">Print</span></a></li>
+    <li><a class="save" href="<%= url_for all_path(@record, :format => "pdf") %>"><span id="export-save">Save</span></a></li>
+    <li><a class="email" href="<%= url_for all_report_path(@record) %>"><span id="export-email">Email</span></a></li>
+    <li><a href="<%= url_for all_path(@record) %>" class="record-link all"><span id="export-link" class="target">Link</span><span id="page-url" class="hidden" title="Click to select, then copy."><%= request.url %></span></a></li>
   </ul>
 </div>
 

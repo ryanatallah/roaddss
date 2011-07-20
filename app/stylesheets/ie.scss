@@ -33,7 +33,7 @@ nav {
 nav.secondary a {
   &:hover {
     font-weight: normal;
-    color: black;
+    color: black; /* For some reason, without this line the border doesn't appear */
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: black;
@@ -41,9 +41,25 @@ nav.secondary a {
   
   &.current {
     font-weight: bold;
-  
+
     &:hover {
       border-bottom: none;
     }
+  }
+}
+
+/* IE style hacks for backgorund positioning in export options */
+.export {
+  #export-print {
+    background-position-y: 0px;
+  }
+  #export-save {
+    background-position-y: -16px;
+  }
+  #export-email {
+    background-position-y: -32px;
+  }
+  #export-link {
+    background-position-y: -48px;
   }
 }

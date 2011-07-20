@@ -145,6 +145,7 @@ nav {
 nav.secondary a:hover {
   font-weight: normal;
   color: black;
+  /* For some reason, without this line the border doesn't appear */
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: black;
@@ -156,4 +157,22 @@ nav.secondary a.current {
 /* line 45, ../../../app/stylesheets/ie.scss */
 nav.secondary a.current:hover {
   border-bottom: none;
+}
+
+/* IE style hacks for backgorund positioning in export options */
+/* line 53, ../../../app/stylesheets/ie.scss */
+.export #export-print {
+  background-position-y: 0px;
+}
+/* line 56, ../../../app/stylesheets/ie.scss */
+.export #export-save {
+  background-position-y: -16px;
+}
+/* line 59, ../../../app/stylesheets/ie.scss */
+.export #export-email {
+  background-position-y: -32px;
+}
+/* line 62, ../../../app/stylesheets/ie.scss */
+.export #export-link {
+  background-position-y: -48px;
 }
