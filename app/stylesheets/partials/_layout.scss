@@ -69,11 +69,11 @@ header {
       }
 
       &:hover {
-        background-position-y: -38px;
+        background-position: 0 -38px;
       }
 
       &:active {
-        background-position-y: -76px;
+        background-position: 0 -76px;
       }
     }
   }
@@ -183,7 +183,7 @@ nav.primary {
         display: block;
         height: 25px;
         background: image-url("embed/tab.png") right;
-        background-position-y: 0px;
+        background-position: right 0;
         margin-right: 4px;
         font-size: 14px;
         padding: 6px 17px 0 14px;
@@ -199,22 +199,22 @@ nav.primary {
           height: 31px;
           margin: -6px 0 0 -18px;
           background: image-url("embed/tab-left.png") left;
-          background-position-y: 0px;
+          background-position: 0 0px;
         }
 
         &:hover {
-          background-position-y: -31px;
+          background-position: right -31px;
 
           &:before {
-            background-position-y: -31px;
+            background-position: 0 -31px;
           }
         }
 
         &:active {
-          background-position-y: -62px;
+          background-position: right -62px;
 
           &:before {
-            background-position-y: -62px;
+            background-position: 0 -62px;
           }
         }
 
@@ -422,19 +422,19 @@ nav.secondary {
     }
 
     &:nth-child(1) {
-      a { span { background-position-y: 0px; } }
+      a { span { background-position: 0 0px; } }
     }
 
     &:nth-child(2) {
-      a { span { background-position-y: -16px; } }
+      a { span { background-position: 0 -16px; } }
     }
 
     &:nth-child(3) {
-      a { span { background-position-y: -32px; } }
+      a { span { background-position: 0 -32px; } }
     }
 
     &:nth-child(4) {
-      a { span { background-position-y: -48px; } }
+      a { span { background-position: 0 -48px; } }
     }
   }
 }

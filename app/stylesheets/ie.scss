@@ -63,3 +63,19 @@ nav.secondary a {
     background-position-y: -48px;
   }
 }
+
+.edit-container td {
+  input {
+    padding-top: 4px;
+    background: none;
+  }
+}
+
+/* 
+span.save {
+  display: block;
+  width: 120px;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+}

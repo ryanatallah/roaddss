@@ -84,12 +84,12 @@ input[type="submit"] {
   color: $aqua;
 
   &:hover {
-    background-position-y: -38px;
+    background-position: 0 -38px;
     cursor: pointer;
   }
 
   &:active {
-    background-position-y: -76px;
+    background-position: 0 -76px;
   }
 
   &[disabled] {

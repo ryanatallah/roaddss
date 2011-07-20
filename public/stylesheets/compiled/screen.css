@@ -84,11 +84,11 @@ header #contact a {
 }
 /* line 71, ../../../app/stylesheets/partials/_layout.scss */
 header #contact a:hover {
-  background-position-y: -38px;
+  background-position: 0 -38px;
 }
 /* line 75, ../../../app/stylesheets/partials/_layout.scss */
 header #contact a:active {
-  background-position-y: -76px;
+  background-position: 0 -76px;
 }
 /* line 81, ../../../app/stylesheets/partials/_layout.scss */
 header #record-box {
@@ -195,7 +195,7 @@ nav.primary ul li a {
   display: block;
   height: 25px;
   background: url('/images/embed/tab.png?1309304715') right;
-  background-position-y: 0px;
+  background-position: right 0;
   margin-right: 4px;
   font-size: 14px;
   padding: 6px 17px 0 14px;
@@ -212,23 +212,23 @@ nav.primary ul li a:before {
   height: 31px;
   margin: -6px 0 0 -18px;
   background: url('/images/embed/tab-left.png?1309304606') left;
-  background-position-y: 0px;
+  background-position: 0 0px;
 }
 /* line 205, ../../../app/stylesheets/partials/_layout.scss */
 nav.primary ul li a:hover {
-  background-position-y: -31px;
+  background-position: right -31px;
 }
 /* line 208, ../../../app/stylesheets/partials/_layout.scss */
 nav.primary ul li a:hover:before {
-  background-position-y: -31px;
+  background-position: 0 -31px;
 }
 /* line 213, ../../../app/stylesheets/partials/_layout.scss */
 nav.primary ul li a:active {
-  background-position-y: -62px;
+  background-position: right -62px;
 }
 /* line 216, ../../../app/stylesheets/partials/_layout.scss */
 nav.primary ul li a:active:before {
-  background-position-y: -62px;
+  background-position: 0 -62px;
 }
 /* line 221, ../../../app/stylesheets/partials/_layout.scss */
 nav.primary ul li a.current {
@@ -431,19 +431,19 @@ nav.secondary ul li a.current:hover {
 }
 /* line 425, ../../../app/stylesheets/partials/_layout.scss */
 .export-list li:nth-child(1) a span, .column.export ul li:nth-child(1) a span, #export-all ul li:nth-child(1) a span {
-  background-position-y: 0px;
+  background-position: 0 0px;
 }
 /* line 429, ../../../app/stylesheets/partials/_layout.scss */
 .export-list li:nth-child(2) a span, .column.export ul li:nth-child(2) a span, #export-all ul li:nth-child(2) a span {
-  background-position-y: -16px;
+  background-position: 0 -16px;
 }
 /* line 433, ../../../app/stylesheets/partials/_layout.scss */
 .export-list li:nth-child(3) a span, .column.export ul li:nth-child(3) a span, #export-all ul li:nth-child(3) a span {
-  background-position-y: -32px;
+  background-position: 0 -32px;
 }
 /* line 437, ../../../app/stylesheets/partials/_layout.scss */
 .export-list li:nth-child(4) a span, .column.export ul li:nth-child(4) a span, #export-all ul li:nth-child(4) a span {
-  background-position-y: -48px;
+  background-position: 0 -48px;
 }
 
 /* line 445, ../../../app/stylesheets/partials/_layout.scss */
@@ -797,12 +797,12 @@ input[type="submit"], .edit-container #recalc-container a {
 }
 /* line 86, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"]:hover, .edit-container #recalc-container a:hover {
-  background-position-y: -38px;
+  background-position: 0 -38px;
   cursor: pointer;
 }
 /* line 91, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"]:active, .edit-container #recalc-container a:active {
-  background-position-y: -76px;
+  background-position: 0 -76px;
 }
 /* line 95, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {
@@ -888,7 +888,7 @@ h5 {
   /* Same as h3, but bigger. Used in "All Benefits" and "Other Benefits" */
   font-size: 20px;
   height: 22px;
-  background-position-y: 13px;
+  background-position: 0 13px;
   margin: 20px 30px;
 }
 
@@ -992,12 +992,12 @@ table tr:nth-child(odd) {
 }
 /* line 83, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container #recalc-container a:hover:before {
-  background-position-y: -38px;
+  background-position: 0 -38px;
   cursor: pointer;
 }
 /* line 90, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container #recalc-container a:active:before {
-  background-position-y: -76px;
+  background-position: 0 -76px;
 }
 /* line 95, ../../../app/stylesheets/partials/_tables.scss */
 .edit-container #recalc-container a:before {
