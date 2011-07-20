@@ -1,0 +1,170 @@
+body#splash {
+  background: image-url("embed/bg-splash.png") repeat-x;
+  overflow-x: hidden;
+
+  #contact {
+    margin-right: 110px;
+  }
+  
+  #road {
+    position: absolute;
+    background: image-url("road.png");
+    width: 568px;
+    height: 541px;
+    right: -180px;
+    top: 0px;
+    z-index: 5;
+  }
+
+  section {
+    padding-top: 40px;
+    height: 271px;
+
+    h2 {
+      text-indent: -9999px;
+      width: 594px;
+      height: 55px;
+      background: image-url("splash-text.png");
+      background-repeat: no-repeat;
+      margin: 0px 10px 15px;
+      padding: 0;
+    }
+
+    div {
+      background: image-url("embed/splash-box-top.png") top 1px;
+      background-repeat: no-repeat;
+      width: 754px;
+      padding-top: 2px;
+      margin-top: 20px;
+
+      p {
+        background: image-url("embed/splash-box-bottom.png") bottom left;
+        padding: 5px 160px 10px 10px;
+        margin: 0;
+        color: #bbd9e0;
+        font-size: 13px;
+        line-height: 18px;
+        text-shadow: 0px 1px 2px #000;
+
+        a { /* "Begin Calculations ›" link text */
+          text-decoration: none;
+          color: #fff227;
+
+          &:hover {
+            border-bottom: 1px solid #fff227;
+          }
+
+          &:after {
+            content: "";
+            padding: 0 4px;
+            margin-left: 5px;
+            background: image-url("embed/arrow-shadow-yellow.png") 0px 3px;
+            background-repeat: no-repeat;
+          }
+        }
+
+        span {
+          color: #04323f;
+          margin-left: 10px;
+          text-shadow: lighten($aqua, 10%) 0px 1px 2px;
+        }
+      }
+    }
+
+    & + section {
+      padding-top: 0px;
+      margin-top: 0px;
+      height: 162px;
+
+      p {
+        padding: 15px 0 10px 10px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        color: #444;
+
+        a {
+          color: $aqua;
+          text-decoration: none;
+
+          &:hover {
+            border-bottom: 1px solid $aqua;
+          }
+
+          &:after {
+            content: "";
+            padding: 0 4px;
+            margin-left: 5px;
+            background: image-url("embed/arrow-blue.png") 0px 3px;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+      ul {
+        @extend .easy-clear;
+        list-style: none;
+        padding: 0;
+        margin: -15px 0 0;
+
+        li {
+          float: left;
+          width: 175px;
+          height: 135px;
+          background: image-url("embed/splash-photo-frame.png");
+          margin-left: -3px;
+
+          & + li {
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+  }
+
+  form#new_record {
+    @extend .input-form;
+    padding: 0;
+    margin-top: -8px;
+
+    div:first-child[style] {
+      display: none !important;
+    }
+  }
+
+  .sidebar {
+    float: left;
+    width: 225px;
+    padding: 70px 0 0 15px;
+
+    h3 span {
+      background: #f0f0f0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        
+
+        &:before {
+          content: "›";
+        }
+
+        blockquote {
+          text-transform: none;
+          font-weight: normal;
+          font-size: 13px;
+          background: #e5e5e5;
+          color: #444;
+          padding: 8px;
+          margin: 5px 0 20px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <td>Reduction in Local Economy Losses:</td>
+    <td><%= ccyf(@record.local_economy_losses_reduction) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr class="sum">
+    <td>Total Community Related Savings:</td>
+    <td><%= ccyf(@record.total_community_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>

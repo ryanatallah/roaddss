@@ -1,0 +1,30 @@
+<%= render "nav_user_benefits" %>
+
+<div class="column">
+  <h4>Efficiency<br>Savings</h4>
+  <div class="table-container">
+    <%= render "efficiency_savings" %>
+  </div>
+  <h4>Publicity Savings</h4>
+  <div class="table-container">
+    <%= render "publicity_savings" %>
+  </div>
+</div>
+
+<div class="column infographics">
+  <div>
+    <%= image_tag "embed/infographics/material.png" %>
+    <p class="info-val"><%= ccyf(@record.material_savings) %></p>
+    <p class="info-tag">Material Savings</p>
+  </div>
+  <div>
+    <%= image_tag "embed/infographics/labor.png" %>
+    <p class="info-val"><%= ccyf(@record.labor_time_savings) %></p>
+    <p class="info-tag">Labor Savings</p>
+  </div>
+  <div>
+    <%= image_tag "embed/infographics/maintenance.png" %>
+    <p class="info-val"><%= ccyf(@record.maintenance_wear_savings) %></p>
+    <p class="info-tag">Maintenance Savings</p>
+  </div>
+</div>

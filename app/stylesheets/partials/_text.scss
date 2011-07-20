@@ -1,0 +1,66 @@
+h2 {
+  /* Applied to page titles, ex: "RoadDSS Calculator Results" */
+  font-weight: normal;
+  color: #003f53;
+  padding: 25px 0 15px 10px;
+  margin: 0;
+  font-size: 22px;
+
+  span {
+    display: none;
+  }
+}
+
+h3 {
+  /* Used in section titles, blue with horizontal line, ex: Customer Information */
+  padding: 0;
+  margin-top: 0px;
+  height: 16px;
+  color: $aqua;
+  font-size: 14px;
+  font-weight: bold;
+  background: image-url("embed/divider-h.png") 0px 9px;
+  background-repeat: repeat-x;
+
+  span {
+    /* to white out the horizontal line behind the text */
+    padding: 0 10px 0 0;
+    background: #fff;
+  }
+}
+
+h4 {
+  /* Used in table labels, with verital divider, ex: "Efficiency Savings" */
+  width: 190px;
+  float: left;
+  text-align: right;
+  padding: 0 20px;
+  margin: 0;
+  color: $aqua;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  /* Same as h3, but bigger. Used in "All Benefits" and "Other Benefits" */
+  @extend h3;
+  font-size: 20px;
+  height: 22px;
+  background-position-y: 13px;
+  margin: 20px 30px;
+}
+
+h6 {
+  /* Table titles on "All Benefits" page only. */
+  float: left;
+  width: 435px;
+  margin: 0;
+  padding: 0 0 5px;
+  color: $aqua;
+  font-size: 13px;
+  border-bottom: 1px solid $aqua;
+
+  & + h6 {
+    margin-left: 30px;
+  }
+}

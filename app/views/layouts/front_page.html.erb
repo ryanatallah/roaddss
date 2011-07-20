@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <%= render "layouts/head" %>
+<body id="splash">
+  <div id="wrapper">
+    <header>
+      <h1>
+        <div id="logo">Vaisala</div>
+        <span>/ RoadDSS Value Calculator</span>
+      </h1>
+      <div id="road"></div>
+      <div id="contact"><a href="#">Contact Vaisala</a></div>
+    </header>
+    <section>
+      <h2>Calculate potential winter road maintenance savings</h2>
+      <div><p>The Vaisala RoadDSS Value Calculator helps users determine the potential savings and benefits of using the Vaisala RoadDSS Decision Support System software for Winter Road Maintenance. The calculator uses a small number of input items from the user, generates a few assumed values,  and produces a detailed list of savings that include labor, materials, maintenance and wear, and increased revenue.</p></div>
+      <div><p>
+        <a class="scroller" href="#new_record">Begin Calculations</a>
+        <span>Provide basic information to begin calculating savings.</span>
+      </p></div>
+    </section>
+    <section>
+      <p id="link-out">Find out more about <a href="http://www.vaisala.com/en/roads/applications/Pages/default.aspx">RoadDSS</a></p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <div class="easy-clear">
+      <%= yield %>
+      <div class="sidebar">
+        <h3><span>RoadDSS Benefits</span></h3>
+        <ul>
+          <li>
+            Efficiency
+            <blockquote>Calculate monetary and time savings due to increased efficiency for Road Operations Maintenance groups, including driving, de-icing materials, cleanup, vehicle maintenance, fuel consumption, and IT reduced costs.</blockquote>
+          </li>
+          <li>
+            Publicity
+            <blockquote>Calculate publicity related reductions in complaint and litigation costs.</blockquote>
+          </li>
+          <li>
+            Safety
+            <blockquote>Assess savings increases in safety and mobility, and pollution reduction costs that benefit the entire community.</blockquote>
+          </li>
+          <li>
+            Additional Benefits
+            <blockquote>Provide a list of additional benefits such as reporting, planning, performance tracking, streamlined operations, transparency, marketing and community safety.</blockquote>
+          </li>
+          <li>
+            Assumptions Editing
+            <blockquote>Allow customers to change assumptions to get a more accurate idea of the potential savings for both the software users and the community in general.</blockquote>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>Vaisala is committed to protecting your privacy. Please read the Vaisala Online Privacy Statement and also any supplemental information listed within for further details about particular Vaisala sites and services that you may use. Additional information on how Vaisala enhances your privacy can be found on the <a href="#">Vaisala website</a>.</p>
+      <p>This Vaisala Online Privacy Statement applies to data collected by Vaisala through this Web site.</p>
+      <p>©2011 Vaisala, Inc.</p>
+    </footer>
+  </div>
+</body>
+</html>

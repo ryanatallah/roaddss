@@ -1,0 +1,88 @@
+<div class="container">
+<%= form_for(@record) do |f| %>
+
+  <h3><span>Customer Information</span></h3>
+  <ul id="customer-input">
+    <li>
+      <%= f.label :name, "Full Name" %>
+      <%= f.text_field :name %>
+    </li>
+    <li>
+      <%= f.label :organization, "Organization" %>
+      <%= f.text_field :organization %>
+    </li>
+    <li>
+      <%= f.label :email, "Email Address" %>
+      <%= f.text_field :email %>
+    </li>
+    <li>
+      <%= f.label :phone, "Phone Number" %>
+      <%= f.text_field  :phone %>
+    </li>
+  </ul>
+
+  <h3><span>Calculator Input</span></h3>
+  <ul>
+    <li>
+      <%= f.label :currency, "Currency" %>
+      <%= f.select :currency, options_for_select([["Select", ""], "USD", "EUR", "CAD", "GBP"]) %>
+    </li>
+    <li>
+      <%= f.label :events, "Winter Weather Events (per Season)" %>
+      <%= f.text_field :events %>
+      <span>Events</span>
+    </li>
+    <li>
+      <%= f.label :stations, "Number of RWIS Stations" %>
+      <%= f.text_field :stations %>
+      <span>Stations</span>
+    </li>
+    <li>
+      <%= f.label :maintenance_budget, "Winter Maintenance Budget" %>
+      <%= f.text_field :maintenance_budget %>
+      <span>USD</span>
+    </li>
+    <li>
+      <%= f.label :population, "Population" %>
+      <%= f.text_field :population %>
+      <span>People</span>
+    </li>
+    <li>
+      <%= f.label :treatment_vehicles, "Number of Treatment Vehicles" %>
+      <%= f.text_field :treatment_vehicles %>
+      <span>Vehicles</span>
+    </li>
+    <li>
+      <%= f.label :treatment_miles, "Treatment Miles (per Event)" %>
+      <%= f.text_field :treatment_miles %>
+      <span>Miles / Event</span>
+    </li>
+    <li>
+      <%= f.label :routes, "Number of Routes" %>
+      <%= f.text_field :routes %>
+      <span>Routes</span>
+    </li>
+    <li>
+      <%= f.label :cleanup_miles, "Cleanup Distance (per Event)" %>
+      <%= f.text_field :cleanup_miles %>
+      <span>Miles / Event</span>
+    </li>
+    <li>
+      <%= f.label :dry_material_use, "Dry Material Use (per Event)" %>
+      <%= f.text_field :dry_material_use %>
+      <span>Tons / Event</span>
+    </li>
+    <li>
+      <%= f.label :wet_material_use, "Wet Material Use (per Event)" %>
+      <%= f.text_field :wet_material_use %>
+      <span>Gal / Event</span>
+    </li>
+  </ul>
+  <%= f.fields_for :assumptions_setting do |f| %>
+    <%= f.hidden_field :treatments_per_year %>
+  <% end %>
+  <h3></h3>
+  <%= f.submit "Submit", :disable_with => 'Calculating…' %>
+
+<% end %>
+</div>

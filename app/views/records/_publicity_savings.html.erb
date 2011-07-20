@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>Complaint Costs Savings:</td>
+    <td><%= ccyf(@record.complaint_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Litigation Costs Savings:</td>
+    <td><%= ccyf(@record.litigation_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr class="sum">
+    <td>Total Publicity Related Savings:</td>
+    <td><%= ccyf(@record.total_publicity_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>

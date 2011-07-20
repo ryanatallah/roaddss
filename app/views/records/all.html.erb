@@ -1,0 +1,50 @@
+<div id="export-all" class="export">
+  <ul>
+    <li><a href="#" id="print-link"><span>Print</span></a></li>
+    <li><a class="save" href="<%= url_for all_path(@record, :format => "pdf") %>"><span>Save</span></a></li>
+    <li><a class="email" href="<%= url_for all_report_path(@record) %>"><span>Email</span></a></li>
+    <li><a href="<%= url_for all_path(@record) %>" class="record-link all"><span class="target">Link</span><span id="page-url" class="hidden" title="Click to select, then copy."><%= request.url %></span></a></li>
+  </ul>
+</div>
+
+<h5><span>Efficiency</span></h5>
+<div class="all-table-container">
+  <h6>Monetary Benefits</h6>
+  <h6>Non-Monetary Benefits</h6>
+  <%= render "efficiency_savings" %>
+  <%= render "efficiency_reductions" %>
+</div>
+
+<h5><span>Publicity</span></h5>
+<div class="all-table-container">
+  <h6>Monetary Benefits</h6>
+  <h6>Non-Monetary Benefits</h6>
+  <%= render "publicity_savings" %>
+  <%= render "publicity_reductions" %>
+</div>
+
+<h5><span>Safety</span></h5>
+<div class="all-table-container">
+  <h6>Monetary Benefits</h6>
+  <h6>Non-Monetary Benefits</h6>
+  <%= render "safety_savings" %>
+  <%= render "safety_reductions" %>
+</div>
+
+<h5><span>Mobility</span></h5>
+<div class="all-table-container">
+  <h6>Monetary Benefits</h6>
+  <h6>Non-Monetary Benefits</h6>
+  <%= render "mobility_savings" %>
+  <%= render "mobility_reductions" %>
+</div>
+
+<h5><span>Environment</span></h5>
+<div class="all-table-container last">
+  <h6>Monetary Benefits</h6>
+  <h6>Non-Monetary Benefits</h6>
+  <%= render "environment_savings" %>
+  <%= render "environment_reductions" %>
+</div>
+
+<%= render "email_lightbox" %>

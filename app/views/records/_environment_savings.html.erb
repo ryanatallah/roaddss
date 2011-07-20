@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td>Air Pollution Costs Savings:</td>
+    <td><%= ccyf(@record.pollution_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>CO<sub>2</sub> Community Cost Avoidance</td>
+    <td><%= ccyf(@record.co2_community_cost_avoidance) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Chemical Use Vehicle &amp; Infrastructure Costs Savings:</td>
+    <td><%= ccyf(@record.veh_infrastructure_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Chemical Use Environmental Costs Savings:</td>
+    <td><%= ccyf(@record.environmental_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr class="sum">
+    <td>Total Environment Related Savings:</td>
+    <td><%= ccyf(@record.total_environment_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>

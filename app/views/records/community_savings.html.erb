@@ -1,0 +1,29 @@
+<%= render "nav_community_benefits" %>
+
+<div class="column">
+  <h4>Safety<br>Savings</h4>
+  <div class="table-container">
+    <%= render "safety_savings" %>
+  </div>
+  <h4>Mobility<br>Savings</h4>
+  <div class="table-container">
+    <%= render "mobility_savings" %>
+  </div>
+  <h4>Environment<br>Savings</h4>
+  <div class="table-container">
+    <%= render "environment_savings" %>
+  </div>
+</div>
+
+<div class="column infographics">
+  <div>
+    <%= image_tag "embed/infographics/accidents.png" %>
+    <p class="info-val"><%= ccyf(@record.accident_savings) %></p>
+    <p class="info-tag">Accident Costs Savings</p>
+  </div>
+  <div>
+    <%= image_tag "embed/infographics/pollution.png" %>
+    <p class="info-val"><%= ccyf(@record.pollution_savings + @record.co2_community_cost_avoidance) %></p>
+    <p class="info-tag">Pollution Costs Savings</p>
+  </div>
+</div>

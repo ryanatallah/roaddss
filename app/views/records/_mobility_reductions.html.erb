@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>Average Increase in Traffic Speed:</td>
+    <td><%= numf(@record.average_speed_increase) %></td>
+    <td><%= @distance_unit %>/Hr</td>
+  </tr>
+  <tr>
+    <td>Increase in Number of Vehicles on the Road:</td>
+    <td><%= numf(@record.road_vehicles_increase) %></td>
+    <td>Vehicles</td>
+  </tr>
+  <tr>
+    <td>Time Savings due to Optimized Treatment:</td>
+    <td><%= numf(@record.community_time_savings) %></td>
+    <td>Hours</td>
+  </tr>
+</table>

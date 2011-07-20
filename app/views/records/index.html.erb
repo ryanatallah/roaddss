@@ -1,0 +1,44 @@
+<h1>All records</h1>
+
+<table class="index">
+  <tr>
+    <th></th>
+    <th></th>
+    <th>name</th>
+    <th>organization</th>
+    <th>phone</th>
+    <th>email</th>
+    <th>currency</th>
+    <th>events</th>
+    <th>stations</th>
+    <th>maintenance budget</th>
+    <th>treatment vehicles</th>
+    <th>treatment miles</th>
+    <th>routes</th>
+    <th>cleanup miles</th>
+    <th>dry material use</th>
+    <th>wet material use</th>
+    <th>population</th>
+  </tr>
+  <% @records.each do |record| %>
+  <tr>
+    <td class="small"><a href="#">Edit</a></td>
+    <td class="small"><a href="#">Delete</a></td>
+    <td><%= record.name %></td>
+    <td><%= record.organization %></td>
+    <td><%= record.phone %></td>
+    <td><%= record.email %></td>
+    <td><%= record.currency %></td>
+    <td><%= record.events %></td>
+    <td><%= record.stations %></td>
+    <td><%= record.maintenance_budget %></td>
+    <td><%= record.treatment_vehicles %></td>
+    <td><%= record.treatment_miles %></td>
+    <td><%= record.routes %></td>
+    <td><%= record.cleanup_miles %></td>
+    <td><%= record.dry_material_use %></td>
+    <td><%= record.wet_material_use %></td>
+    <td><%= record.population %></td>
+  </tr>
+  <% end %>
+<table>

@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>Reduction in Dry Road Treatment Materials:</td>
+    <td><%= numf(@record.road_treatment_materials_reduction) %></td>
+    <td>Tons</td>
+  </tr>
+  <tr>
+    <td>Reduction in Green House Gas Creation (CO<sub>2</sub>):</td>
+    <td><%= numf(@record.ghg_reduction) %></td>
+    <td>Tons</td>
+  </tr>
+  <tr>
+    <td>Reduction in Polluting Emissions (NOx/VOC/CO):</td>
+    <td><%= numf(@record.polluting_emissions_reduction) %></td>
+    <td><%= @mass_unit %></td>
+  </tr>
+</table>

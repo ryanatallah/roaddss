@@ -1,0 +1,273 @@
+<h1>Record <%= @record.id %> Value Analysis</h1>
+
+<section>
+  <h3>Efficiency</h3>
+  <table>
+    <tr>
+      <th>Savings Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Decision Time Costs Savings:</td>
+      <td><%= @record.decision_time_savings %></td>
+    </tr>
+    <tr>
+      <td>Treatment Labor Usage Costs Savings:</td>
+      <td><%= @record.treatment_labor_usage_savings %></td>
+    </tr>
+    <tr>
+      <td>Reduced Stress Related Absences Savings:</td>
+      <td><%= @record.reduced_stress_absences_savings %></td>
+    </tr>
+    <tr>
+      <td>Dry De-Icing Materials Costs Savings:</td>
+      <td><%= @record.dry_material_savings %></td>
+    </tr>
+    <tr>
+      <td>Wet De-Icing Materials Costs Savings:</td>
+      <td><%= @record.wet_material_savings %></td>
+    </tr>
+    <tr>
+      <td>Cleanup Labor Costs Savings:</td>
+      <td><%= @record.cleanup_labor_savings %></td>
+    </tr>
+    <tr>
+      <td>Vehicle Maintenance Costs Savings:</td>
+      <td><%= @record.vehicle_maintenance_savings %></td>
+    </tr>
+    <tr>
+      <td>Fuel Consumption Costs Savings:</td>
+      <td><%= @record.fuel_consumption_savings %></td>
+    </tr>
+    <tr>
+      <td>Wear Infrastructure Costs Savings:</td>
+      <td><%= @record.wear_infrastructure_savings %></td>
+    </tr>
+    <tr>
+      <td>IT Hardware Costs Savings:</td>
+      <td><%= @record.it_hardware_savings %></td>
+    </tr>
+    <tr>
+      <td>IT Labor Costs Savings:</td>
+      <td><%= @record.it_labor_savings %></td>
+    </tr>
+    <tr>
+      <td>Increase Revenue from Toll Roads:</td>
+      <td><%= @record.toll_revenue_increase %></td>
+    </tr>
+    <tr>
+      <td>Total Efficiency Related Savings (per Year):</td>
+      <td><%= @record.total_efficiency_savings %></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Reduction Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Reduction in Time to Make Decisions:</td>
+      <td><%= @record.decision_time_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Operator Treatment Driving Time:</td>
+      <td><%= @record.driving_time_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Stress Related Absences Hours:</td>
+      <td><%= @record.stress_absences_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Dry De-Icing Material Use:</td>
+      <td><%= @record.dry_material_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Wet De-Icing Material Use:</td>
+      <td><%= @record.wet_material_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Cleanup Labor Time:</td>
+      <td><%= @record.cleanup_labor_time_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Operation Vehicles Needed:</td>
+      <td><%= @record.required_vehicles_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Operation Laborers Needed:</td>
+      <td><%= @record.operation_people_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Miles Driven:</td>
+      <td><%= @record.driven_lane_miles_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in IT Labor Hours:</td>
+      <td><%= @record.it_labor_reduction %></td>
+    </tr>
+    <tr>
+      <td>Yearly Increase in Toll Vehicles during Events:</td>
+      <td><%= @record.toll_vehicles_increase %></td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h3>Publicity</h3>
+  <table>
+    <tr>
+      <th>Savings Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Complaint Costs Savings:</td>
+      <td><%= @record.complaint_savings %></td>
+    </tr>
+    <tr>
+      <td>Litigation Costs Savings:</td>
+      <td><%= @record.litigation_savings %></td>
+    </tr>
+    <tr>
+      <td>Total Publicity Related Savings (per Year):</td>
+      <td><%= @record.total_publicity_savings %></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Reductions Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Reduction in Number of Complaints:</td>
+      <td><%= @record.complaints_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Number of Lawsuits:</td>
+      <td><%= @record.lawsuits_reduction %></td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h3>Safety</h3>
+  <table>
+    <tr>
+      <th>Savings Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Accident Costs Savings:</td>
+      <td><%= @record.accident_savings %></td>
+    </tr>
+    <tr>
+      <td>Fatality Costs Savings:</td>
+      <td><%= @record.fatality_savings %></td>
+    </tr>
+    <tr>
+      <td>Total Safety Related Savings (per Year):</td>
+      <td><%= @record.total_safety_savings %></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Reductions Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Reduction in Number of Accidents:</td>
+      <td><%= @record.accidents_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Number of Fatalities:</td>
+      <td><%= @record.fatalities_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Emergency Vehicle Response Time:</td>
+      <td><%= @record.emergency_response_time_reduction %></td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h3>Mobility</h3>
+  <table>
+    <tr>
+      <th>Savings Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Reduction in Local Economy Losses:</td>
+      <td><%= @record.local_economy_losses_reduction %></td>
+    </tr>
+    <tr>
+      <td>Total Community Related Savings (per Year):</td>
+      <td><%= @record.total_community_savings %></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Reductions Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Average Increase in Traffic Speed:</td>
+      <td><%= @record.average_speed_increase %></td>
+    </tr>
+    <tr>
+      <td>Increase in Number of Vehicles on the Road:</td>
+      <td><%= @record.road_vehicles_increase %></td>
+    </tr>
+    <tr>
+      <td>Community Time Savings due to Optimized Treatment:</td>
+      <td><%= @record.community_time_savings %></td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h3>Environment</h3>
+  <table>
+    <tr>
+      <th>Savings Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Air Pollution Costs Savings:</td>
+      <td><%= @record.pollution_savings %></td>
+    </tr>
+    <tr>
+      <td>CO<sub>2</sub> Community Cost Avoidance</td>
+      <td><%= @record.co2_community_cost_avoidance %></td>
+    </tr>
+    <tr>
+      <td>Chemical Use Vehicle &amp; Infrastructure Costs Savings:</td>
+      <td><%= @record.veh_infrastructure_savings %></td>
+    </tr>
+    <tr>
+      <td>Chemical Use Environmental Costs Savings:</td>
+      <td><%= @record.environmental_savings %></td>
+    </tr>
+    <tr>
+      <td>Total Environment Related Savings (per Year):</td>
+      <td><%= @record.total_environment_savings %></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Reductions Benefits</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Reduction in Dry Road Treatment Materials (Water table):</td>
+      <td><%= @record.road_treatment_materials_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Green House Gas Creation:</td>
+      <td><%= @record.ghg_reduction %></td>
+    </tr>
+    <tr>
+      <td>Reduction in Polluting Emissions:</td>
+      <td><%= @record.polluting_emissions_reduction %></td>
+    </tr>
+  </table>
+</section>

@@ -1,0 +1,1133 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* @import "compass/reset"; */
+/* This file contains constants for access in all other stylesheets. */
+/* line 3, ../../../app/stylesheets/partials/_base.scss */
+h1, h2, h3, h5, h4, h5, p, div {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_layout.scss */
+body {
+  background: url('/images/embed/bg.png?1309206939') repeat-x;
+  margin: 0;
+}
+
+/* line 6, ../../../app/stylesheets/partials/_layout.scss */
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 11, ../../../app/stylesheets/partials/_layout.scss */
+header {
+  width: 940px;
+  height: 39px;
+  padding: 14px 10px;
+  position: relative;
+}
+/* line 17, ../../../app/stylesheets/partials/_layout.scss */
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../../../app/stylesheets/partials/_layout.scss */
+header h1 #logo {
+  text-indent: -9999px;
+  display: block;
+  width: 140px;
+  height: 36px;
+  float: left;
+  background: url('/images/embed/logotype.png?1309207745');
+}
+/* line 30, ../../../app/stylesheets/partials/_layout.scss */
+header h1 #logo-blue {
+  width: 140px;
+  height: 36px;
+  float: left;
+  display: none;
+}
+/* line 37, ../../../app/stylesheets/partials/_layout.scss */
+header h1 span {
+  margin-left: 15px;
+  color: #dbf0f5;
+  font-size: 18px;
+  display: block;
+  float: left;
+  margin-top: -5px;
+}
+/* line 47, ../../../app/stylesheets/partials/_layout.scss */
+header #contact {
+  width: 142px;
+  height: 38px;
+  margin-top: -12px;
+  background: url('/images/embed/contact-shadow.png?1309211731');
+  padding: 12px;
+  float: right;
+}
+/* line 55, ../../../app/stylesheets/partials/_layout.scss */
+header #contact a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  width: 142px;
+  height: 18px;
+  padding: 10px 0;
+  background: url('/images/embed/contact.png?1309211661');
+  text-align: center;
+  color: #00728f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 71, ../../../app/stylesheets/partials/_layout.scss */
+header #contact a:hover {
+  background-position-y: -38px;
+}
+/* line 75, ../../../app/stylesheets/partials/_layout.scss */
+header #contact a:active {
+  background-position-y: -76px;
+}
+/* line 81, ../../../app/stylesheets/partials/_layout.scss */
+header #record-box {
+  float: right;
+  width: 132px;
+  height: 50px;
+  margin: -14px 0;
+  padding: 18px 10px 0 10px;
+  background: url('/images/embed/record-box.png?1309290946');
+  text-align: right;
+  z-index: 10;
+}
+/* line 91, ../../../app/stylesheets/partials/_layout.scss */
+header #record-box span {
+  display: block;
+  width: 132px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: no-wrap;
+  line-height: 20px;
+}
+/* line 100, ../../../app/stylesheets/partials/_layout.scss */
+header #record-box span#organization {
+  color: #d6e9f2;
+  font-size: 14px;
+}
+/* line 105, ../../../app/stylesheets/partials/_layout.scss */
+header #record-box span#name {
+  color: #779eb2;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* line 114, ../../../app/stylesheets/partials/_layout.scss */
+footer {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+/* line 120, ../../../app/stylesheets/partials/_layout.scss */
+footer a {
+  color: #66abbc;
+}
+
+/* line 125, ../../../app/stylesheets/partials/_layout.scss */
+.container {
+  float: left;
+  width: 660px;
+  padding: 10px 30px 30px;
+  background: url('/images/embed/container-bottom.png?1309209056');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin: 60px 0 30px;
+}
+/* line 135, ../../../app/stylesheets/partials/_layout.scss */
+.container:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -18px;
+  left: 1px;
+  height: 18px;
+  margin: -10px -30px 0;
+  background: url('/images/embed/container-top.png?1309208974');
+}
+
+/* line 147, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary {
+  height: 31px;
+  width: 940px;
+  padding: 0 10px;
+  display: block;
+  z-index: 15;
+  position: relative;
+  bottom: 2px;
+}
+/* line 156, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 162, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li {
+  float: left;
+}
+/* line 166, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li:first-child a {
+  margin-left: 4px;
+}
+/* line 172, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li:last-child a {
+  margin-right: 0;
+  background: url('/images/embed/tab-grey.png?1310419230') right top;
+}
+/* line 176, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li:last-child a:before {
+  background: url('/images/embed/tab-grey-left.png?1310419222') top;
+}
+/* line 182, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a {
+  display: block;
+  height: 25px;
+  background: url('/images/embed/tab.png?1309304715') right;
+  background-position-y: 0px;
+  margin-right: 4px;
+  font-size: 14px;
+  padding: 6px 17px 0 14px;
+  white-space: nowrap;
+  color: #00728f;
+  text-decoration: none;
+}
+/* line 194, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a:before {
+  content: "";
+  float: left;
+  display: block;
+  width: 4px;
+  height: 31px;
+  margin: -6px 0 0 -18px;
+  background: url('/images/embed/tab-left.png?1309304606') left;
+  background-position-y: 0px;
+}
+/* line 205, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a:hover {
+  background-position-y: -31px;
+}
+/* line 208, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a:hover:before {
+  background-position-y: -31px;
+}
+/* line 213, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a:active {
+  background-position-y: -62px;
+}
+/* line 216, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a:active:before {
+  background-position-y: -62px;
+}
+/* line 221, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a.current {
+  background: url('/images/embed/tab-selected.png?1309314834') right;
+}
+/* line 224, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li a.current:before {
+  background: url('/images/embed/tab-selected-left.png?1309314785') left;
+}
+/* line 230, ../../../app/stylesheets/partials/_layout.scss */
+nav.primary ul li + li {
+  margin-left: 4px;
+}
+
+/* line 237, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary {
+  background: #e2f5f8;
+  width: 958px;
+  border: 1px solid #00728f;
+  margin: 8px 0 30px;
+}
+/* line 244, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary span {
+  display: block;
+  float: left;
+  width: 210px;
+  background: url('/images/embed/divider-v.png?1309209226') no-repeat right;
+  margin: 10px 0;
+  font-size: 12px;
+  text-align: right;
+  padding-right: 20px;
+  color: #00728f;
+}
+/* line 256, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary ul {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+/* line 262, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary ul li {
+  float: left;
+  font-size: 12px;
+  margin-left: 20px;
+}
+/* line 267, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary ul li a {
+  color: #00728f;
+  text-decoration: none;
+}
+/* line 271, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary ul li a:not([class="current"]):hover {
+  border-bottom: 1px solid #00728f;
+}
+/* line 275, ../../../app/stylesheets/partials/_layout.scss */
+nav.secondary ul li a.current {
+  font-weight: bold;
+}
+
+/* line 283, ../../../app/stylesheets/partials/_layout.scss */
+#tabs-container {
+  width: 960px;
+  background: url('/images/embed/tabs-container.png?1310489799');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 50px;
+}
+/* line 291, ../../../app/stylesheets/partials/_layout.scss */
+#tabs-container:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -3px;
+  height: 3px;
+  background: url('/images/embed/tabs-container-top.png?1309293728');
+}
+/* line 300, ../../../app/stylesheets/partials/_layout.scss */
+#tabs-container.photo {
+  padding-top: 60px;
+  background: url('/images/embed/tabs-container-photo.png?1310431981') bottom no-repeat;
+  height: 570px;
+}
+/* line 305, ../../../app/stylesheets/partials/_layout.scss */
+#tabs-container.photo:before {
+  top: -63px;
+}
+/* line 309, ../../../app/stylesheets/partials/_layout.scss */
+#tabs-container.photo table + table {
+  margin-top: 20px;
+}
+/* line 313, ../../../app/stylesheets/partials/_layout.scss */
+#tabs-container.photo .sum {
+  height: 35px;
+}
+
+/* line 319, ../../../app/stylesheets/partials/_layout.scss */
+.column {
+  float: left;
+  width: 710px;
+  display: block;
+}
+/* line 325, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics {
+  width: 150px;
+  margin: 0 50px;
+}
+/* line 329, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics img {
+  margin-left: 25px;
+}
+/* line 333, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics p {
+  text-align: center;
+  color: #00728f;
+}
+/* line 337, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics p.info-val {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+}
+/* line 343, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics p.info-tag {
+  margin: 2px;
+  font-size: 13px;
+}
+/* line 349, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics div + div {
+  margin-top: 15px;
+  border-top: 1px solid #00728f;
+}
+/* line 353, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics div + div img {
+  margin-top: 5px;
+}
+/* line 358, ../../../app/stylesheets/partials/_layout.scss */
+.column.infographics div:last-child {
+  margin-bottom: 30px;
+}
+/* line 363, ../../../app/stylesheets/partials/_layout.scss */
+.column.export {
+  width: 138px;
+  margin: 0 50px 0;
+  border: 1px solid #00728f;
+  padding: 5px;
+}
+/* line 372, ../../../app/stylesheets/partials/_layout.scss */
+.column.export ul li + li {
+  margin-top: 5px;
+}
+
+/* line 379, ../../../app/stylesheets/partials/_layout.scss */
+#link-instructions {
+  display: block;
+  margin: 10px 50px;
+  float: left;
+  text-align: center;
+  width: 149px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* line 389, ../../../app/stylesheets/partials/_layout.scss */
+.export-list, .column.export ul, #export-all ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 394, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li, .column.export ul li, #export-all ul li {
+  height: 24px;
+}
+/* line 397, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li a, .column.export ul li a, #export-all ul li a {
+  display: block;
+  height: 16px;
+  padding: 4px;
+  color: #000;
+  text-decoration: none;
+}
+/* line 404, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li a span, .column.export ul li a span, #export-all ul li a span {
+  display: block;
+  height: 16px;
+  background: url('/images/embed/export-icons.png?1310432371') 2px top no-repeat;
+  padding-left: 28px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 415, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li a:hover, .column.export ul li a:hover, #export-all ul li a:hover {
+  background: #DEF2F7;
+}
+/* line 421, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li:nth-child(1) a span, .column.export ul li:nth-child(1) a span, #export-all ul li:nth-child(1) a span {
+  background-position-y: 0px;
+}
+/* line 425, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li:nth-child(2) a span, .column.export ul li:nth-child(2) a span, #export-all ul li:nth-child(2) a span {
+  background-position-y: -16px;
+}
+/* line 429, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li:nth-child(3) a span, .column.export ul li:nth-child(3) a span, #export-all ul li:nth-child(3) a span {
+  background-position-y: -32px;
+}
+/* line 433, ../../../app/stylesheets/partials/_layout.scss */
+.export-list li:nth-child(4) a span, .column.export ul li:nth-child(4) a span, #export-all ul li:nth-child(4) a span {
+  background-position-y: -48px;
+}
+
+/* line 441, ../../../app/stylesheets/partials/_layout.scss */
+#export-all ul {
+  float: right;
+  margin: 20px 30px -30px 0;
+}
+/* line 447, ../../../app/stylesheets/partials/_layout.scss */
+#export-all ul li {
+  width: 80px;
+  float: left;
+}
+
+/* line 454, ../../../app/stylesheets/partials/_layout.scss */
+.list-container {
+  margin-left: 30px;
+}
+/* line 458, ../../../app/stylesheets/partials/_layout.scss */
+.list-container ul {
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+/* line 463, ../../../app/stylesheets/partials/_layout.scss */
+.list-container ul li {
+  line-height: 22px;
+  font-size: 13px;
+}
+/* line 467, ../../../app/stylesheets/partials/_layout.scss */
+.list-container ul li:first-child {
+  line-height: 24px;
+  font-weight: bold;
+}
+/* line 472, ../../../app/stylesheets/partials/_layout.scss */
+.list-container ul li + li:before {
+  content: "›";
+  margin-right: 8px;
+  margin-left: 10px;
+}
+/* line 480, ../../../app/stylesheets/partials/_layout.scss */
+.list-container div {
+  float: left;
+  width: 280px;
+  margin-right: 30px;
+}
+
+/* line 487, ../../../app/stylesheets/partials/_layout.scss */
+#lightbox {
+  display: none;
+  background: #fff;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1000;
+}
+
+/* line 499, ../../../app/stylesheets/partials/_layout.scss */
+#lightbox-container {
+  display: none;
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  margin-left: -200px;
+  width: 340px;
+  background: #fff;
+  border: 1px solid #00728f;
+  padding: 20px 30px;
+  z-index: 1001;
+  -moz-box-shadow: 0px 0px 5px #ccc;
+  -webkit-box-shadow: 0px 0px 5px #ccc;
+  box-shadow: 0px 0px 5px #ccc;
+}
+/* line 514, ../../../app/stylesheets/partials/_layout.scss */
+#lightbox-container img {
+  display: block;
+  margin: 30px auto;
+}
+/* line 519, ../../../app/stylesheets/partials/_layout.scss */
+#lightbox-container p {
+  text-align: center;
+  color: #00728f;
+}
+/* line 524, ../../../app/stylesheets/partials/_layout.scss */
+#lightbox-container span {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  line-height: 20px;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_splash.scss */
+body#splash {
+  background: url('/images/embed/bg-splash.png?1309206789') repeat-x;
+  overflow-x: hidden;
+}
+/* line 5, ../../../app/stylesheets/partials/_splash.scss */
+body#splash #contact {
+  margin-right: 110px;
+}
+/* line 9, ../../../app/stylesheets/partials/_splash.scss */
+body#splash #road {
+  position: absolute;
+  background: url('/images/road.png?1309208271');
+  width: 568px;
+  height: 541px;
+  right: -180px;
+  top: 0px;
+  z-index: 5;
+}
+/* line 19, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section {
+  padding-top: 40px;
+  height: 271px;
+}
+/* line 23, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section h2 {
+  text-indent: -9999px;
+  width: 594px;
+  height: 55px;
+  background: url('/images/splash-text.png?1309208387');
+  background-repeat: no-repeat;
+  margin: 0px 10px 15px;
+  padding: 0;
+}
+/* line 33, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section div {
+  background: url('/images/embed/splash-box-top.png?1309208463') top 1px;
+  background-repeat: no-repeat;
+  width: 754px;
+  padding-top: 2px;
+  margin-top: 20px;
+}
+/* line 40, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section div p {
+  background: url('/images/embed/splash-box-bottom.png?1309208509') bottom left;
+  padding: 5px 160px 10px 10px;
+  margin: 0;
+  color: #bbd9e0;
+  font-size: 13px;
+  line-height: 18px;
+  text-shadow: 0px 1px 2px #000;
+}
+/* line 49, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section div p a {
+  /* "Begin Calculations ›" link text */
+  text-decoration: none;
+  color: #fff227;
+}
+/* line 53, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section div p a:hover {
+  border-bottom: 1px solid #fff227;
+}
+/* line 57, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section div p a:after {
+  content: "";
+  padding: 0 4px;
+  margin-left: 5px;
+  background: url('/images/embed/arrow-shadow-yellow.png?1309208561') 0px 3px;
+  background-repeat: no-repeat;
+}
+/* line 66, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section div p span {
+  color: #04323f;
+  margin-left: 10px;
+  text-shadow: #009bc2 0px 1px 2px;
+}
+/* line 74, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section {
+  padding-top: 0px;
+  margin-top: 0px;
+  height: 162px;
+}
+/* line 79, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section p {
+  padding: 15px 0 10px 10px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+/* line 86, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section p a {
+  color: #00728f;
+  text-decoration: none;
+}
+/* line 90, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section p a:hover {
+  border-bottom: 1px solid #00728f;
+}
+/* line 94, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section p a:after {
+  content: "";
+  padding: 0 4px;
+  margin-left: 5px;
+  background: url('/images/embed/arrow-blue.png?1309208642') 0px 3px;
+  background-repeat: no-repeat;
+}
+/* line 104, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section ul {
+  list-style: none;
+  padding: 0;
+  margin: -15px 0 0;
+}
+/* line 110, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section ul li {
+  float: left;
+  width: 175px;
+  height: 135px;
+  background: url('/images/embed/splash-photo-frame.png?1309208708');
+  margin-left: -3px;
+}
+/* line 117, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section ul li + li {
+  margin-left: -10px;
+}
+/* line 125, ../../../app/stylesheets/partials/_splash.scss */
+body#splash form#new_record {
+  padding: 0;
+  margin-top: -8px;
+}
+/* line 130, ../../../app/stylesheets/partials/_splash.scss */
+body#splash form#new_record div:first-child[style] {
+  display: none !important;
+}
+/* line 135, ../../../app/stylesheets/partials/_splash.scss */
+body#splash .sidebar {
+  float: left;
+  width: 225px;
+  padding: 70px 0 0 15px;
+}
+/* line 140, ../../../app/stylesheets/partials/_splash.scss */
+body#splash .sidebar h3 span, body#splash .sidebar h5 span {
+  background: #f0f0f0;
+}
+/* line 144, ../../../app/stylesheets/partials/_splash.scss */
+body#splash .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 148, ../../../app/stylesheets/partials/_splash.scss */
+body#splash .sidebar ul li {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 154, ../../../app/stylesheets/partials/_splash.scss */
+body#splash .sidebar ul li:before {
+  content: "›";
+}
+/* line 158, ../../../app/stylesheets/partials/_splash.scss */
+body#splash .sidebar ul li blockquote {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 13px;
+  background: #e5e5e5;
+  color: #444;
+  padding: 8px;
+  margin: 5px 0 20px 0;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_forms.scss */
+.input-form, body#splash form#new_record {
+  font-size: 14px;
+}
+/* line 4, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul, body#splash form#new_record ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 25px 20px 15px;
+}
+/* line 10, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul#customer-input, body#splash form#new_record ul#customer-input {
+  margin-bottom: 30px;
+}
+/* line 13, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul#customer-input label, body#splash form#new_record ul#customer-input label {
+  width: 130px;
+}
+/* line 18, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li, body#splash form#new_record ul li {
+  height: 40px;
+}
+/* line 22, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li label, body#splash form#new_record ul li label {
+  display: block;
+  float: left;
+  width: 300px;
+  margin-top: 5px;
+}
+/* line 29, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li input[type="text"], body#splash form#new_record ul li input[type="text"] {
+  float: left;
+  height: 20px;
+  display: block;
+  font-size: 14px;
+  border: 1px solid #919191;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 3px 3px;
+}
+/* line 40, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li input[type="text"]:focus, body#splash form#new_record ul li input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #00728f;
+  background: #f5fdff;
+}
+/* line 47, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li span, body#splash form#new_record ul li span {
+  display: block;
+  float: left;
+  margin: 5px 0 0 8px;
+  color: #666;
+}
+
+/* line 57, ../../../app/stylesheets/partials/_forms.scss */
+select {
+  display: block;
+  float: left;
+  height: 28px;
+  font-size: 14px;
+  border: 1px solid #919191;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 67, ../../../app/stylesheets/partials/_forms.scss */
+select:focus {
+  outline: none;
+  border: 1px solid #00728f;
+}
+
+/* line 73, ../../../app/stylesheets/partials/_forms.scss */
+input[type="submit"], .edit-container #recalc-container a {
+  float: right;
+  width: 102px;
+  height: 38px;
+  border: none;
+  background: url('/images/embed/submit.png?1309209603');
+  font-size: 15px;
+  color: #00728f;
+}
+/* line 82, ../../../app/stylesheets/partials/_forms.scss */
+input[type="submit"]:hover, .edit-container #recalc-container a:hover {
+  background-position-y: -38px;
+  cursor: pointer;
+}
+/* line 87, ../../../app/stylesheets/partials/_forms.scss */
+input[type="submit"]:active, .edit-container #recalc-container a:active {
+  background-position-y: -76px;
+}
+/* line 91, ../../../app/stylesheets/partials/_forms.scss */
+input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {
+  background-image: none;
+  background: #e1e1e1;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 130px;
+  color: #888;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_text.scss */
+h2 {
+  /* Applied to page titles, ex: "RoadDSS Calculator Results" */
+  font-weight: normal;
+  color: #003f53;
+  padding: 25px 0 15px 10px;
+  margin: 0;
+  font-size: 22px;
+}
+/* line 9, ../../../app/stylesheets/partials/_text.scss */
+h2 span {
+  display: none;
+}
+
+/* line 14, ../../../app/stylesheets/partials/_text.scss */
+h3, h5 {
+  /* Used in section titles, blue with horizontal line, ex: Customer Information */
+  padding: 0;
+  margin-top: 0px;
+  height: 16px;
+  color: #00728f;
+  font-size: 14px;
+  font-weight: bold;
+  background: url('/images/embed/divider-h.png?1309209197') 0px 9px;
+  background-repeat: repeat-x;
+}
+/* line 25, ../../../app/stylesheets/partials/_text.scss */
+h3 span, h5 span {
+  /* to white out the horizontal line behind the text */
+  padding: 0 10px 0 0;
+  background: #fff;
+}
+
+/* line 32, ../../../app/stylesheets/partials/_text.scss */
+h4 {
+  /* Used in table labels, with verital divider, ex: "Efficiency Savings" */
+  width: 190px;
+  float: left;
+  text-align: right;
+  padding: 0 20px;
+  margin: 0;
+  color: #00728f;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* line 44, ../../../app/stylesheets/partials/_text.scss */
+h5 {
+  /* Same as h3, but bigger. Used in "All Benefits" and "Other Benefits" */
+  font-size: 20px;
+  height: 22px;
+  background-position-y: 13px;
+  margin: 20px 30px;
+}
+
+/* line 53, ../../../app/stylesheets/partials/_text.scss */
+h6 {
+  /* Table titles on "All Benefits" page only. */
+  float: left;
+  width: 435px;
+  margin: 0;
+  padding: 0 0 5px;
+  color: #00728f;
+  font-size: 13px;
+  border-bottom: 1px solid #00728f;
+}
+/* line 63, ../../../app/stylesheets/partials/_text.scss */
+h6 + h6 {
+  margin-left: 30px;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_tables.scss */
+table {
+  width: 460px;
+  font-size: 12px;
+  border: none;
+  border-collapse: collapse;
+}
+/* line 8, ../../../app/stylesheets/partials/_tables.scss */
+table tr td {
+  padding: 5px;
+}
+/* line 11, ../../../app/stylesheets/partials/_tables.scss */
+table tr td:nth-child(2) {
+  text-align: right;
+}
+/* line 16, ../../../app/stylesheets/partials/_tables.scss */
+table tr.sum {
+  border-top: 1px solid #00728f;
+  background: #e3eff9 !important;
+  color: #00728f;
+  font-weight: bold;
+}
+/* line 23, ../../../app/stylesheets/partials/_tables.scss */
+table tr:nth-child(odd) {
+  background: #ebebeb;
+}
+
+/* line 29, ../../../app/stylesheets/partials/_tables.scss */
+.all-table-container {
+  width: 900px;
+  margin: 0 30px 50px;
+}
+/* line 34, ../../../app/stylesheets/partials/_tables.scss */
+.all-table-container table {
+  width: 435px;
+  float: left;
+}
+/* line 38, ../../../app/stylesheets/partials/_tables.scss */
+.all-table-container table + table {
+  margin-left: 30px;
+}
+/* line 43, ../../../app/stylesheets/partials/_tables.scss */
+.all-table-container.last {
+  margin-bottom: 30px;
+}
+
+/* line 48, ../../../app/stylesheets/partials/_tables.scss */
+.table-container {
+  float: left;
+  padding-left: 19px;
+  border-left: 1px solid #00728f;
+  margin-bottom: 50px;
+}
+
+/* line 55, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container {
+  margin: 50px 0;
+}
+/* line 58, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container #recalc-container {
+  margin: 0 30px 50px;
+}
+/* line 62, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container #recalc-container p {
+  width: 670px;
+  float: left;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #00728f;
+  line-height: 18px;
+  text-align: right;
+}
+/* line 73, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container #recalc-container a {
+  display: block;
+  background: url('/images/embed/submit-right.png?1310923545') right top;
+  width: auto;
+  line-height: 35px;
+  text-decoration: none;
+  padding: 0 14px 0 6px;
+}
+/* line 83, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container #recalc-container a:hover:before {
+  background-position-y: -38px;
+  cursor: pointer;
+}
+/* line 90, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container #recalc-container a:active:before {
+  background-position-y: -76px;
+}
+/* line 95, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container #recalc-container a:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 4px;
+  height: 38px;
+  position: relative;
+  left: -10px;
+  background: url('/images/embed/submit-left.png?1310923515') left top;
+}
+/* line 108, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table {
+  width: 680px;
+  font-size: 13px;
+  table-layout: fixed;
+}
+/* line 114, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table#customer-information td:nth-child(1) {
+  width: 140px;
+}
+/* line 118, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table#customer-information td:nth-child(2) {
+  width: 280px;
+}
+/* line 121, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table#customer-information td:nth-child(2) input {
+  width: 215px;
+  background: url('/images/embed/input-medium.png?1310922648') right;
+}
+/* line 128, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr {
+  height: 35px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  background-color: transparent;
+}
+/* line 134, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr.edit-row {
+  background: #edfffc;
+  font-weight: bold;
+  cursor: default !important;
+  height: 50px;
+}
+/* line 140, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr.edit-row span.edit {
+  display: none !important;
+}
+/* line 144, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr.edit-row span.save {
+  display: inline;
+  font-weight: normal;
+}
+/* line 150, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr:not([class="non-editable"]):hover {
+  background: #edfffc;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* line 155, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr:not([class="non-editable"]):hover td span.edit {
+  display: inline;
+  font-weight: normal;
+}
+/* line 161, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td {
+  padding: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 167, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td span {
+  color: #9ca8a6;
+  display: none;
+}
+/* line 171, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td span.edit {
+  padding-left: 20px;
+  background: url('/images/embed/icon-edit.png?1310794242') left top no-repeat;
+}
+/* line 177, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(1) {
+  width: 300px;
+}
+/* line 181, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(2) {
+  color: #555;
+  width: 120px;
+}
+/* line 185, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(2) input {
+  width: 110px;
+  height: 25px;
+  background: url('/images/embed/input-small.png?1310922015') right;
+  border: none;
+  outline: none;
+  text-align: right;
+  padding: 0 5px 0 0;
+  margin: 0;
+}
+/* line 197, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(3) {
+  color: #888;
+}
+/* line 201, ../../../app/stylesheets/partials/_tables.scss */
+.edit-container table tr td:nth-child(4) {
+  width: 120px;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_flashes.scss */
+.flash {
+  height: 25px;
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 6px;
+}
+/* line 8, ../../../app/stylesheets/partials/_flashes.scss */
+.flash span {
+  padding-left: 27px;
+}
+
+/* line 13, ../../../app/stylesheets/partials/_flashes.scss */
+.flash.success {
+  background: #C7E9C7;
+  border: 1px solid #006600;
+  color: #006600;
+}
+/* line 18, ../../../app/stylesheets/partials/_flashes.scss */
+.flash.success span {
+  background: url('/images/embed/flash-success.png?1311017964') no-repeat;
+}
+
+/* line 23, ../../../app/stylesheets/partials/_flashes.scss */
+.flash.failure {
+  background: #EEBDBD;
+  border: 1px solid #790000;
+  color: #790000;
+}
+/* line 28, ../../../app/stylesheets/partials/_flashes.scss */
+.flash.failure span {
+  background: url('/images/embed/flash-failure.png?1311018453') no-repeat;
+}
+
+/* line 16, ../../../app/stylesheets/screen.scss */
+.easy-clear:after, .container:after, nav.primary ul:after, nav.secondary:after, #tabs-container:after, .column:after, #export-all:after, #export-all ul:after, .list-container:after, body#splash section + section ul:after, .input-form ul:after, body#splash form#new_record ul:after, .input-form ul li:after, body#splash form#new_record ul li:after, .all-table-container:after, .edit-container #recalc-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 24, ../../../app/stylesheets/screen.scss */
+*.hidden {
+  display: none !important;
+}

@@ -1,0 +1,31 @@
+.flash {
+  height: 25px;
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 6px;
+
+  span {
+    padding-left: 27px;
+  }
+}
+
+.flash.success {
+  background: #C7E9C7;
+  border: 1px solid #006600;
+  color: #006600;
+
+  span {
+    background: image-url("embed/flash-success.png") no-repeat;
+  }
+}
+
+.flash.failure {
+  background: #EEBDBD;
+  border: 1px solid #790000;
+  color: #790000;
+
+  span {
+    background: image-url("embed/flash-failure.png") no-repeat;
+  }
+}

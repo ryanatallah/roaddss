@@ -1,0 +1,15 @@
+<div class="column">
+  <h4>Results<br>Summary</h4>
+  <div class="table-container">
+    <%= render "summary_partial" %>
+  </div>
+</div>
+
+<div class="column export">
+  <ul>
+    <li><a href="#"><span>Print    </span></a></li>
+    <li><a href="#"><span>Save PDF </span></a></li>
+    <li><a href="#"><span>Email PDF</span></a></li>
+    <li><a href="<%= url_for user_savings_path(@record) %>" class="record-link"><span>Copy Link</span></a></li>
+  </ul>
+</div>

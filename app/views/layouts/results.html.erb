@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <%= render "layouts/head" %>
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>
+        <div id="logo">Vaisala</div>
+        <div id="logo-blue"><%= image_tag("embed/logotype-blue.png", :alt => "Vaisala", :id => "logotype-blue") %></div>
+        <span>/ RoadDSS Value Calculator</span>
+      </h1>
+      <div id="record-box">
+        <span id="organization"><%= @record.organization %></span>
+        <span id="name"><%= @record.name %></span>
+      </div>
+      <div id="contact"><a href="#">Contact Vaisala</a></div>
+
+      <script type="text/javascript">
+        rails_authenticity_token = '<%= form_authenticity_token %>'
+      </script>
+    </header>
+
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><span><%= value %></span></div>
+    <% end %>
+
+    <h2>RoadDSS Calculator Results<br><span>Record URL &mdash; <%= request.url.gsub("/all", "") %></span></h2>
+
+    <nav class="primary">
+      <ul>
+        <li><%= link_to "User Benefits",      user_savings_path,      :class => current_tab(@nav, 1) %></li>
+        <li><%= link_to "Community Benefits", community_savings_path, :class => current_tab(@nav, 2) %></li>
+        <li><%= link_to "Other Benefits",     other_benefits_path,    :class => current_tab(@nav, 3) %></li>
+        <li><%= link_to "Summary",            summary_path,           :class => current_tab(@nav, 4) %></li>
+        <li><%= link_to "All Benefits",       all_path,               :class => current_tab(@nav, 5) %></li>
+        <li><%= link_to "Change Assumptions", edit_record_path,       :class => current_tab(@nav, 6) %></li>
+      </ul>
+    </nav>
+
+    <div id="tabs-container"<% if @nav == 4 %> class="photo"<% end %>>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

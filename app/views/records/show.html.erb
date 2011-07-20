@@ -1,0 +1,102 @@
+<h1>Record <%= @record.id %> Information:</h1>
+
+<%= link_to "Edit", edit_record_path %>
+
+<h2>Customer Information</h2>
+<ul>
+  <li>Full Name: <%= @record.name %></li>
+  <li>Organization: <%= @record.organization %></li>
+  <li>E-mail: <%= @record.email %></li>
+  <li>Phone Number: <%= @record.phone %></li>
+</ul>
+
+<h2>General</h2>
+<ul>
+  <li>Currency: <%= @record.currency %></li>
+</ul>
+
+<h2>Number of Weather Events</h2>
+<ul>
+  <li>Winter Weather Events <span>(per Season)<span>: <%= @record.events %></li>
+  <li>Treatment Call-Outs <span>(per Year)</span>: <%= @record.assumptions_setting.treatments_per_year %></li>
+</ul>
+
+<h2>Customer Labor &amp; Infrastructure</h2>
+<ul>
+  <li>Decision Maker Rate: <%= number_to_currency(@record.assumptions_setting.decision_maker_rate, :unit => @record.ccy_symb) %></li>
+  <li>Driver Rate: <%= number_to_currency(@record.assumptions_setting.driver_rate, :unit => @record.ccy_symb) %></li>
+  <li>Complaint Labor Cost: <%= number_to_currency(@record.assumptions_setting.complaint_labor_cost, :unit => @record.ccy_symb) %></li>
+  <li>Number of RWIS Stations: <%= @record.stations %></li>
+  <li>Winter Maintenance Budget: <%= number_to_currency(@record.maintenance_budget, :unit => @record.ccy_symb) %></li>
+  <li>Number of Areas/Regions: <%= @record.assumptions_setting.regions %></li>
+</ul>
+<ul>
+  <li>Hours for Decision to Send Operators <span>(per Day)</span>: <%= @record.assumptions_setting.decision_hrs %></li>
+  <li>Number of Drivers: <%= @record.assumptions_setting.drivers %></li>
+  <li>Number of Decision Makers: <%= @record.assumptions_setting.decision_makers %></li>
+  <li>Stress Related Absences <span>(per Decision Maker)</span>: <%= @record.assumptions_setting.stress_absences %></li>
+  <li>IT Labor Costs <span>(per Year)</span>: <%= number_to_currency(@record.assumptions_setting.it_labor_costs, :unit => @record.ccy_symb) %></li>
+  <li>IT Hardware Costs <span>(per Year)</span>: <%= number_to_currency(@record.assumptions_setting.it_hardware_costs, :unit => @record.ccy_symb) %></li>
+</ul>
+
+<h2>Maintenance Fleet Vehicles</h2>
+<ul>
+  <li>Fuel Economy: <%= @record.assumptions_setting.vehicle_mpg %>
+  <li>Fuel Cost: <%= number_to_currency(@record.assumptions_setting.fuel_cost, :unit => @record.ccy_symb) %>
+  <li>Cleaning Cost (per Vehicle per Event): <%= number_to_currency(@record.assumptions_setting.fleet_cleaning, :unit => @record.ccy_symb) %>
+  <li>Servicing Costs (per Vehicle per Year): <%= @record.assumptions_setting.fleet_servicing %>
+</ul
+<ul
+  <li>Number of Treatment Vehicles: <%= @record.treatment_vehicles %>
+  <li>Equipment Replacement Costs (per Year): <%= @record.assumptions_setting.equipment_replacement_costs %>
+</ul
+
+<h2>Treatment</h2
+<ul
+  <li>Treatment Miles (per Event): <%= @record.treatment_miles %>
+  <li>Number of Routes: <%= @record.routes %>
+  <li>Dry Material Cost: <%= @record.assumptions_setting.dry_material_cost %>
+  <li>Wet Material Cost: <%= @record.assumptions_setting.wet_material_cost %>
+  <li>Cleanup Distance: <%= @record.cleanup_miles %>
+  <li>Cleanup Hours (per Mile): <%= @record.assumptions_setting.cleanup_time_per_mile %>
+</ul>
+<ul
+<li>Treatment Hours (per Route): <%= @record.assumptions_setting.treatment_hrs_per_event_driver %>
+<li>Dry Material Use (per Treatment): <%= @record.dry_material_use %>
+<li>Wet Material Use (per Treatment): <%= @record.wet_material_use %>
+<li>Cleanup Miles (per Route): <%= @record.assumptions_setting.cleanup_miles_per_route %>
+<li>Cleanup Hours (per Route): <%= @record.assumptions_setting.cleanup_hrs_per_route %>
+</ul
+
+<h2>Community &amp; Infrastructure</h2
+<ul
+  <li>Cost per Major Accident: <%= @record.assumptions_setting.cost_per_major_accident %>
+  <li>Cost per Fatality: <%= @record.assumptions_setting.cost_per_fatality %>
+  <li>Population: <%= @record.population %>
+  <li>Total Local Economy: <%= @record.assumptions_setting.total_local_economy %>
+  <li>Average Community Fuel Economy: <%= @record.assumptions_setting.community_fuel_economy %>
+  <li>Miles per Vehicle on Weather Event: <%= @record.assumptions_setting.miles_per_vehicle %>
+  <li>Average Litigation Cost (per Accident): <%= @record.assumptions_setting.litigation_cost_accident %>
+  <li>Average Litigation Cost (per Fatality): <%= @record.assumptions_setting.litigation_cost_fatality %>
+</ul
+<ul
+  <li>Number of Major Accidents (per Event): <%= @record.assumptions_setting.accidents_per_event %>
+  <li>Number of Winter Fatalities (per Year): <%= @record.assumptions_setting.fatalities %>
+  <li>Number of Complaints (per Year):  <%= @record.assumptions_setting.complaints %>
+  <li>Percent Economy Affected on Weather Events: <%= @record.assumptions_setting.economy_affected_pct %>
+  <li>Average Traffic Speed during Weather Events: <%= @record.assumptions_setting.traffic_speed %>
+  <li>Vehicles on the Road on Weather Events (per Day): <%= @record.assumptions_setting.vehicles_on_road %>
+  <li>Infrastructure Wear Costs (per Year): <%= @record.assumptions_setting.infrastructure_wear_costs %>
+  <li>Vegetation Replacement Costs (per Year): <%= @record.assumptions_setting.vegetation_replacement_costs %>
+</ul>
+
+<h2>Other</h2>
+<ul>
+  <li>Average Carbon Dioxide Emissions (from Diesel): <%= @record.assumptions_setting.co2_diesel %>
+  <li>Average Carbon Dioxide Emissions (from Gasoline): <%= @record.assumptions_setting.co2_gas %>
+  <li>Tolls (per Vehicle: <%= @record.assumptions_setting.tolls_per_vehicle %>
+</ul>
+<ul>
+  <li>Vehicles on Toll Roads during Event: <%= @record.assumptions_setting.toll_roads_vehicles %>
+  <li>Emergency Vehicles (per Event): <%= @record.assumptions_setting.emergency_vehicles_event %>
+</ul>

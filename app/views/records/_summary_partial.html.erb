@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>Labor Time Savings</td>
+    <td><%= ccyf(@record.labor_time_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Material Savings</td>
+    <td><%= ccyf(@record.material_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Maintenance &amp; Wear Savings</td>
+    <td><%= ccyf(@record.maintenance_wear_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Increased Revenue</td>
+    <td><%= ccyf(@record.increased_revenue) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr class="sum">
+    <td>Total Efficiency Savings</td>
+    <td><%= ccyf(@record.total_efficiency_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>Percent Budget Saved</td>
+    <td><%= numf(@record.percent_budget_saved * 100, 2) %></td>
+    <td>%</td>
+  </tr>
+  <tr>
+    <td>Average Savings per Region</td>
+    <td><%= ccyf(@record.savings_per_region) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>RWIS Increased Value per Station</td>
+    <td><%= ccyf(@record.increased_value_per_station) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>

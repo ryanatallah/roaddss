@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>Accident Costs Savings:</td>
+    <td><%= ccyf(@record.accident_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Fatality Costs Savings:</td>
+    <td><%= ccyf(@record.fatality_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr class="sum">
+    <td>Total Safety Related Savings:</td>
+    <td><%= ccyf(@record.total_safety_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>

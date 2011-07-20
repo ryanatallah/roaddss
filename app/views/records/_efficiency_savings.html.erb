@@ -1,0 +1,67 @@
+<table>
+  <tr>
+    <td>Decision Time Costs Savings:</td>
+    <td><%= ccyf(@record.decision_time_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Treatment Labor Usage Costs Savings:</td>
+    <td><%= ccyf(@record.treatment_labor_usage_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Reduced Stress Related Absences Savings:</td>
+    <td><%= ccyf(@record.reduced_stress_absences_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Dry De-Icing Materials Costs Savings:</td>
+    <td><%= ccyf(@record.dry_material_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Wet De-Icing Materials Costs Savings:</td>
+    <td><%= ccyf(@record.wet_material_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Cleanup Labor Costs Savings:</td>
+    <td><%= ccyf(@record.cleanup_labor_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Vehicle Maintenance Costs Savings:</td>
+    <td><%= ccyf(@record.vehicle_maintenance_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Fuel Consumption Costs Savings:</td>
+    <td><%= ccyf(@record.fuel_consumption_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Wear Infrastructure Costs Savings:</td>
+    <td><%= ccyf(@record.wear_infrastructure_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>IT Hardware Costs Savings:</td>
+    <td><%= ccyf(@record.it_hardware_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>IT Labor Costs Savings:</td>
+    <td><%= ccyf(@record.it_labor_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr>
+    <td>Increase Revenue from Toll Roads:</td>
+    <td><%= ccyf(@record.toll_revenue_increase) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+  <tr class="sum">
+    <td>Total Efficiency Related Savings:</td>
+    <td><%= ccyf(@record.total_efficiency_savings) %></td>
+    <td><%= @currency_unit %></td>
+  </tr>
+</table>

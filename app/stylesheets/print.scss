@@ -1,0 +1,177 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "partials/base";
+@import "partials/tables";
+
+.easy-clear:after {
+  content: ".";  
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+nav, #contact, #road, .export, .infographics {
+  display: none;
+}
+
+header {
+  @extend .easy-clear;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+
+    #logo {
+      display: none;
+    }
+
+    #logo-blue {
+      display: block;
+      width: 140px;
+      height: 36px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAABJCAYAAADmKzlqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUNEMDg1REZBOTExMTFFMDgxNkVEOEIzMTdFMUYxNjciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUNEMDg1RTBBOTExMTFFMDgxNkVEOEIzMTdFMUYxNjciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBQ0QwODVEREE5MTExMUUwODE2RUQ4QjMxN0UxRjE2NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBQ0QwODVERUE5MTExMUUwODE2RUQ4QjMxN0UxRjE2NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmXEL1AAABF8SURBVHja7F0JkJTF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);
+      background-size: 140px 36px;
+      float: left;
+
+      img {
+        width: 140px;
+        height: 36px;
+      }
+    }
+
+    span {
+      margin-left: 15px;
+      color: $aqua;
+      font-size: 18px;
+      display: block;
+      float: left;
+    }
+  }
+
+  #record-box {
+    float: right;
+    width: 160px;
+    padding: 2px;
+    margin: 0;
+    background: #ebebeb;
+    text-align: right;
+
+    span {
+      display: block;
+      width: 155px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: no-wrap;
+      line-height: 20px;
+    }
+
+    span#organization {
+      color: #000;
+      font-size: 14px;
+    }
+
+    span#name {
+      color: $aqua;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+}
+
+table + table {
+  margin-top: 20px;
+}
+
+.all-table-container {
+  margin: 0;
+  width: 640px;
+
+  table {
+    width: 304px;
+    float: left;
+    font-size: 9px;
+
+    & + table {
+      margin-top: 0;
+    }
+  }
+}
+
+h2 {
+  border-top: 1px solid $aqua;
+  padding-top: 20px;
+  margin-top: 26px;
+  margin-bottom: 40px;
+  font-weight: normal;
+  color: #003f53;
+  font-size: 20px;
+
+  span {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+
+h4 {
+  /* Used in table labels, with verital divider, ex: "Efficiency Savings" */
+  width: 120px;
+  float: left;
+  text-align: right;
+  padding: 0 20px;
+  margin: 0;
+  color: $aqua;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h3 {
+  /* Used in section titles, blue with horizontal line, ex: Customer Information */
+  padding: 0;
+  margin-top: 0px;
+  height: 16px;
+  color: $aqua;
+  font-size: 14px;
+  font-weight: bold;
+  background: image-url("embed/divider-h.png") 0px 9px;
+  background-repeat: repeat-x;
+
+  span {
+    /* to white out the horizontal line behind the text */
+    padding: 0 10px 0 0;
+    background: #fff;
+  }
+}
+
+h5 {
+  /* Same as h3, but bigger. Used in "All Benefits" and "Other Benefits" */
+  @extend h3;
+  font-size: 20px;
+  height: 22px;
+  background-position-y: 13px;
+  margin: 40px 0 20px 0;
+}
+
+h6 {
+  /* Table titles on "All Benefits" page only. */
+  float: left;
+  width: 304px;
+  margin: 0;
+  padding: 0 0 5px;
+  color: $aqua;
+  font-size: 13px;
+  border-bottom: 1px solid $aqua;
+
+  & + h6 {
+    margin-left: 30px;
+  }
+}
+
+#lightbox, #lightbox-container {
+  display: none;
+}

@@ -1,0 +1,31 @@
+body#contact {
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: 50px;
+
+  #road {
+    position: absolute;
+    background: image-url("road-faded.png") no-repeat;
+    width: 568px;
+    height: 541px;
+    right: -180px;
+    top: 0px;
+    z-index: 5;
+  }
+
+  .container {
+    position: absolute;
+    z-index: 100;
+    margin-top: 15px;
+    float: none;
+  }
+
+  p {
+    float: left;
+    width: 200px;
+    line-height: 22px;
+    font-size: 13px;
+    color: #444;
+    margin: 0 0 0 20px;
+  }
+}

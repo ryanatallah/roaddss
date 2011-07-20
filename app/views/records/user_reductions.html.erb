@@ -1,0 +1,25 @@
+<%= render "nav_user_benefits" %>
+
+<div class="column">
+  <h4>Efficiency<br>Benefits</h4>
+  <div class="table-container">
+    <%= render "efficiency_reductions" %>
+  </div>
+  <h4>Publicity<br>Benefits</h4>
+  <div class="table-container">
+    <%= render "publicity_reductions" %>
+  </div>
+</div>
+
+<div class="column infographics">
+  <div>
+    <%= image_tag "embed/infographics/dry-material.png" %>
+    <p class="info-val"><%= numf(@record.dry_material_reduction) %> Tons</p>
+    <p class="info-tag">Dry Material Use Reduction</p>
+  </div>
+  <div>
+    <%= image_tag "embed/infographics/wet-material.png" %>
+    <p class="info-val"><%= numf(@record.wet_material_reduction) %> <%= @volume_unit %></p>
+    <p class="info-tag">Wet Material Use Reduction</p>
+  </div>
+</div>

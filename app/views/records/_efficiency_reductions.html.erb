@@ -1,0 +1,57 @@
+<table>
+  <tr>
+    <td>Reduction in Time to Make Decisions:</td>
+    <td><%= numf(@record.decision_time_reduction) %></td>
+    <td>Hours</td>
+  </tr>
+  <tr>
+    <td>Reduction in Operator Treatment Driving Time:</td>
+    <td><%= numf(@record.driving_time_reduction) %></td>
+    <td>Hours</td>
+  </tr>
+  <tr>
+    <td>Reduction in Stress Related Absences Hours:</td>
+    <td><%= numf(@record.stress_absences_reduction) %></td>
+    <td>Hours</td>
+  </tr>
+  <tr>
+    <td>Reduction in Dry De-Icing Material Use:</td>
+    <td><%= numf(@record.dry_material_reduction) %></td>
+    <td>Tons</td>
+  </tr>
+  <tr>
+    <td>Reduction in Wet De-Icing Material Use:</td>
+    <td><%= numf(@record.wet_material_reduction) %></td>
+    <td><%= @volume_unit %></td>
+  </tr>
+  <tr>
+    <td>Reduction in Cleanup Labor Time:</td>
+    <td><%= numf(@record.cleanup_labor_time_reduction) %></td>
+    <td>Hours</td>
+  </tr>
+  <tr>
+    <td>Reduction in Operation Vehicles Needed:</td>
+    <td><%= numf(@record.required_vehicles_reduction) %></td>
+    <td>Vehicles</td>
+  </tr>
+  <tr>
+    <td>Reduction in Operation Laborers Needed:</td>
+    <td><%= numf(@record.operation_people_reduction) %></td>
+    <td>People</td>
+  </tr>
+  <tr>
+    <td>Reduction in Miles Driven:</td>
+    <td><%= numf(@record.driven_lane_miles_reduction) %></td>
+    <td><%= @distance_unit %></td>
+  </tr>
+  <tr>
+    <td>Reduction in IT Labor Hours:</td>
+    <td><%= numf(@record.it_labor_reduction) %></td>
+    <td>Hours</td>
+  </tr>
+  <tr>
+    <td>Yearly Increase in Toll Vehicles during Events:</td>
+    <td><%= numf(@record.toll_vehicles_increase) %></td>
+    <td>Vehicles</td>
+  </tr>
+</table>
