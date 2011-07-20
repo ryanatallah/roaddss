@@ -3,9 +3,16 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
-/* line 13, ../../../app/stylesheets/ie.scss */
+/* This file contains constants for access in all other stylesheets. */
+/* line 3, ../../../app/stylesheets/partials/_base.scss */
+h1, h2, h3, h4, h5, p, div {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 10, ../../../app/stylesheets/ie.scss */
 body {
   text-align: center;
+  text-align: left;
 }
 /* line 44, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
 * html body legend {
@@ -111,4 +118,42 @@ body select {
 body button {
   position: relative;
   top: 0.25em;
+}
+
+/* line 15, ../../../app/stylesheets/ie.scss */
+header {
+  display: block;
+  height: 39px;
+}
+
+/* line 20, ../../../app/stylesheets/ie.scss */
+section {
+  display: block;
+}
+/* line 23, ../../../app/stylesheets/ie.scss */
+section div {
+  background: url('/images/embed/splash-box-top.png?1309208463');
+  background-position-x: 1px;
+}
+
+/* line 29, ../../../app/stylesheets/ie.scss */
+nav {
+  display: block;
+}
+
+/* line 34, ../../../app/stylesheets/ie.scss */
+nav.secondary a:hover {
+  font-weight: normal;
+  color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+/* line 42, ../../../app/stylesheets/ie.scss */
+nav.secondary a.current {
+  font-weight: bold;
+}
+/* line 45, ../../../app/stylesheets/ie.scss */
+nav.secondary a.current:hover {
+  border-bottom: none;
 }

@@ -268,12 +268,16 @@ nav.secondary {
         color: $aqua;
         text-decoration: none;
 
-        &:not([class="current"]):hover {
+        &:hover {
           border-bottom: 1px solid $aqua;
         }
 
         &.current {
           font-weight: bold;
+
+          &:hover {
+            border-bottom: none;
+          }
         }
       }
     }
