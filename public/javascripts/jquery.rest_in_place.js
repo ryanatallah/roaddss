@@ -10,7 +10,19 @@ RestInPlaceEditor.prototype = {
   // Public Interface Functions //////////////////////////////////////////////
   
   activate : function() {
-    this.oldValue = this.element.html().replace(/,/g,'').replace('$','').;
+    this.currency = $("#currency").html();
+    if (this.currency == "USD") {
+      this.oldValue = this.element.html().replace('$','').replace(/,/g,'');
+    }
+    if (this.currency == "GBP") {
+      this.oldValue = this.element.html().replace('&pound;','').replace(/,/g,'');
+    }
+    if (this.currency == "EUR") {
+      this.oldValue = this.element.html().replace('&euro;','').replace(/./g,'').replace(/,/g,'.');
+    }
+    if (this.currency == "CAD") {
+      this.oldValue = this.element.html().replace('$','').replace(/,/g,'');
+    }
     this.element.addClass('rip-active');
     this.element.closest('tr').addClass('edit-row');
     this.element.unbind('click', this.clickHandler);
