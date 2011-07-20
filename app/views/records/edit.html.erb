@@ -46,13 +46,13 @@
     <table class="no-alt-colors">
       <tr>
         <td>Number of Weather Events</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="events"><%= @record.events %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="events"><%= numf(@record.events) %></td>
         <td>Events</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of RWIS Stations</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="stations"><%= @record.stations %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="stations"><%= numf(@record.stations) %></td>
         <td>Stations</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -64,43 +64,43 @@
       </tr>
       <tr>
         <td>Population</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="population"><%= @record.population %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="population"><%= numf(@record.population) %></td>
         <td>People</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Treatment Vehicles</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="treatment_vehicles"><%= @record.treatment_vehicles %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="treatment_vehicles"><%= numf(@record.treatment_vehicles) %></td>
         <td>Vehicles</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Treatment Miles (per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="treatment_miles"><%= @record.treatment_miles %></td>
-        <td>Miles / Event</td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="treatment_miles"><%= numf(@record.treatment_miles) %></td>
+        <td>Lane <%= @distance_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Routes</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="routes"><%= @record.routes %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="routes"><%= numf(@record.routes) %></td>
         <td>Routes</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Cleanup Distance (per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="cleanup_miles"><%= @record.cleanup_miles %></td>
-        <td><%= @distance_unit %> / Event</td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="cleanup_miles"><%= numf(@record.cleanup_miles) %></td>
+        <td>Lane <%= @distance_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Dry Material Use (per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="dry_material_use"><%= @record.dry_material_use %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="dry_material_use"><%= numf(@record.dry_material_use) %></td>
         <td>Tons / Event</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Wet Material Use (per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="wet_material_use"><%= @record.wet_material_use %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="wet_material_use"><%= numf(@record.wet_material_use) %></td>
         <td><%= @volume_unit %> / Event</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -115,55 +115,55 @@
     <table class="no-alt-colors">
       <tr>
         <td>Decision Maker Rate</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_maker_rate"><%= @record.assumptions_setting.decision_maker_rate %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_maker_rate"><%= ccyf(@record.assumptions_setting.decision_maker_rate, 2) %></td>
         <td><%= @currency_unit %> / Hour</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Driver Rate</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="driver_rate"><%= @record.assumptions_setting.driver_rate %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="driver_rate"><%= ccyf(@record.assumptions_setting.driver_rate, 2) %></td>
         <td><%= @currency_unit %> / Hour</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Complaint Labor Cost</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="complaint_labor_cost"><%= @record.assumptions_setting.complaint_labor_cost %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="complaint_labor_cost"><%= ccyf(@record.assumptions_setting.complaint_labor_cost, 2) %></td>
         <td><%= @currency_unit %> / Call</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Hours for Decision to Send Operators</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_hrs"><%= @record.assumptions_setting.decision_hrs %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_hrs"><%= numf(@record.assumptions_setting.decision_hrs, 1) %></td>
         <td>Hours / Day</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Drivers</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="drivers"><%= @record.assumptions_setting.drivers %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="drivers"><%= numf(@record.assumptions_setting.drivers) %></td>
         <td>Drivers</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Decision Makers</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_makers"><%= @record.assumptions_setting.decision_makers %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="decision_makers"><%= numf(@record.assumptions_setting.decision_makers) %></td>
         <td>Decision Makers</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Stress Related Absences (per Person)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="stress_absences"><%= @record.assumptions_setting.stress_absences %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="stress_absences"><%= numf(@record.assumptions_setting.stress_absences) %></td>
         <td>Absences</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>IT Labor Costs</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="it_labor_costs"><%= @record.assumptions_setting.it_labor_costs %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="it_labor_costs"><%= ccyf(@record.assumptions_setting.it_labor_costs) %></td>
         <td><%= @currency_unit %> / Year</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>IT Hardware Costs</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="it_hardware_costs"><%= @record.assumptions_setting.it_hardware_costs %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="it_hardware_costs"><%= ccyf(@record.assumptions_setting.it_hardware_costs) %></td>
         <td><%= @currency_unit %> / Year</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -174,31 +174,31 @@
     <table class="no-alt-colors">
       <tr>
         <td>Maintenance Vehicle Fuel Economy</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vehicle_mpg"><%= @record.assumptions_setting.vehicle_mpg %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vehicle_mpg"><%= numf(@record.assumptions_setting.vehicle_mpg, 1) %></td>
         <td><%= @fuel_economy_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Fuel Cost</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fuel_cost"><%= @record.assumptions_setting.fuel_cost %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fuel_cost"><%= ccyf(@record.assumptions_setting.fuel_cost, 2) %></td>
         <td><%= @currency_unit %> / <%= @volume_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Cleaning Costs (per Vehicle per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fleet_cleaning"><%= @record.assumptions_setting.fleet_cleaning %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fleet_cleaning"><%= ccyf(@record.assumptions_setting.fleet_cleaning, 2) %></td>
         <td><%= @currency_unit %> / Vehicle</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Servicing Costs (per Vehicle per Year)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fleet_servicing"><%= @record.assumptions_setting.fleet_servicing %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fleet_servicing"><%= ccyf(@record.assumptions_setting.fleet_servicing, 2) %></td>
         <td><%= @currency_unit %> / Vehicle</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Equipment Replacement Costs (per Year)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="equipment_replacement_costs"><%= @record.assumptions_setting.equipment_replacement_costs %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="equipment_replacement_costs"><%= ccyf(@record.assumptions_setting.equipment_replacement_costs, 2) %></td>
         <td><%= @currency_unit %> / Year</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -209,37 +209,37 @@
     <table class="no-alt-colors">
       <tr>
         <td>Dry Material Cost</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="dry_material_cost"><%= @record.assumptions_setting.dry_material_cost %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="dry_material_cost"><%= ccyf(@record.assumptions_setting.dry_material_cost, 2) %></td>
         <td><%= @currency_unit %> / Hour</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Wet Material Cost</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="wet_material_cost"><%= @record.assumptions_setting.wet_material_cost %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="wet_material_cost"><%= ccyf(@record.assumptions_setting.wet_material_cost, 2) %></td>
         <td><%= @currency_unit %> / Hour</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Cleanup Time (per Mile)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cleanup_time_per_mile"><%= @record.assumptions_setting.cleanup_time_per_mile %></td>
-        <td><%= @currency_unit %> / Call</td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cleanup_time_per_mile"><%= numf(@record.assumptions_setting.cleanup_time_per_mile, 2) %></td>
+        <td>Hours / <%= @distance_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Treatment Time (per Driver per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="treatment_hrs_per_event_driver"><%= @record.assumptions_setting.treatment_hrs_per_event_driver %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="treatment_hrs_per_event_driver"><%= numf(@record.assumptions_setting.treatment_hrs_per_event_driver, 2) %></td>
         <td>Hours / Day</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr class="non-editable">
         <td>Cleanup Distance (per Route)</td>
-        <td><%= @record.assumptions_setting.cleanup_miles_per_route %></td>
-        <td>Drivers</td>
+        <td><%= numf(@record.assumptions_setting.cleanup_miles_per_route, 2) %></td>
+        <td><%= @distance_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr class="non-editable">
         <td>Cleanup Time (per Route)</td>
-        <td><%= @record.assumptions_setting.cleanup_hrs_per_route %></td>
+        <td><%= numf(@record.assumptions_setting.cleanup_hrs_per_route, 2) %></td>
         <td>Drivers</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -250,61 +250,61 @@
     <table class="no-alt-colors">
       <tr>
         <td>Cost per Major Accident</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cost_per_major_accident"><%= @record.assumptions_setting.cost_per_major_accident %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cost_per_major_accident"><%= ccyf(@record.assumptions_setting.cost_per_major_accident, 2) %></td>
         <td><%= @currency_unit %> / Accident</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Cost per Fatality</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cost_per_fatality"><%= @record.assumptions_setting.cost_per_fatality %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="cost_per_fatality"><%= ccyf(@record.assumptions_setting.cost_per_fatality, 2) %></td>
         <td><%= @currency_unit %> / Fatality</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Total Local Economy</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="total_local_economy"><%= @record.assumptions_setting.total_local_economy %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="total_local_economy"><%= ccyf(@record.assumptions_setting.total_local_economy) %></td>
         <td><%= @currency_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Average Community Fuel Economy</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="community_fuel_economy"><%= @record.assumptions_setting.community_fuel_economy %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="community_fuel_economy"><%= numf(@record.assumptions_setting.community_fuel_economy, 1) %></td>
         <td><%= @fuel_economy_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Distance per Vehicle on Weather Event</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="miles_per_vehicle"><%= @record.assumptions_setting.miles_per_vehicle %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="miles_per_vehicle"><%= numf(@record.assumptions_setting.miles_per_vehicle, 1) %></td>
         <td><%= @distance_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Average Accident Litigation Cost</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="litigation_cost_accident"><%= @record.assumptions_setting.litigation_cost_accident %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="litigation_cost_accident"><%= ccyf(@record.assumptions_setting.litigation_cost_accident, 2) %></td>
         <td><%= @currency_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Average Fatality Litigation Cost</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="litigation_cost_fatality"><%= @record.assumptions_setting.litigation_cost_fatality %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="litigation_cost_fatality"><%= ccyf(@record.assumptions_setting.litigation_cost_fatality, 2) %></td>
         <td><%= @currency_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Major Accidents (per Event)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="accidents_per_event"><%= @record.assumptions_setting.accidents_per_event %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="accidents_per_event"><%= numf(@record.assumptions_setting.accidents_per_event) %></td>
         <td>Accidents</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Winter Fatalities (per Year)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fatalities"><%= @record.assumptions_setting.fatalities %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="fatalities"><%= numf(@record.assumptions_setting.fatalities) %></td>
         <td>Fatalities</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Number of Complaints (per Year)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="complaints"><%= @record.assumptions_setting.complaints %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="complaints"><%= numf(@record.assumptions_setting.complaints) %></td>
         <td>Complaints</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -316,25 +316,25 @@
       </tr>
       <tr>
         <td>Traffic Speed during Events</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="traffic_speed"><%= @record.assumptions_setting.traffic_speed %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="traffic_speed"><%= numf(@record.assumptions_setting.traffic_speed, 1) %></td>
         <td><%= @distance_unit %> / Hour</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Vehicles on the Road Daily during Events</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vehicles_on_road"><%= @record.assumptions_setting.vehicles_on_road %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vehicles_on_road"><%= numf(@record.assumptions_setting.vehicles_on_road) %></td>
         <td>Vehicles</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Infrastructure Wear Costs (per Year)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="infrastructure_wear_costs"><%= @record.assumptions_setting.infrastructure_wear_costs %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="infrastructure_wear_costs"><%= ccyf(@record.assumptions_setting.infrastructure_wear_costs) %></td>
         <td><%= @currency_unit %> / Year</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Vegetation Replacement Costs (per Year)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vegetation_replacement_costs"><%= @record.assumptions_setting.vegetation_replacement_costs %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="vegetation_replacement_costs"><%= ccyf(@record.assumptions_setting.vegetation_replacement_costs) %></td>
         <td><%= @currency_unit %> / Year</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
@@ -345,25 +345,25 @@
     <table class="no-alt-colors">
       <tr class="non-editable">
         <td>Carbon Dioxide Emissions (from Diesel)</td>
-        <td><%= @record.assumptions_setting.co2_diesel %></td>
+        <td><%= numf(@record.assumptions_setting.co2_diesel, 1) %></td>
         <td><%= @mass_unit %> / <%= @volume_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr class="non-editable">
         <td>Carbon Dioxide Emissions (from Gasoline)</td>
-        <td><%= @record.assumptions_setting.co2_gas %></td>
+        <td><%= numf(@record.assumptions_setting.co2_gas, 1) %></td>
         <td><%= @mass_unit %> / <%= @volume_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Tolls (per Vehicle)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="total_local_economy"><%= @record.assumptions_setting.tolls_per_vehicle %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="total_local_economy"><%= ccyf(@record.assumptions_setting.tolls_per_vehicle, 2) %></td>
         <td><%= @currency_unit %> / Vehicle</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Vehicles on Toll Roads During Event</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="toll_roads_vehicles"><%= @record.assumptions_setting.toll_roads_vehicles %></td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="toll_roads_vehicles"><%= numf(@record.assumptions_setting.toll_roads_vehicles) %></td>
         <td>Vehicles</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
