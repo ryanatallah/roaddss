@@ -5,7 +5,7 @@
 $(function document() {
   $('.scroller').click(function() {
     var target = $(this).attr("href");
-    var position = $(target).offset().top - 40
+    var position = $(target).offset().top - 40;
 
     $('html, body').animate({
       scrollTop: position
