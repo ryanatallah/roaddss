@@ -98,9 +98,9 @@ class RecordsController < ApplicationController
   end
 
   def export_to_csv
-    require 'csv'
+    require 'fastercsv'
     @records = Record.find(:all, :order => "organization asc")
-    csv_string = CSV.generate do |csv|
+    csv_string = FasterCSV.generate do |csv|
         # header row
       csv << [
         "Name",
