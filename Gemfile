@@ -13,7 +13,7 @@ gem 'sass'
 
 gem 'jquery-rails'
 
-gem 'fastercsv'
+gem 'csv'
 
 # Use unicorn as the web server
 # gem 'unicorn'
