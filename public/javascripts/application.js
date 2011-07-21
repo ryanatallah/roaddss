@@ -19,7 +19,7 @@ $(function document() {
   $("#sample-data").click(function(e) {
     $("#record_name").val("Sample User");
     $("#record_organization").val("Organization");
-    $("#record_email").val("dario.atallah@vaisala.com");
+    $("#record_email").val("your_address@your_domain.com");
     $("#record_phone").val("123-456-7890");
     $("#record_currency").val("USD");
     $("#record_events").val("60");
