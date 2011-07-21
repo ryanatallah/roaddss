@@ -242,13 +242,13 @@
       <tr class="non-editable">
         <td>Cleanup Distance (per Route)</td>
         <td><%= numf(@record.assumptions_setting.cleanup_miles_per_route, 2) %></td>
-        <td><%= @distance_unit %></td>
+        <td><%= @distance_unit %> / Route</td>
         <td><span>Not editable</span></td>
       </tr>
       <tr class="non-editable">
         <td>Cleanup Time (per Route)</td>
         <td><%= numf(@record.assumptions_setting.cleanup_hrs_per_route, 2) %></td>
-        <td>Drivers</td>
+        <td>Hours / Route</td>
         <td><span>Not editable</span></td>
       </tr>
     </table>

@@ -4,6 +4,7 @@
   <tr class="header-row">
     <th></th>
     <th></th>
+    <th></th>
     <th>Name</th>
     <th>Organization</th>
     <th>Phone</th>
@@ -32,6 +33,7 @@
   </tr>
   <% @records.each do |record| %>
   <tr>
+    <td class="small"><%= link_to "Show", all_path(record) %></td>
     <td class="small"><%= link_to "Edit", edit_record_path(record) %></td>
     <td class="small"><%= link_to "Delete", record, :method => :delete, :confirm => "Are you sure?" %></td>
     <td><%= record.name %></td>

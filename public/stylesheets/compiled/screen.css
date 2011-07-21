@@ -575,7 +575,7 @@ body#splash section h2 {
 }
 /* line 33, ../../../app/stylesheets/partials/_splash.scss */
 body#splash section div {
-  background: url('/images/embed/splash-box-top.png?1309208463') top 1px;
+  background: url('/images/embed/splash-box-top.png?1309208463') 1px 0;
   background-repeat: no-repeat;
   width: 754px;
   padding-top: 2px;
@@ -1137,34 +1137,38 @@ table tr:nth-child(odd) {
   overflow: visible;
 }
 
-/* line 227, ../../../app/stylesheets/partials/_tables.scss */
+/* line 226, ../../../app/stylesheets/partials/_tables.scss */
+body#index table {
+  background: #fafafa;
+}
+/* line 229, ../../../app/stylesheets/partials/_tables.scss */
 body#index table tr {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-/* line 231, ../../../app/stylesheets/partials/_tables.scss */
+/* line 233, ../../../app/stylesheets/partials/_tables.scss */
 body#index table tr.header-row {
   background: #ddd;
 }
-/* line 236, ../../../app/stylesheets/partials/_tables.scss */
+/* line 238, ../../../app/stylesheets/partials/_tables.scss */
 body#index table td, body#index table th {
   padding: 10px;
   vertical-align: bottom;
   text-align: left;
 }
-/* line 241, ../../../app/stylesheets/partials/_tables.scss */
+/* line 243, ../../../app/stylesheets/partials/_tables.scss */
 body#index table td.total, body#index table th.total {
   font-weight: bold;
   color: #00728f;
 }
-/* line 247, ../../../app/stylesheets/partials/_tables.scss */
+/* line 249, ../../../app/stylesheets/partials/_tables.scss */
 body#index table td {
   white-space: nowrap;
   max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 253, ../../../app/stylesheets/partials/_tables.scss */
+/* line 255, ../../../app/stylesheets/partials/_tables.scss */
 body#index table td.total {
   font-weight: bold;
   color: #00728f;
