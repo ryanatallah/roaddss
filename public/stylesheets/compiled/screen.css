@@ -1242,6 +1242,38 @@ body#contact p {
 body#index header {
   width: auto;
 }
+/* line 6, ../../../app/stylesheets/partials/_index.scss */
+body#index h2 a {
+  display: inline;
+  font-size: 11px;
+  margin-left: 10px;
+  background: #ddd;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px;
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 4px;
+}
+/* line 22, ../../../app/stylesheets/partials/_index.scss */
+body#index h2 a:hover {
+  color: #00728f;
+  border-color: #00728f;
+  background: #fff;
+}
+/* line 28, ../../../app/stylesheets/partials/_index.scss */
+body#index h2 a:active {
+  background: #bbb;
+}
+/* line 34, ../../../app/stylesheets/partials/_index.scss */
+body#index .flash {
+  border-left: none;
+  border-right: none;
+}
 
 /* line 18, ../../../app/stylesheets/screen.scss */
 .easy-clear:after, .container:after, nav.primary ul:after, nav.secondary:after, #tabs-container:after, .column:after, #export-all:after, #export-all ul:after, .list-container:after, body#splash section + section ul:after, .input-form ul:after, body#splash form#new_record ul:after, #new_support_message ul:after, .input-form ul li:after, body#splash form#new_record ul li:after, #new_support_message ul li:after, .all-table-container:after, .edit-container #recalc-container:after {

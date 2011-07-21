@@ -6,6 +6,8 @@ Roaddss::Application.routes.draw do
 
   get "/secure_link" => "records#index", :as => :index
 
+  match "/export" => "records#export_to_csv", :as => :export
+
   match "/records/:id/user-savings"          => "records#user_savings",            :as => :user_savings
   match "/records/:id/user-reductions"       => "records#user_reductions",         :as => :user_reductions
   match "/records/:id/community-savings"     => "records#community_savings",       :as => :community_savings

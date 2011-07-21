@@ -3,19 +3,13 @@ class RecordsController < ApplicationController
   layout "spread", :only => [:index]
   layout "results", :except => [:new, :index, :destroy]
 
-  before_filter :get_units, :except => [:create, :update, :new, :index, :destroy]
-  before_filter :get_record, :except => [:create, :new, :index, :destroy]
+  before_filter :get_units, :except => [:create, :update, :new, :index, :destroy, :export_to_csv]
+  before_filter :get_record, :except => [:create, :new, :index, :destroy, :export_to_csv]
 
   def new
     @record = Record.new(:assumptions_setting => AssumptionsSetting.new)
     render :layout => "front_page"
     @title = nil
-  end
-
-  def index
-    @records = Record.all
-    render :layout => "spread"
-    @title = "Record Index"
   end
 
   def show
@@ -95,6 +89,79 @@ class RecordsController < ApplicationController
         format.json { render :nothing =>  true }
       end
     end
+  end
+
+  def index
+    @records = Record.all
+    render :layout => "spread"
+    @title = "Record Index"
+  end
+
+  def export_to_csv
+    @records = Record.all
+    csv_string = FasterCSV.generate do |csv|
+        # header row
+      csv << [
+        "Name",
+        "Organization",
+        "Phone",
+        "Email",
+        "Currency",
+        "Labor Time Savings",
+        "Material Savings",
+        "Maintenance and Wear Savings",
+        "Increased Revenue",
+        "Total Efficiency Savings",
+        "Percent Budget Saved",
+        "Increased Value per Station",
+        "Weather Events",
+        "RWIS Stations",
+        "Maintenance Budget",
+        "Treatment Vehicles",
+        "Treatment Distance",
+        "Routes",
+        "Cleanup Distance",
+        "Dry Material Use",
+        "Wet Material Use",
+        "Population",
+        "Tolls"
+      ]
+
+      @records.each do |record|
+        csv << [
+          record.name,
+          record.organization,
+          record.phone,
+          record.email,
+          record.currency,
+          record.labor_time_savings,
+          record.material_savings,
+          record.maintenance_wear_savings,
+          record.increased_revenue,
+          record.total_efficiency_savings,
+          record.percent_budget_saved,
+          record.increased_value_per_station,
+          record.events,
+          record.stations,
+          record.maintenance_budget,
+          record.treatment_vehicles,
+          record.treatment_miles,
+          record.routes,
+          record.cleanup_miles,
+          record.dry_material_use,
+          record.wet_material_use,
+          record.population,
+          record.assumptions_setting.tolls_per_vehicle
+        ]
+      end
+    end
+
+    # add byte order mark
+    require 'iconv'
+    csv_string = "\377\376" + Iconv.conv("utf-16le", "utf-8", csv_string)
+
+    send_data csv_string, :type => 'text/csv; charset=utf-16',
+                          :filename => "roaddss-calc-records.csv"
   end
 
   def destroy

@@ -1,20 +1,19 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
+gem 'rake', '0.8.7'
+gem 'sqlite3'
+
+gem 'mail', '2.2.19'
+gem 'friendly_id', '~> 3.2.1'
+gem 'pdfkit'
+
 gem "compass", ">= 0.11.1"
 gem 'sass'
 
-gem 'sqlite3'
-
 gem 'jquery-rails'
 
-gem 'rake', '0.8.7'
-
-gem 'friendly_id', '~> 3.2.1'
-
-gem 'pdfkit'
-
-gem "mail", "2.2.19"
+gem 'fastercsv'
 
 # Use unicorn as the web server
 # gem 'unicorn'
