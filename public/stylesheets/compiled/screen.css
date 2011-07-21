@@ -673,32 +673,36 @@ body#splash form#new_record {
 body#splash form#new_record div:first-child[style] {
   display: none !important;
 }
-/* line 135, ../../../app/stylesheets/partials/_splash.scss */
+/* line 134, ../../../app/stylesheets/partials/_splash.scss */
+body#splash form#new_record li {
+  whitespace: nowrap;
+}
+/* line 139, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar {
   float: left;
   width: 225px;
   padding: 70px 0 0 15px;
 }
-/* line 140, ../../../app/stylesheets/partials/_splash.scss */
+/* line 144, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar h3 span, body#splash .sidebar h5 span {
   background: #f0f0f0;
 }
-/* line 144, ../../../app/stylesheets/partials/_splash.scss */
+/* line 148, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul {
   list-style: none;
   padding: 0;
 }
-/* line 148, ../../../app/stylesheets/partials/_splash.scss */
+/* line 152, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
 }
-/* line 154, ../../../app/stylesheets/partials/_splash.scss */
+/* line 158, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li:before {
   content: "›";
 }
-/* line 158, ../../../app/stylesheets/partials/_splash.scss */
+/* line 162, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li blockquote {
   text-transform: none;
   font-weight: normal;
@@ -797,12 +801,12 @@ input[type="submit"], .edit-container #recalc-container a {
 }
 /* line 86, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"]:hover, .edit-container #recalc-container a:hover {
-  background-position: 0 -38px;
+  background-position: right -38px;
   cursor: pointer;
 }
 /* line 91, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"]:active, .edit-container #recalc-container a:active {
-  background-position: 0 -76px;
+  background-position: right -76px;
 }
 /* line 95, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {

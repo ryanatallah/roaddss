@@ -130,6 +130,10 @@ body#splash {
     div:first-child[style] {
       display: none !important;
     }
+
+    li {
+      whitespace: nowrap;
+    }
   }
 
   .sidebar {

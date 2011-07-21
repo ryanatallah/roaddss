@@ -11,18 +11,30 @@ RestInPlaceEditor.prototype = {
   
   activate : function() {
     this.currency = $("#currency").html();
-    if (this.currency == "USD") {
-      this.oldValue = this.element.html().replace('$','').replace(/,/g,'');
+    this.oldValueF = this.element.html();
+    this.ccyVar = false;
+    if (this.currency == "USD" || this.currency == "CAD") {
+      if (this.oldValueF.search(/\u0024/) != '-1') {
+        this.ccyVar = true;
+        this.ccySymb = "$";
+      }
+      this.oldValue = this.element.html().replace(/\u0024/,'').replace(/,/g,'');
     }
     if (this.currency == "GBP") {
-      this.oldValue = this.element.html().replace('&pound;','').replace(/,/g,'');
+      if (this.oldValueF.search(/\u00a3/) != '-1') {
+        this.ccyVar = true;
+        this.ccySymb = "&pound;";
+      }
+      this.oldValue = this.element.html().replace(/\u00a3/,'').replace(/,/g,'');
     }
     if (this.currency == "EUR") {
-      this.oldValue = this.element.html().replace('&euro;','').replace(/./g,'').replace(/,/g,'.');
+      if (this.oldValueF.search(/\u20ac/) != '-1') {
+        this.ccyVar = true;
+        this.ccySymb = "&euro;";
+      }
+      this.oldValue = this.element.html().replace(/\u20ac/,'').replace(/\./g,'').replace(/,/g,'.');
     }
-    if (this.currency == "CAD") {
-      this.oldValue = this.element.html().replace('$','').replace(/,/g,'');
-    }
+    this.decimals = decimalCounter(this.oldValue);
     this.element.addClass('rip-active');
     this.element.closest('tr').addClass('edit-row');
     this.element.unbind('click', this.clickHandler);
@@ -31,7 +43,7 @@ RestInPlaceEditor.prototype = {
   
   abort : function() {
     this.element
-      .html(this.oldValue)
+      .html(this.oldValueF)
       .removeClass('rip-active')
       .bind('click', {editor: this}, this.clickHandler);
     this.element.closest('tr').removeClass('edit-row');
@@ -125,10 +137,16 @@ RestInPlaceEditor.prototype = {
 
     // Check for nested models
     if ( typeof data[this.objectName] !== "undefined" ) {
-        this.element.html(data[this.objectName][this.attributeName]);
+        this.newVal = data[this.objectName][this.attributeName]
     } else {
         var parts = this.objectName.match( /(.+)\[(.+)\]/ );
-        this.element.html(data[parts[1]][parts[2]][this.attributeName]);
+        this.newVal = data[parts[1]][parts[2]][this.attributeName]
+    }
+
+    this.element.html(addCommas(this.newVal, this.decimals));
+
+    if (this.ccyVar) {
+      this.element.prepend(this.ccySymb);
     }
 
     this.element.bind('click', {editor: this}, this.clickHandler);    
@@ -192,3 +210,36 @@ jQuery.fn.rest_in_place = function() {
   })
   return this;
 };
+
+function decimalCounter(num) {
+  var x = num.split('.');
+  var count = x.length > 1 ? x[1].length : 0;
+  alert(count);
+  return count;
+}
+
+function addCommas(nStr, decimals) {
+  var ccy = $("#currency").html();
+  var delimitor = ",";
+  var separator = ".";
+  if (ccy == "EUR") {
+    delimitor = ".";
+    separator = ",";
+  }
+  nStr += '';
+  var x = nStr.split('.');
+  var x1 = x[0];
+
+  if (decimals == 0) {
+    var x2 = '';
+  } else if (decimals == 1) {
+    var x2 = separator + x[1].substr(0.1);
+  } else {
+    var x2 = x[1].length > 1 ? separator + x[1].substr(0,2) : separator + x[1] + '0';
+  }
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+      x1 = x1.replace(rgx, '$1' + delimitor + '$2');
+  }
+  return x1 + x2;
+}

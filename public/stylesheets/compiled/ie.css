@@ -1,89 +1,193 @@
-/*
-Syntax error: Invalid CSS after "}": expected selector or at-rule, was "/* "
-        on line 74 of /Users/ryanatallah/Sites/roaddss/app/stylesheets/ie.scss
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* This file contains constants for access in all other stylesheets. */
+/* line 3, ../../../app/stylesheets/partials/_base.scss */
+h1, h2, h3, h4, h5, p, div {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
 
-69:     padding-top: 4px;
-70:     background: none;
-71:   }
-72: }
-73: 
-74: /* 
-75: span.save {
-76:   display: block;
-77:   width: 120px;
-78:   white-space: normal;
-79:   text-overflow: clip;
+/* line 10, ../../../app/stylesheets/ie.scss */
+body {
+  text-align: center;
+  text-align: left;
+}
+/* line 44, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+* html body legend {
+  margin: 0px -8px 16px 0;
+  padding: 0;
+}
+/* line 48, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+html > body p code {
+  *white-space: normal;
+}
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body .container {
+  text-align: left;
+}
+/* line 62, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body sup {
+  vertical-align: text-top;
+}
+/* line 64, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body sub {
+  vertical-align: text-bottom;
+}
+/* line 66, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body hr {
+  margin: -8px auto 11px;
+}
+/* line 68, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body img {
+  -ms-interpolation-mode: bicubic;
+}
+/* line 70, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body fieldset {
+  padding-top: 0;
+}
+/* line 72, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body legend {
+  margin-top: -0.2em;
+  margin-bottom: 1em;
+  margin-left: -0.5em;
+}
+/* line 76, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body fieldset, body #IE8#HACK {
+  padding-top: 1.4em;
+}
+/* line 77, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body legend, body #IE8#HACK {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 78, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body textarea {
+  overflow: auto;
+}
+/* line 80, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body label {
+  position: relative;
+  top: -0.25em;
+}
+/* line 84, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.text {
+  margin: 0.5em 0;
+  background-color: white;
+  border: 1px solid #bbbbbb;
+}
+/* line 88, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.text:focus {
+  border: 1px solid #666666;
+}
+/* line 90, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.title {
+  margin: 0.5em 0;
+  background-color: white;
+  border: 1px solid #bbbbbb;
+}
+/* line 94, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.title:focus {
+  border: 1px solid #666666;
+}
+/* line 96, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.checkbox {
+  position: relative;
+  top: 0.25em;
+}
+/* line 99, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.radio {
+  position: relative;
+  top: 0.25em;
+}
+/* line 102, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body input.button {
+  position: relative;
+  top: 0.25em;
+}
+/* line 105, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body textarea {
+  margin: 0.5em 0;
+}
+/* line 107, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body select {
+  margin: 0.5em 0;
+}
+/* line 109, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
+body button {
+  position: relative;
+  top: 0.25em;
+}
 
-Backtrace:
-/Users/ryanatallah/Sites/roaddss/app/stylesheets/ie.scss:74
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/scss/parser.rb:898:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/scss/parser.rb:841:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/scss/parser.rb:27:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/engine.rb:319:in `_to_tree'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/engine.rb:291:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/engine.rb:239:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/util.rb:298:in `silence_sass_warnings'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/engine.rb:239:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin.rb:81:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin.rb:54:in `check_for_updates'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.2/lib/sass/../sass/plugin/rack.rb:51:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Library/Ruby/Gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
-/Library/Ruby/Gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Library/Ruby/Gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
-/Library/Ruby/Gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
-/Library/Ruby/Gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
-/Library/Ruby/Gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
-/Library/Ruby/Gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
-/Library/Ruby/Gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
-/Library/Ruby/Gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
-/Library/Ruby/Gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
-script/rails:6:in `require'
-script/rails:6
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"}\": expected selector or at-rule, was \"/* \"\A         on line 74 of /Users/ryanatallah/Sites/roaddss/app/stylesheets/ie.scss\A \A 69:     padding-top: 4px;\A 70:     background: none;\A 71:   }\A 72: }\A 73: \A 74: /* \A 75: span.save {\A 76:   display: block;\A 77:   width: 120px;\A 78:   white-space: normal;\A 79:   text-overflow: clip;"; }
+/* line 15, ../../../app/stylesheets/ie.scss */
+header {
+  display: block;
+  height: 39px;
+}
+
+/* line 20, ../../../app/stylesheets/ie.scss */
+section {
+  display: block;
+}
+/* line 23, ../../../app/stylesheets/ie.scss */
+section div {
+  background: url('/images/embed/splash-box-top.png?1309208463');
+  background-position-x: 1px;
+}
+
+/* line 29, ../../../app/stylesheets/ie.scss */
+nav {
+  display: block;
+}
+
+/* line 34, ../../../app/stylesheets/ie.scss */
+nav.secondary a:hover {
+  font-weight: normal;
+  color: black;
+  /* For some reason, without this line the border doesn't appear */
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+/* line 42, ../../../app/stylesheets/ie.scss */
+nav.secondary a.current {
+  font-weight: bold;
+}
+/* line 45, ../../../app/stylesheets/ie.scss */
+nav.secondary a.current:hover {
+  border-bottom: none;
+}
+
+/* IE style hacks for backgorund positioning in export options */
+/* line 53, ../../../app/stylesheets/ie.scss */
+.export #export-print {
+  background-position-y: 0px;
+}
+/* line 56, ../../../app/stylesheets/ie.scss */
+.export #export-save {
+  background-position-y: -16px;
+}
+/* line 59, ../../../app/stylesheets/ie.scss */
+.export #export-email {
+  background-position-y: -32px;
+}
+/* line 62, ../../../app/stylesheets/ie.scss */
+.export #export-link {
+  background-position-y: -48px;
+}
+
+/* line 68, ../../../app/stylesheets/ie.scss */
+.edit-container td input {
+  padding-top: 4px;
+  background: none;
+}
+
+/* line 74, ../../../app/stylesheets/ie.scss */
+span.save {
+  display: block;
+  width: 120px;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+}
