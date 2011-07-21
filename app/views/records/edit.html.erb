@@ -243,13 +243,13 @@
         <td>Cleanup Distance (per Route)</td>
         <td><%= numf(@record.assumptions_setting.cleanup_miles_per_route, 2) %></td>
         <td><%= @distance_unit %></td>
-        <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
+        <td><span>Not editable</span></td>
       </tr>
       <tr class="non-editable">
         <td>Cleanup Time (per Route)</td>
         <td><%= numf(@record.assumptions_setting.cleanup_hrs_per_route, 2) %></td>
         <td>Drivers</td>
-        <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
+        <td><span>Not editable</span></td>
       </tr>
     </table>
   </div>
@@ -355,13 +355,13 @@
         <td>Carbon Dioxide Emissions (from Diesel)</td>
         <td><%= numf(@record.assumptions_setting.co2_diesel, 1) %></td>
         <td><%= @mass_unit %> / <%= @volume_unit %></td>
-        <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
+        <td><span>Not editable</span></td>
       </tr>
       <tr class="non-editable">
         <td>Carbon Dioxide Emissions (from Gasoline)</td>
         <td><%= numf(@record.assumptions_setting.co2_gas, 1) %></td>
         <td><%= @mass_unit %> / <%= @volume_unit %></td>
-        <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
+        <td><span>Not editable</span></td>
       </tr>
       <tr>
         <td>Vehicles on Toll Roads During Event</td>

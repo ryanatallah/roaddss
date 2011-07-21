@@ -82,7 +82,7 @@ header {
     float: right;
     width: 132px;
     height: 50px;
-    margin: -14px 0;
+    margin: -14px -10px -14px 0;
     padding: 18px 10px 0 10px;
     background: image-url("embed/record-box.png");
     text-align: right;
@@ -93,7 +93,7 @@ header {
       width: 132px;
       text-overflow: ellipsis;
       overflow: hidden;
-      white-space: no-wrap;
+      white-space: nowrap;
       line-height: 20px;
     }
 

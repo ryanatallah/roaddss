@@ -163,8 +163,10 @@ table {
         font-weight: normal;
         cursor: default;
 
-        td span.edit {
-          display: none;
+        span {
+          display: inline;
+          padding-left: 20px;
+          background: image-url("embed/icon-disabled.png") left 1px no-repeat;
           font-weight: normal;
         }
       }
