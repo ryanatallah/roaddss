@@ -686,7 +686,7 @@ body#splash form#new_record #calc-input-fields input[type="text"] {
   width: 190px;
 }
 /* line 149, ../../../app/stylesheets/partials/_splash.scss */
-body#splash form#new_record a#sample_record {
+body#splash form#new_record a#sample-data {
   float: right;
   position: relative;
   top: 38px;
@@ -703,13 +703,13 @@ body#splash form#new_record a#sample_record {
   text-transform: uppercase;
 }
 /* line 165, ../../../app/stylesheets/partials/_splash.scss */
-body#splash form#new_record a#sample_record:hover {
+body#splash form#new_record a#sample-data:hover {
   color: #fff;
   border-color: #00728f;
   background: #00728f;
 }
 /* line 171, ../../../app/stylesheets/partials/_splash.scss */
-body#splash form#new_record a#sample_record:active {
+body#splash form#new_record a#sample-data:active {
   color: #ccc;
 }
 /* line 177, ../../../app/stylesheets/partials/_splash.scss */

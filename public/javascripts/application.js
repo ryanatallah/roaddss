@@ -16,6 +16,29 @@ $(function document() {
 });
 
 $(function document() {
+  $("#sample-data").click(function(e) {
+    $("#record_name").val("Sample User");
+    $("#record_organization").val("Organization");
+    $("#record_email").val("dario.atallah@vaisala.com");
+    $("#record_phone").val("123-456-7890");
+    $("#record_currency").val("USD");
+    $("#record_events").val("60");
+    $("#record_stations").val("12");
+    $("#record_maintenance_budget").val("25000000");
+    $("#record_population").val("320000");
+    $("#record_treatment_vehicles").val("22");
+    $("#record_treatment_miles").val("530");
+    $("#record_routes").val("19");
+    $("#record_cleanup_miles").val("250");
+    $("#record_dry_material_use").val("100");
+    $("#record_wet_material_use").val("5000");
+    $("#record_assumptions_setting_attributes_tolls_per_vehicle").val("5");
+
+    e.preventDefault();
+  });
+});
+
+$(function document() {
   function changeUnits() {
     var currency = $("#record_currency").val();
     $(".ccy-label").html(currency);

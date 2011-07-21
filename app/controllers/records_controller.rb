@@ -72,7 +72,7 @@ class RecordsController < ApplicationController
     @record = Record.create(params[:record])
 
     if @record.save
-      redirect_to user_savings_path(@record)
+      redirect_to summary_path(@record)
     else
       redirect_to root_path
     end

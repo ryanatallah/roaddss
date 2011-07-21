@@ -28,10 +28,10 @@
 
     <nav class="primary">
       <ul>
+        <li><%= link_to "Summary",            summary_path,           :class => current_tab(@nav, 4) %></li>
         <li><%= link_to "User Benefits",      user_savings_path,      :class => current_tab(@nav, 1) %></li>
         <li><%= link_to "Community Benefits", community_savings_path, :class => current_tab(@nav, 2) %></li>
         <li><%= link_to "Other Benefits",     other_benefits_path,    :class => current_tab(@nav, 3) %></li>
-        <li><%= link_to "Summary",            summary_path,           :class => current_tab(@nav, 4) %></li>
         <li><%= link_to "All Benefits",       all_path,               :class => current_tab(@nav, 5) %></li>
         <li><%= link_to "Change Assumptions", edit_record_path,       :class => current_tab(@nav, 6) %></li>
       </ul>
