@@ -214,7 +214,6 @@ jQuery.fn.rest_in_place = function() {
 function decimalCounter(num) {
   var x = num.split('.');
   var count = x.length > 1 ? x[1].length : 0;
-  alert(count);
   return count;
 }
 
