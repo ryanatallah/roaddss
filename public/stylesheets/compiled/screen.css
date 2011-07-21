@@ -5,7 +5,7 @@
 /* @import "compass/reset"; */
 /* This file contains constants for access in all other stylesheets. */
 /* line 3, ../../../app/stylesheets/partials/_base.scss */
-h1, h2, h3, h5, h4, h5, p, div {
+h1, h2, h3, h5, h4, h5, p, div, table {
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -1137,6 +1137,39 @@ table tr:nth-child(odd) {
   overflow: visible;
 }
 
+/* line 227, ../../../app/stylesheets/partials/_tables.scss */
+body#index table tr {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+/* line 231, ../../../app/stylesheets/partials/_tables.scss */
+body#index table tr.header-row {
+  background: #ddd;
+}
+/* line 236, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td, body#index table th {
+  padding: 10px;
+  vertical-align: bottom;
+  text-align: left;
+}
+/* line 241, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td.total, body#index table th.total {
+  font-weight: bold;
+  color: #00728f;
+}
+/* line 247, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td {
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 253, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td.total {
+  font-weight: bold;
+  color: #00728f;
+}
+
 /* line 1, ../../../app/stylesheets/partials/_flashes.scss */
 .flash {
   height: 25px;
@@ -1205,7 +1238,12 @@ body#contact p {
   margin: 0 0 0 20px;
 }
 
-/* line 17, ../../../app/stylesheets/screen.scss */
+/* line 2, ../../../app/stylesheets/partials/_index.scss */
+body#index header {
+  width: auto;
+}
+
+/* line 18, ../../../app/stylesheets/screen.scss */
 .easy-clear:after, .container:after, nav.primary ul:after, nav.secondary:after, #tabs-container:after, .column:after, #export-all:after, #export-all ul:after, .list-container:after, body#splash section + section ul:after, .input-form ul:after, body#splash form#new_record ul:after, #new_support_message ul:after, .input-form ul li:after, body#splash form#new_record ul li:after, #new_support_message ul li:after, .all-table-container:after, .edit-container #recalc-container:after {
   content: ".";
   display: block;
@@ -1214,7 +1252,7 @@ body#contact p {
   visibility: hidden;
 }
 
-/* line 25, ../../../app/stylesheets/screen.scss */
+/* line 26, ../../../app/stylesheets/screen.scss */
 *.hidden {
   display: none !important;
 }

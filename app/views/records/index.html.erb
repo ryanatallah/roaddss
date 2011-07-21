@@ -1,44 +1,64 @@
-<h1>All records</h1>
+<h2>All records</h2>
 
-<table class="index">
-  <tr>
+<table>
+  <tr class="header-row">
     <th></th>
     <th></th>
-    <th>name</th>
-    <th>organization</th>
-    <th>phone</th>
-    <th>email</th>
-    <th>currency</th>
-    <th>events</th>
-    <th>stations</th>
-    <th>maintenance budget</th>
-    <th>treatment vehicles</th>
-    <th>treatment miles</th>
-    <th>routes</th>
-    <th>cleanup miles</th>
-    <th>dry material use</th>
-    <th>wet material use</th>
-    <th>population</th>
+    <th>Name</th>
+    <th>Organization</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Currency</th>
+
+    <th>Labor Time Savings</th>
+    <th>Material Savings</th>
+    <th>Maintenance &amp; Wear Savings</th>
+    <th>Increased Revenue</th>
+    <th class="total">Total Efficiency Savings</th>
+    <th>Percent Budget Saved</th>
+    <th>Increased Value per Station</th>
+
+    <th>Weather Events</th>
+    <th>RWIS Stations</th>
+    <th>Maintenance Budget</th>
+    <th>Treatment Vehicles</th>
+    <th>Treatment Distance</th>
+    <th>Routes</th>
+    <th>Cleanup Distance</th>
+    <th>Dry Material Use</th>
+    <th>Wet Material Use</th>
+    <th>Population</th>
+    <th>Tolls</th>
   </tr>
   <% @records.each do |record| %>
   <tr>
-    <td class="small"><a href="#">Edit</a></td>
-    <td class="small"><a href="#">Delete</a></td>
+    <td class="small"><%= link_to "Edit", edit_record_path(record) %></td>
+    <td class="small"><%= link_to "Delete", record, :method => :delete, :confirm => "Are you sure?" %></td>
     <td><%= record.name %></td>
     <td><%= record.organization %></td>
     <td><%= record.phone %></td>
     <td><%= record.email %></td>
     <td><%= record.currency %></td>
-    <td><%= record.events %></td>
-    <td><%= record.stations %></td>
-    <td><%= record.maintenance_budget %></td>
-    <td><%= record.treatment_vehicles %></td>
-    <td><%= record.treatment_miles %></td>
-    <td><%= record.routes %></td>
-    <td><%= record.cleanup_miles %></td>
-    <td><%= record.dry_material_use %></td>
-    <td><%= record.wet_material_use %></td>
-    <td><%= record.population %></td>
+
+    <td><%= numf(record.labor_time_savings) %></td>
+    <td><%= numf(record.material_savings) %></td>
+    <td><%= numf(record.maintenance_wear_savings) %></td>
+    <td><%= numf(record.increased_revenue) %></td>
+    <td class="total"><%= numf(record.total_efficiency_savings) %></td>
+    <td><%= numf(record.percent_budget_saved * 100) %></td>
+    <td><%= numf(record.increased_value_per_station) %></td>
+
+    <td><%= numf(record.events) %></td>
+    <td><%= numf(record.stations) %></td>
+    <td><%= numf(record.maintenance_budget) %></td>
+    <td><%= numf(record.treatment_vehicles) %></td>
+    <td><%= numf(record.treatment_miles) %></td>
+    <td><%= numf(record.routes) %></td>
+    <td><%= numf(record.cleanup_miles) %></td>
+    <td><%= numf(record.dry_material_use) %></td>
+    <td><%= numf(record.wet_material_use) %></td>
+    <td><%= numf(record.population) %></td>
+    <td><%= numf(record.assumptions_setting.tolls_per_vehicle, 2) %></td>
   </tr>
   <% end %>
 <table>

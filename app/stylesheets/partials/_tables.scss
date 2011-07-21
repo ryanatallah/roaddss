@@ -221,3 +221,39 @@ table {
     }
   }
 }
+
+body#index {
+  table {
+    tr {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+
+      &.header-row {
+        background: #ddd;
+      }
+    }
+
+    td, th {
+      padding: 10px;
+      vertical-align: bottom;
+      text-align: left;
+
+      &.total {
+        font-weight: bold;
+        color: $aqua;
+      }
+    }
+
+    td {
+      white-space: nowrap;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &.total {
+        font-weight: bold;
+        color: $aqua;
+      }
+    }
+  }
+}

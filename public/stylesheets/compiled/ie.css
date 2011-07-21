@@ -5,7 +5,7 @@
  * <![endif]--> */
 /* This file contains constants for access in all other stylesheets. */
 /* line 3, ../../../app/stylesheets/partials/_base.scss */
-h1, h2, h3, h4, h5, p, div {
+h1, h2, h3, h4, h5, p, div, table {
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 

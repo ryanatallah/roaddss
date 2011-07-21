@@ -4,7 +4,7 @@ Roaddss::Application.routes.draw do
 
   resources :records, :path => "/records"
 
-  get "/secure_link" => "records#index"
+  get "/secure_link" => "records#index", :as => :index
 
   match "/records/:id/user-savings"          => "records#user_savings",            :as => :user_savings
   match "/records/:id/user-reductions"       => "records#user_reductions",         :as => :user_reductions

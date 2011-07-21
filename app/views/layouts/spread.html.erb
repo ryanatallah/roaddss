@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%= render "layouts/head" %>
+<body id="index">
+  <header>
+    <h1>
+      <div id="logo">Vaisala</div>
+      <div id="logo-blue"><%= image_tag("embed/logotype-blue.png", :alt => "Vaisala", :id => "logotype-blue") %></div>
+      <span>/ RoadDSS Value Calculator</span>
+    </h1>
+  </header>
+  <% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><span><%= value %></span></div>
+  <% end %>
+  <%= yield %>
+</body>
+</html>

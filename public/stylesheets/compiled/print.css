@@ -3,7 +3,7 @@
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 /* This file contains constants for access in all other stylesheets. */
 /* line 3, ../../../app/stylesheets/partials/_base.scss */
-h1, h2, h3, h5, h4, h5, p, div {
+h1, h2, h3, h5, h4, h5, p, div, table {
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -222,6 +222,39 @@ table tr:nth-child(odd) {
   white-space: normal;
   text-overflow: clip;
   overflow: visible;
+}
+
+/* line 227, ../../../app/stylesheets/partials/_tables.scss */
+body#index table tr {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+/* line 231, ../../../app/stylesheets/partials/_tables.scss */
+body#index table tr.header-row {
+  background: #ddd;
+}
+/* line 236, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td, body#index table th {
+  padding: 10px;
+  vertical-align: bottom;
+  text-align: left;
+}
+/* line 241, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td.total, body#index table th.total {
+  font-weight: bold;
+  color: #00728f;
+}
+/* line 247, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td {
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 253, ../../../app/stylesheets/partials/_tables.scss */
+body#index table td.total {
+  font-weight: bold;
+  color: #00728f;
 }
 
 /* line 8, ../../../app/stylesheets/print.scss */

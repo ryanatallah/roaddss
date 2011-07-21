@@ -1,9 +1,10 @@
 class RecordsController < ApplicationController
   layout "front_page", :only => [:new]
-  layout "results", :except => [:new, :index]
+  layout "spread", :only => [:index]
+  layout "results", :except => [:new, :index, :destroy]
 
-  before_filter :get_units, :except => [:create, :update, :new, :index]
-  before_filter :get_record, :except => [:create, :new, :index]
+  before_filter :get_units, :except => [:create, :update, :new, :index, :destroy]
+  before_filter :get_record, :except => [:create, :new, :index, :destroy]
 
   def new
     @record = Record.new(:assumptions_setting => AssumptionsSetting.new)
@@ -13,6 +14,7 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.all
+    render :layout => "spread"
     @title = "Record Index"
   end
 
@@ -93,6 +95,13 @@ class RecordsController < ApplicationController
         format.json { render :nothing =>  true }
       end
     end
+  end
+
+  def destroy
+    Record.find(params[:id]).destroy
+    flash[:success] = "User destroyed."
+    @records = Record.all
+    redirect_to(:action =>'index')
   end
 
   def recalculate_assumptions
