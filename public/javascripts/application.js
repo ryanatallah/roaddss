@@ -5,13 +5,31 @@
 $(function document() {
   $('.scroller').click(function() {
     var target = $(this).attr("href");
-    var position = $(target).offset().top - 40;
+    var position = $(target).offset().top - 60;
 
     $('html, body').animate({
       scrollTop: position
     }, 500);
 
     return false;
+  });
+});
+
+$(function document() {
+  function changeUnits() {
+    var currency = $("#record_currency").val();
+    $(".ccy-label").html(currency);
+    if (currency == "USD" || currency == "GBP") {
+      $(".dist-label").html("Miles");
+      $(".vol-label").html("Gals");
+    }
+    if (currency == "EUR" || currency == "CAD") {
+      $(".dist-label").html("Km");
+      $(".vol-label").html("Liters");
+    }
+  }
+  $("select").change(function() {
+    changeUnits();
   });
 });
 
@@ -103,4 +121,3 @@ $(function document() {
     $("nav.secondary").sap();
   }
 });
-

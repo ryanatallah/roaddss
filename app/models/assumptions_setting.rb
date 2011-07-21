@@ -102,7 +102,6 @@ class AssumptionsSetting < ActiveRecord::Base
     self.co2_diesel                     = self.record.currency == "USD" ? 22.2 : self.record.currency == "GBP" ? 22.2 / 0.8327.to_f : 22.2 * 0.4536.to_f / 3.7854
     self.co2_gas                        = self.record.currency == "USD" ? 19.4 : self.record.currency == "GBP" ? 19.4 / 0.8327.to_f : 19.4 * 0.4536.to_f / 3.7854
     self.emergency_vehicles_event       = self.accidents_per_event * 2
-    self.tolls_per_vehicle              = 5
     self.toll_roads_vehicles            = self.vehicles_on_road * 0.04
   end
 end

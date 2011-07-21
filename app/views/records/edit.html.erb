@@ -106,6 +106,12 @@
         <td><%= @volume_unit %> / Event</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
+      <tr>
+        <td>Tolls (per Vehicle)</td>
+        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="tolls_per_vehicle"><%= ccyf(@record.assumptions_setting.tolls_per_vehicle, 2) %></td>
+        <td><%= @currency_unit %> / Vehicle</td>
+        <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
+      </tr>
     </table>
   </div>
   <div id="recalc-container">
@@ -355,12 +361,6 @@
         <td>Carbon Dioxide Emissions (from Gasoline)</td>
         <td><%= numf(@record.assumptions_setting.co2_gas, 1) %></td>
         <td><%= @mass_unit %> / <%= @volume_unit %></td>
-        <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
-      </tr>
-      <tr>
-        <td>Tolls (per Vehicle)</td>
-        <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="tolls_per_vehicle"><%= ccyf(@record.assumptions_setting.tolls_per_vehicle, 2) %></td>
-        <td><%= @currency_unit %> / Vehicle</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>

@@ -22,7 +22,7 @@
   </ul>
 
   <h3><span>Calculator Input</span></h3>
-  <ul>
+  <ul id="calc-input-fields">
     <li>
       <%= f.label :currency, "Currency" %>
       <%= f.select :currency, options_for_select([["Select", ""], "USD", "EUR", "CAD", "GBP"]) %>
@@ -40,7 +40,7 @@
     <li>
       <%= f.label :maintenance_budget, "Winter Maintenance Budget" %>
       <%= f.text_field :maintenance_budget %>
-      <span>USD</span>
+      <span class="ccy-label">USD</span>
     </li>
     <li>
       <%= f.label :population, "Population" %>
@@ -55,7 +55,7 @@
     <li>
       <%= f.label :treatment_miles, "Treatment Distance (per Event)" %>
       <%= f.text_field :treatment_miles %>
-      <span>Lane Miles</span>
+      <span>Lane <b class="dist-label">Miles</b></span>
     </li>
     <li>
       <%= f.label :routes, "Number of Routes" %>
@@ -65,7 +65,7 @@
     <li>
       <%= f.label :cleanup_miles, "Cleanup Distance (per Event)" %>
       <%= f.text_field :cleanup_miles %>
-      <span>Miles / Event</span>
+      <span><b class="dist-label">Miles</b> / Event</span>
     </li>
     <li>
       <%= f.label :dry_material_use, "Dry Material Use (per Event)" %>
@@ -75,12 +75,16 @@
     <li>
       <%= f.label :wet_material_use, "Wet Material Use (per Event)" %>
       <%= f.text_field :wet_material_use %>
-      <span>Gal / Event</span>
+      <span><b class="vol-label">Gals</b> / Event</span>
+    </li>
+    <li>
+      <%= f.fields_for :assumptions_setting do |f| %>
+        <%= f.label :tolls_per_vehicle, "Tolls (per Vehicle)" %>
+        <%= f.text_field :tolls_per_vehicle %>
+        <span class="ccy-label">USD</span>
+      <% end %>
     </li>
   </ul>
-  <%= f.fields_for :assumptions_setting do |f| %>
-    <%= f.hidden_field :treatments_per_year %>
-  <% end %>
   <h3></h3>
   <%= f.submit "Submit", :disable_with => 'Calculating…' %>
 

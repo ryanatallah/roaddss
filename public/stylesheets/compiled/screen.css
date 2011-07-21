@@ -677,32 +677,40 @@ body#splash form#new_record div:first-child[style] {
 body#splash form#new_record li {
   whitespace: nowrap;
 }
-/* line 139, ../../../app/stylesheets/partials/_splash.scss */
+/* line 140, ../../../app/stylesheets/partials/_splash.scss */
+body#splash form#new_record #calc-input-fields span b {
+  font-weight: normal;
+}
+/* line 144, ../../../app/stylesheets/partials/_splash.scss */
+body#splash form#new_record #calc-input-fields input[type="text"] {
+  width: 190px;
+}
+/* line 150, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar {
   float: left;
   width: 225px;
   padding: 70px 0 0 15px;
 }
-/* line 144, ../../../app/stylesheets/partials/_splash.scss */
+/* line 155, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar h3 span, body#splash .sidebar h5 span {
   background: #f0f0f0;
 }
-/* line 148, ../../../app/stylesheets/partials/_splash.scss */
+/* line 159, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul {
   list-style: none;
   padding: 0;
 }
-/* line 152, ../../../app/stylesheets/partials/_splash.scss */
+/* line 163, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
 }
-/* line 158, ../../../app/stylesheets/partials/_splash.scss */
+/* line 169, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li:before {
   content: "›";
 }
-/* line 162, ../../../app/stylesheets/partials/_splash.scss */
+/* line 173, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li blockquote {
   text-transform: none;
   font-weight: normal;

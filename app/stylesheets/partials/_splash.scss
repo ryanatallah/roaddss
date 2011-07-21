@@ -134,6 +134,17 @@ body#splash {
     li {
       whitespace: nowrap;
     }
+
+    #calc-input-fields {
+      span {
+        b {
+          font-weight: normal;
+        }
+      }
+      input[type="text"] {
+        width: 190px;
+      }
+    }
   }
 
   .sidebar {
