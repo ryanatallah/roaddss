@@ -8,6 +8,7 @@ class RecordsController < ApplicationController
 
   def new
     @record = Record.new(:assumptions_setting => AssumptionsSetting.new)
+    @sample = Record.find(:first)
     render :layout => "front_page"
     @title = nil
   end

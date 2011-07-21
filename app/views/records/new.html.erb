@@ -1,6 +1,8 @@
 <div class="container">
 <%= form_for(@record) do |f| %>
 
+  <%= link_to "Sample Record", user_savings_path(@sample), :id => "sample_record" %>
+
   <h3><span>Customer Information</span></h3>
   <ul id="customer-input">
     <li>
