@@ -168,7 +168,12 @@ class Record < ActiveRecord::Base
   end
 
   def fuel_consumption_savings
-    fuel_consumption_cost = self.assumptions_setting.fuel_cost / self.assumptions_setting.vehicle_mpg
+    if self.currency == "EUR" || self.currency == "CAD"
+      fuel_consumption_cost = self.assumptions_setting.fuel_cost * self.assumptions_setting.vehicle_mpg / 100 # Metric fuel consumption is expressed in Liters per 100 km
+    else
+      fuel_consumption_cost = self.assumptions_setting.fuel_cost / self.assumptions_setting.vehicle_mpg
+    end
+    
     (
       ( # Treatment fuel savings
         self.treatment_miles * self.assumptions_setting.treatments_per_year - 
@@ -178,12 +183,7 @@ class Record < ActiveRecord::Base
         self.cleanup_miles * self.assumptions_setting.treatments_per_year - 
         self.pro("cleanup_miles") * self.pro("treatments_per_year")
       )
-    ) * fuel_consumption_cost / 
-    if self.currency == "EUR" || self.currency == "CAD"
-      100 # Metric fuel consumption is expressed in Liters per 100 km
-    else
-      1
-    end
+    ) * fuel_consumption_cost
   end
 
   def wear_infrastructure_savings
@@ -433,6 +433,11 @@ class Record < ActiveRecord::Base
 
     self.ccy(self.population * salt_cost) * self.lookup("vehicles") / self.lookup("population") * ( 1.00 - 0.50 ) # Multiplier replaces proactive factor of 0.50
   end
+  def veh_infrastructure_savings_pre
+    salt_cost = 30.17 # Vehicle infrastructure salt cost per vehicle
+
+    self.ccy(self.population * salt_cost) * self.lookup("vehicles") / self.lookup("population") # Multiplier replaces proactive factor of 0.50
+  end
 
   def environmental_savings
     salt_cost_per_mile = 5072.68
@@ -464,18 +469,18 @@ class Record < ActiveRecord::Base
   end
 
   def polluting_emissions_reduction
-    self.treatment_miles * ( 8.0 + 2.1 + 9.5 ) / 453.5924 * (
+    if self.currency == "USD" || self.currency == "GBP"
+      mass = 1.00
+    else
+      mass = 0.45359237
+    end
+    self.treatment_miles * mass * ( 8.0 + 2.1 + 9.5 ) / 453.5924 * (
       ( # NOX voc co emissions
         self.assumptions_setting.treatments_per_year
       ) - 
       ( # Proactive NOX voc co emissions
         self.pro("treatments_per_year") * ( 1 - 0.33184855233853 ) # Percent Change NOx Use
-      ) * 
-      if self.currency == "USD" || self.currency == "GBP"
-        1.00
-      else
-        0.45359237
-      end
+      )
     )
   end
 end
