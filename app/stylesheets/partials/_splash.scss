@@ -114,10 +114,15 @@ body#splash {
           background: image-url("embed/splash-photo-frame.png");
           margin-left: -3px;
 
+          a {
+            border: none;
+          }
+
           img {
             width: 130px;
             height: 90px;
             margin: 27px 0 0 18px;
+            border: none;
           }
 
           & + li {
@@ -200,7 +205,7 @@ body#splash {
         
 
         &:before {
-          content: "›";
+          content: "\203A";
         }
 
         blockquote {

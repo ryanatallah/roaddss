@@ -666,37 +666,42 @@ body#splash section + section ul li {
   margin-left: -3px;
 }
 /* line 117, ../../../app/stylesheets/partials/_splash.scss */
+body#splash section + section ul li a {
+  border: none;
+}
+/* line 121, ../../../app/stylesheets/partials/_splash.scss */
 body#splash section + section ul li img {
   width: 130px;
   height: 90px;
   margin: 27px 0 0 18px;
+  border: none;
 }
-/* line 123, ../../../app/stylesheets/partials/_splash.scss */
+/* line 128, ../../../app/stylesheets/partials/_splash.scss */
 body#splash section + section ul li + li {
   margin-left: -10px;
 }
-/* line 131, ../../../app/stylesheets/partials/_splash.scss */
+/* line 136, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record {
   padding: 0;
   margin-top: -8px;
 }
-/* line 136, ../../../app/stylesheets/partials/_splash.scss */
+/* line 141, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record div:first-child[style] {
   display: none !important;
 }
-/* line 140, ../../../app/stylesheets/partials/_splash.scss */
+/* line 145, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record li {
   whitespace: nowrap;
 }
-/* line 146, ../../../app/stylesheets/partials/_splash.scss */
+/* line 151, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record #calc-input-fields span b {
   font-weight: normal;
 }
-/* line 150, ../../../app/stylesheets/partials/_splash.scss */
+/* line 155, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record #calc-input-fields input[type="text"] {
   width: 190px;
 }
-/* line 155, ../../../app/stylesheets/partials/_splash.scss */
+/* line 160, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record a#sample-data {
   float: right;
   position: relative;
@@ -713,42 +718,42 @@ body#splash form#new_record a#sample-data {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 171, ../../../app/stylesheets/partials/_splash.scss */
+/* line 176, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record a#sample-data:hover {
   color: #fff;
   border-color: #00728f;
   background: #00728f;
 }
-/* line 177, ../../../app/stylesheets/partials/_splash.scss */
+/* line 182, ../../../app/stylesheets/partials/_splash.scss */
 body#splash form#new_record a#sample-data:active {
   color: #ccc;
 }
-/* line 183, ../../../app/stylesheets/partials/_splash.scss */
+/* line 188, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar {
   float: left;
   width: 225px;
   padding: 70px 0 0 15px;
 }
-/* line 188, ../../../app/stylesheets/partials/_splash.scss */
+/* line 193, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar h3 span, body#splash .sidebar h5 span {
   background: #f0f0f0;
 }
-/* line 192, ../../../app/stylesheets/partials/_splash.scss */
+/* line 197, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul {
   list-style: none;
   padding: 0;
 }
-/* line 196, ../../../app/stylesheets/partials/_splash.scss */
+/* line 201, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
 }
-/* line 202, ../../../app/stylesheets/partials/_splash.scss */
+/* line 207, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li:before {
-  content: "›";
+  content: "\203A";
 }
-/* line 206, ../../../app/stylesheets/partials/_splash.scss */
+/* line 211, ../../../app/stylesheets/partials/_splash.scss */
 body#splash .sidebar ul li blockquote {
   text-transform: none;
   font-weight: normal;
