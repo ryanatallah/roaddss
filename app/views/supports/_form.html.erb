@@ -1,0 +1,35 @@
+<% form_for @support, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
+  <h3><span>Customer Information</span></h3>
+  <ul class="customer-input">
+    <li>
+      <%= f.label :name, "Full Name" %>
+      <%= f.text_field :name %>
+    </li>
+    <li>
+      <%= f.label :organization, "Organization" %>
+      <%= f.text_field :organization %>
+    </li>
+    <li>
+      <%= f.label :phone, "Phone Number" %>
+      <%= f.text_field :phone %>
+    </li>
+    <li>
+      <%= f.label :email, "Email Address" %>
+      <%= f.text_field :email %>
+    </li>
+  </ul>
+  <h3><span>Message Details</span></h3>
+  <ul class="customer-input">
+    <li>
+    <%= f.label :subject, "Message Subject" %>
+    <%= f.text_field :subject %>
+    </li>
+  </ul>
+  <span id="content-title">Please type your message below.</span>
+  <div class="easy-clear">
+    <%= f.text_area :content %>
+    <p>Thank you for your interest in the RoadDSS Value Calculator. Someone will respond to your question or comment as soon as possible.</p>
+  </div>
+  <h3></h3>
+  <%= f.submit "Submit", :disable_with => 'Sending…' %>
+<% end %>

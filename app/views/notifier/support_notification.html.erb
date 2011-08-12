@@ -1,0 +1,11 @@
+<h2>Vaisala / RoadDSS Value Calculator — Support Message</h2>
+
+<h3>Sender Information:</h2>
+
+<p>Name: <%= @sender.name %></p>
+<p>Organization: <%= @sender.organization %></p>
+<p>Phone: <%= @sender.phone %></p>
+<p>Email: <a href="mailto:<%= @sender.email %>"><%= @sender.email %></a></p>
+
+<h3>Message: <%= @sender.subject %></h3>
+<p><%= simple_format @sender.content %></p>

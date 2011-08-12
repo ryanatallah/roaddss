@@ -138,9 +138,11 @@ function SelectText(element) {
   }
 }
 
+
 $(function document() {
   if ($.browser.webkit || $.browser.mozilla || $.browser.opera) {
     // sap breaks in IE
     $("nav.secondary").sap();
   }
 });
+

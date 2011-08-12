@@ -12,27 +12,33 @@ RestInPlaceEditor.prototype = {
   activate : function() {
     this.currency = $("#currency").html();
     this.oldValueF = this.element.html();
+    this.no_format = this.element.hasClass("no_format");
     this.ccyVar = false;
-    if (this.currency == "USD" || this.currency == "CAD") {
-      if (this.oldValueF.search(/\u0024/) != '-1') {
-        this.ccyVar = true;
-        this.ccySymb = "$";
+
+    if (this.no_format == false) {
+      if (this.currency == "USD" || this.currency == "CAD") {
+        if (this.oldValueF.search(/\u0024/) != '-1') {
+          this.ccyVar = true;
+          this.ccySymb = "$";
+        }
+        this.oldValue = this.element.html().replace(/\u0024/,'').replace(/,/g,'');
       }
-      this.oldValue = this.element.html().replace(/\u0024/,'').replace(/,/g,'');
-    }
-    if (this.currency == "GBP") {
-      if (this.oldValueF.search(/\u00a3/) != '-1') {
-        this.ccyVar = true;
-        this.ccySymb = "&pound;";
+      if (this.currency == "GBP") {
+        if (this.oldValueF.search(/\u00a3/) != '-1') {
+          this.ccyVar = true;
+          this.ccySymb = "&pound;";
+        }
+        this.oldValue = this.element.html().replace(/\u00a3/,'').replace(/,/g,'');
       }
-      this.oldValue = this.element.html().replace(/\u00a3/,'').replace(/,/g,'');
-    }
-    if (this.currency == "EUR") {
-      if (this.oldValueF.search(/\u20ac/) != '-1') {
-        this.ccyVar = true;
-        this.ccySymb = "&euro;";
+      if (this.currency == "EUR") {
+        if (this.oldValueF.search(/\u20ac/) != '-1') {
+          this.ccyVar = true;
+          this.ccySymb = "&euro;";
+        }
+        this.oldValue = this.element.html().replace(/\u20ac/,'').replace(/\./g,'').replace(/,/g,'.');
       }
-      this.oldValue = this.element.html().replace(/\u20ac/,'').replace(/\./g,'').replace(/,/g,'.');
+    } else {
+      this.oldValue = this.element.html();
     }
     this.decimals = decimalCounter(this.oldValue);
     this.element.addClass('rip-active');
@@ -143,15 +149,19 @@ RestInPlaceEditor.prototype = {
         this.newVal = data[parts[1]][parts[2]][this.attributeName]
     }
 
-    this.element.html(addCommas(this.newVal, this.decimals));
-
-    if (this.ccyVar) {
-      this.element.prepend(this.ccySymb);
+    if (this.no_format == false) {
+      this.element.html(addCommas(this.newVal, this.decimals));
+      
+      if (this.ccyVar) {
+        this.element.prepend(this.ccySymb);
+      }
+    } else {
+      this.element.html(this.newVal, this.decimals);
     }
 
-    this.element.bind('click', {editor: this}, this.clickHandler);    
+    this.element.bind('click', {editor: this}, this.clickHandler);
   },
-  
+
   clickHandler : function(event) {
     event.data.editor.activate();
   }

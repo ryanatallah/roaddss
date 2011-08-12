@@ -20,6 +20,9 @@ Roaddss::Application.routes.draw do
   get "/records/:id/summary-report"          => "records#summary_report",          :as => :summary_report
   get "/records/:id/all-report"              => "records#all_report",              :as => :all_report
 
+  match "/contact" => "supports#new", :as => :contact
+  resources :supports, :only => [:new, :create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

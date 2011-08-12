@@ -114,6 +114,12 @@ body#splash {
           background: image-url("embed/splash-photo-frame.png");
           margin-left: -3px;
 
+          img {
+            width: 130px;
+            height: 90px;
+            margin: 27px 0 0 18px;
+          }
+
           & + li {
             margin-left: -10px;
           }

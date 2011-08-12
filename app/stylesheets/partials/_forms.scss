@@ -23,7 +23,7 @@
     padding-left: 0px;
     margin: 25px 20px 15px;
 
-    &#customer-input {
+    &#customer-input, &.customer-input {
       margin-bottom: 30px;
 
       label {
@@ -104,7 +104,7 @@ input[type="submit"] {
   }
 }
 
-#new_support_message {
+#new_support {
   @extend .input-form;
 
   span#content-title {
