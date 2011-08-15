@@ -4,6 +4,9 @@ class SupportsController < ApplicationController
   def new
     # id is required to deal with form
     @support = Support.new(:id => 1)
+    if request.fullpath.include?("records")
+      @record = Record.find(params[:id])
+    end
   end
 
   def create

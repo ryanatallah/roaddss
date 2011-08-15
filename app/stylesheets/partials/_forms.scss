@@ -128,3 +128,13 @@ input[type="submit"] {
     height: 250px;
   }
 }
+
+.field_with_errors {
+  label {
+    color: #8f0000;
+  }
+
+  input {
+    border: 1px solid #8f0000 !important;
+  }
+}

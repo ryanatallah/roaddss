@@ -74,7 +74,8 @@ class RecordsController < ApplicationController
     if @record.save
       redirect_to summary_path(@record)
     else
-      redirect_to root_path
+      flash.now[:failure] = "Please fill all fields."
+      render "new", :layout => "front_page"
     end
   end
 

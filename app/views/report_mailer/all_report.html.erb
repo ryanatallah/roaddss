@@ -19,20 +19,20 @@
         <span style="font-size: 16px; vertical-align: 125%;">/ RoadDSS Value Calculator</span>
       </h1>
       <div style="background: #e2f5f8; border-bottom: 1px solid #00728f; border-top: 1px solid #00728f; margin-top: 15px; padding: 10px 15px;">
-        <span style="font-size: 16px;"><%= @record.organization %> — </span><span style="font-weight: bold; font-size: 13px; text-transform: uppercase; color: #004C5F"><%= @record.name %></span><a class="primary" href="#" style="float: right; font-size: 12px; margin-top: 2px; text-decoration: none; color: #004C5F;">Show all results &rarr;</a>
+        <span style="font-size: 16px;"><%= @record.organization %> — </span><span style="font-weight: bold; font-size: 13px; text-transform: uppercase; color: #004C5F"><%= @record.name %></span><a class="primary" href="<%= root_url.chomp("/") %><%= url_for(all_path(@record)) %>" style="float: right; font-size: 12px; margin-top: 2px; text-decoration: none; color: #004C5F;">Show all results &rarr;</a>
       </div>
       <div style="padding: 0 15px; line-height: 22px;">
         <p>
           Thank you for using the Vaisala RoadDSS Value Calculator. Please download the results summary report you requested by clicking on the box below.
         </p>
         <p> 
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          You will get a detailed report on the potential savings and benefits of using Vaisala RoadDSS Manager software. For additional information, please contact your Vaisala sales representative, of send an e-mail to <a href="mailto:paul.bridge@vaisala.com">paul.bridge@vaisala.com</a>.
         </p>
-        <a id="report" href="#" style="text-decoration: none; display: block; margin: 50px; padding: 30px; border: 1px solid #00728f; color #00728f;">
-          <span class="title" style="color: #00728f; font-weight: bold; font-size: 18px">Results Report</span>
-          <span style="font-weight: normal; font-size: 13px; color: #444;"><br>(PDF - 13.2 MB)</span>
-          <span style="font-weight: normal; font-size: 10px; display: block; padding-top: 20px; color: #444;"><br>http://www.vaisala.com/roaddssvc/records/3e499e928f/all.pdf</span>
-        </a>
+        <div id="report" style="text-decoration: none; display: block; margin: 50px; padding: 30px; border: 1px solid #00728f; color #00728f;">
+          <a class="title" href="<%= root_url.chomp("/") %><%= url_for(all_path(@record)) %>" style="color: #00728f; font-weight: bold; font-size: 18px">Results Report</a>
+          <span style="font-weight: normal; font-size: 13px; color: #444;"><br>(PDF)</span>
+          <a style="font-weight: normal; font-size: 10px; display: block; padding-top: 20px; color: #444;"><br><%= root_url.chomp("/") %><%= url_for(all_path(@record)) %></a>
+        </div>
       </div>
     </div>
   </body>

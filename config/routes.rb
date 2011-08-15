@@ -2,9 +2,13 @@ Roaddss::Application.routes.draw do
 
   root :to => "records#new"
 
-  resources :records, :path => "/records"
+  resources :records, :path => "/records", :except => [:index] do
+    member do
+      get "contact", :controller => "supports", :action => "new"
+    end
+  end
 
-  get "/secure_link" => "records#index", :as => :index
+  get "/7f23a3158c90b61f" => "records#index", :as => :index
 
   match "/export" => "records#export_to_csv", :as => :export
 

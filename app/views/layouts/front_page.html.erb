@@ -28,6 +28,11 @@
       </ul>
     </section>
     <div class="easy-clear">
+
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><span><%= value %></span></div>
+      <% end %>
+
       <%= yield %>
       <div class="sidebar">
         <h3><span>RoadDSS Benefits</span></h3>
@@ -60,6 +65,7 @@
       <p>Vaisala is committed to protecting your privacy. Please read the Vaisala Online Privacy Statement and also any supplemental information listed within for further details about particular Vaisala sites and services that you may use. Additional information on how Vaisala enhances your privacy can be found on the <a href="#">Vaisala website</a>.</p>
       <p>This Vaisala Online Privacy Statement applies to data collected by Vaisala through this Web site.</p>
       <p>©2011 Vaisala, Inc.</p>
+      <p>Application Design &amp; Development by <a href="http://www.ryanatallah.com">Ryan Atallah</a></p>
     </footer>
   </div>
 </body>

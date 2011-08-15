@@ -2,6 +2,23 @@ class Record < ActiveRecord::Base
   has_one :assumptions_setting, :dependent => :destroy
   accepts_nested_attributes_for :assumptions_setting
 
+  validates_presence_of :name,
+                        :organization,
+                        :email,
+                        :phone,
+                        :currency,
+                        :events,
+                        :stations,
+                        :maintenance_budget,
+                        :treatment_vehicles,
+                        :treatment_miles,
+                        :routes,
+                        :cleanup_miles,
+                        :dry_material_use,
+                        :wet_material_use,
+                        :population,
+                        :cached_slug
+
   has_friendly_id :code, :use_slug => true
 
   def code

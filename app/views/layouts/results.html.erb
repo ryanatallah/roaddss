@@ -13,7 +13,7 @@
         <span id="organization"><%= @record.organization %></span>
         <span id="name"><%= @record.name %></span>
       </div>
-      <div id="contact"><%= link_to "Contact Vaisala", contact_path %></div>
+      <div id="contact"><%= link_to "Contact Vaisala", contact_record_path %></div>
 
       <script type="text/javascript">
         rails_authenticity_token = '<%= form_authenticity_token %>'
@@ -24,7 +24,7 @@
       <div class="flash <%= key %>"><span><%= value %></span></div>
     <% end %>
 
-    <h2>RoadDSS Calculator Results<br><span>Record URL &mdash; <%= request.url.gsub("/all", "") %></span></h2>
+    <h2>RoadDSS Calculator Results &ndash; Potential Benefits<br><span>Record URL &mdash; <%= request.url.gsub("/all", "") %></span></h2>
 
     <nav class="primary">
       <ul>

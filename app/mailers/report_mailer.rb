@@ -1,5 +1,5 @@
 class ReportMailer < ActionMailer::Base
-  default :from => "mail@ryanatallah.com"
+  default :from => "roaddss.no.reply@gmail.com"
 
   def summary_report(record, pdf)
     @record = record
@@ -10,6 +10,8 @@ class ReportMailer < ActionMailer::Base
     attachments['roaddss-calculator-results-summary.pdf'] = pdf
 
     mail(:to => "#{record.name} <#{record.email}>",
+         :from => "Vaisala RoadDSS <roaddss.no.reply@gmail.com>",
+         :reply_to => "paul.bridge@vaisala.com",
          :subject => "Vaisala RoadDSS Value Calculator Results Summary")
   end
 
@@ -22,6 +24,8 @@ class ReportMailer < ActionMailer::Base
     attachments['roaddss-calculator-results.pdf'] = pdf
 
     mail(:to => "#{record.name} <#{record.email}>",
+         :from => "Vaisala RoadDSS <roaddss.no.reply@gmail.com>",
+         :reply_to => "paul.bridge@vaisala.com",
          :subject => "Vaisala RoadDSS Value Calculator Results Summary")
   end
 end

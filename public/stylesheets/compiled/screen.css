@@ -892,6 +892,15 @@ input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {
   height: 250px;
 }
 
+/* line 133, ../../../app/stylesheets/partials/_forms.scss */
+.field_with_errors label {
+  color: #8f0000;
+}
+/* line 137, ../../../app/stylesheets/partials/_forms.scss */
+.field_with_errors input {
+  border: 1px solid #8f0000 !important;
+}
+
 /* line 1, ../../../app/stylesheets/partials/_text.scss */
 h2 {
   /* Applied to page titles, ex: "RoadDSS Calculator Results" */

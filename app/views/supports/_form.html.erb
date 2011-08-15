@@ -1,5 +1,6 @@
 <% form_for @support, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
   <h3><span>Customer Information</span></h3>
+  <% if @record.nil? %>
   <ul class="customer-input">
     <li>
       <%= f.label :name, "Full Name" %>
@@ -18,6 +19,26 @@
       <%= f.text_field :email %>
     </li>
   </ul>
+  <% else %>
+  <ul class="customer-input" id="customer-input-with-record">
+    <li>
+      <%= f.label :name, "Full Name" %>
+      <%= f.text_field :name, :value => @record.name %>
+    </li>
+    <li>
+      <%= f.label :organization, "Organization" %>
+      <%= f.text_field :organization, :value => @record.organization %>
+    </li>
+    <li>
+      <%= f.label :phone, "Phone Number" %>
+      <%= f.text_field :phone, :value => @record.phone %>
+    </li>
+    <li>
+      <%= f.label :email, "Email Address" %>
+      <%= f.text_field :email, :value => @record.email %>
+    </li>
+  </ul>
+  <% end %>
   <h3><span>Message Details</span></h3>
   <ul class="customer-input">
     <li>

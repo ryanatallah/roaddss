@@ -4,9 +4,9 @@ ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => true,
   :address => 'smtp.gmail.com',
   :port => 587,
-  :domain => "ryanatallah.com",
-  :user_name => 'mail@ryanatallah.com',
-  :password => 'netuser2',
+  :domain => "gmail.com",
+  :user_name => 'roaddss.no.reply@gmail.com',
+  :password => 'r04dsm4i13r',
   :authentication => 'plain',
 }
 
