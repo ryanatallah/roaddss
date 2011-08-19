@@ -16,8 +16,7 @@ class Record < ActiveRecord::Base
                         :cleanup_miles,
                         :dry_material_use,
                         :wet_material_use,
-                        :population,
-                        :cached_slug
+                        :population
 
   has_friendly_id :code, :use_slug => true
 

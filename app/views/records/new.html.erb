@@ -1,3 +1,19 @@
+<% if @record.errors.any? %>  
+<div id="errorExplanation">  
+  <h2>Submission failed because <%= pluralize(@record.errors.count, "required" + " " + "item") %> failed:</h2>  
+
+  <% if @record.errors.count < 7 %>
+  <ul>
+    <% @record.errors.full_messages.each do |msg| %>  
+      <li><%= msg %></li>  
+    <% end %>
+  </ul>
+  <% else %> 
+  <p>Please be sure that all required fields are completed.</p>
+  <% end %>
+</div>  
+<% end %>
+
 <div class="container">
 <%= form_for(@record) do |f| %>
 
