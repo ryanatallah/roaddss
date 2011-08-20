@@ -157,6 +157,9 @@ RestInPlaceEditor.prototype = {
       }
     } else {
       this.element.html(this.newVal, this.decimals);
+      if ($.browser.msie && $.browser.version.substr(0,1)<9) {
+        window.setTimeout('location.reload()', 0);
+      }
     }
 
     this.element.bind('click', {editor: this}, this.clickHandler);
