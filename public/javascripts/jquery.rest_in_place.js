@@ -150,7 +150,9 @@ RestInPlaceEditor.prototype = {
     }
 
     if ($.browser.msie && $.browser.version.substr(0,1)<9) {
-      window.location.hash = window.pageYOffset;
+      var element_container = this.element.parent().parent().parent().parent();
+      var tag = element_container.prev("h4").attr("id");
+      window.location.hash = tag;
       window.location.reload();
     } else {
 
@@ -257,4 +259,22 @@ function addCommas(nStr, decimals) {
       x1 = x1.replace(rgx, '$1' + delimitor + '$2');
   }
   return x1 + x2;
+}
+
+function getScrollY() {
+  var scrOfX = 0, scrOfY = 0;
+  if( typeof( window.pageYOffset ) == 'number' ) {
+    //Netscape compliant
+    scrOfY = window.pageYOffset;
+    scrOfX = window.pageXOffset;
+  } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+    //DOM compliant
+    scrOfY = document.body.scrollTop;
+    scrOfX = document.body.scrollLeft;
+  } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+    //IE6 standards compliant mode
+    scrOfY = document.documentElement.scrollTop;
+    scrOfX = document.documentElement.scrollLeft;
+  }
+  return scrOfY;
 }
