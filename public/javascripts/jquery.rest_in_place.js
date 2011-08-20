@@ -142,22 +142,20 @@ RestInPlaceEditor.prototype = {
     if (jQuery.fn.jquery < "1.4") data = eval('(' + data + ')' );
 
     // Check for nested models
-    alert("gate 0");
     if ( typeof data[this.objectName] !== "undefined" ) {
         this.newVal = data[this.objectName][this.attributeName]
+        alert(this.newVal);
     } else {
         var parts = this.objectName.match( /(.+)\[(.+)\]/ );
         this.newVal = data[parts[1]][parts[2]][this.attributeName]
+        alert(this.newVal);
     }
-
-    alert("gate 1");
 
     if (this.no_format == false) {
       alert(this.newVal);
       this.element.html(addCommas(this.newVal, this.decimals));
       
       if (this.ccyVar) {
-        alert("gate 2a1");
         this.element.prepend(this.ccySymb);
       }
     } else {
@@ -165,7 +163,6 @@ RestInPlaceEditor.prototype = {
       this.element.html(this.newVal, this.decimals);
     }
 
-    alert("gate 3");
     this.element.bind('click', {editor: this}, this.clickHandler);
   },
 
