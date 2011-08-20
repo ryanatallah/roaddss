@@ -144,26 +144,22 @@ RestInPlaceEditor.prototype = {
     // Check for nested models
     if ( typeof data[this.objectName] !== "undefined" ) {
         this.newVal = data[this.objectName][this.attributeName]
-        alert(this.newVal);
-        alert(this.objectName);
-        alert(this.attributeName);
     } else {
         var parts = this.objectName.match( /(.+)\[(.+)\]/ );
         this.newVal = data[parts[1]][parts[2]][this.attributeName]
-        alert(this.newVal);
-        alert(this.objectName);
-        alert(this.attributeName);
+    }
+
+    if ($.browser.msie && $.browser.version.substr(0,1)<9) {
+      window.setTimeout('location.reload()', 0);
     }
 
     if (this.no_format == false) {
-      alert(this.newVal);
       this.element.html(addCommas(this.newVal, this.decimals));
       
       if (this.ccyVar) {
         this.element.prepend(this.ccySymb);
       }
     } else {
-      alert(this.newVal);
       this.element.html(this.newVal, this.decimals);
     }
 
