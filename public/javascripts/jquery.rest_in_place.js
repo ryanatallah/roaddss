@@ -151,16 +151,17 @@ RestInPlaceEditor.prototype = {
 
     if ($.browser.msie && $.browser.version.substr(0,1)<9) {
       window.setTimeout('location.reload()', 0);
-    }
-
-    if (this.no_format == false) {
-      this.element.html(addCommas(this.newVal, this.decimals));
-      
-      if (this.ccyVar) {
-        this.element.prepend(this.ccySymb);
-      }
     } else {
-      this.element.html(this.newVal, this.decimals);
+
+      if (this.no_format == false) {
+        this.element.html(addCommas(this.newVal, this.decimals));
+
+        if (this.ccyVar) {
+          this.element.prepend(this.ccySymb);
+        }
+      } else {
+        this.element.html(this.newVal, this.decimals);
+      }
     }
 
     this.element.bind('click', {editor: this}, this.clickHandler);
