@@ -8,7 +8,7 @@ function RestInPlaceEditor(e) {
 
 RestInPlaceEditor.prototype = {
   // Public Interface Functions //////////////////////////////////////////////
-  
+
   activate : function() {
     this.currency = $("#currency").html();
     this.oldValueF = this.element.html();
@@ -46,7 +46,7 @@ RestInPlaceEditor.prototype = {
     this.element.unbind('click', this.clickHandler);
     this.activateForm();
   },
-  
+
   abort : function() {
     this.element
       .html(this.oldValueF)
@@ -54,7 +54,7 @@ RestInPlaceEditor.prototype = {
       .bind('click', {editor: this}, this.clickHandler);
     this.element.closest('tr').removeClass('edit-row');
   },
-  
+
   update : function() {
     var editor = this;
     editor.ajax({
@@ -75,9 +75,9 @@ RestInPlaceEditor.prototype = {
   activateForm : function() {
     alert("The form was not properly initialized. activateForm is unbound");
   },
-  
+
   // Helper Functions ////////////////////////////////////////////////////////
-  
+
   initOptions : function() {
     // Try parent supplied info
     var self = this;
@@ -149,19 +149,22 @@ RestInPlaceEditor.prototype = {
         this.newVal = data[parts[1]][parts[2]][this.attributeName]
     }
 
+    alert("gate 1");
+
     if (this.no_format == false) {
+      alert("gate 2a");
       this.element.html(addCommas(this.newVal, this.decimals));
       
       if (this.ccyVar) {
+        alert("gate 2a1");
         this.element.prepend(this.ccySymb);
       }
     } else {
+      alert("gate 2b");
       this.element.html(this.newVal, this.decimals);
-      if ($.browser.msie && $.browser.version.substr(0,1)<9) {
-        window.setTimeout('location.reload()', 0);
-      }
     }
 
+    alert("gate 3");
     this.element.bind('click', {editor: this}, this.clickHandler);
   },
 
