@@ -142,6 +142,7 @@ RestInPlaceEditor.prototype = {
     if (jQuery.fn.jquery < "1.4") data = eval('(' + data + ')' );
 
     // Check for nested models
+    alert("gate 0");
     if ( typeof data[this.objectName] !== "undefined" ) {
         this.newVal = data[this.objectName][this.attributeName]
     } else {
@@ -152,7 +153,7 @@ RestInPlaceEditor.prototype = {
     alert("gate 1");
 
     if (this.no_format == false) {
-      alert("gate 2a");
+      alert(this.newVal);
       this.element.html(addCommas(this.newVal, this.decimals));
       
       if (this.ccyVar) {
@@ -160,7 +161,7 @@ RestInPlaceEditor.prototype = {
         this.element.prepend(this.ccySymb);
       }
     } else {
-      alert("gate 2b");
+      alert(this.newVal);
       this.element.html(this.newVal, this.decimals);
     }
 
