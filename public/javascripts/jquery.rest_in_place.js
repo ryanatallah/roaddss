@@ -145,10 +145,14 @@ RestInPlaceEditor.prototype = {
     if ( typeof data[this.objectName] !== "undefined" ) {
         this.newVal = data[this.objectName][this.attributeName]
         alert(this.newVal);
+        alert(this.objectName);
+        alert(this.attributeName);
     } else {
         var parts = this.objectName.match( /(.+)\[(.+)\]/ );
         this.newVal = data[parts[1]][parts[2]][this.attributeName]
         alert(this.newVal);
+        alert(this.objectName);
+        alert(this.attributeName);
     }
 
     if (this.no_format == false) {
