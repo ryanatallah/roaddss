@@ -150,7 +150,8 @@ RestInPlaceEditor.prototype = {
     }
 
     if ($.browser.msie && $.browser.version.substr(0,1)<9) {
-      window.setTimeout('location.reload()', 0);
+      window.location.hash = window.pageYOffset;
+      window.location.reload();
     } else {
 
       if (this.no_format == false) {
