@@ -152,8 +152,8 @@ RestInPlaceEditor.prototype = {
     if ($.browser.msie && $.browser.version.substr(0,1)<9) {
       var element_container = this.element.parent().parent().parent().parent();
       var tag = element_container.prev("h4").attr("id");
-      var path = window.location.pathname + "#" + tag;
-      window.location = path;
+      window.location.hash = tag;
+      location.reload();
     } else {
 
       if (this.no_format == false) {
