@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110717222209) do
+ActiveRecord::Schema.define(:version => 20110822044344) do
 
   create_table "assumptions_settings", :force => true do |t|
     t.integer  "record_id"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20110717222209) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cached_slug"
+    t.boolean  "contactable"
   end
 
   create_table "slugs", :force => true do |t|

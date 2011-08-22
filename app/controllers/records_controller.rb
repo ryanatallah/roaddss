@@ -7,7 +7,7 @@ class RecordsController < ApplicationController
   before_filter :get_record, :except => [:create, :new, :index, :destroy, :export_to_csv]
 
   def new
-    @record = Record.new(:assumptions_setting => AssumptionsSetting.new)
+    @record = Record.new(:assumptions_setting => AssumptionsSetting.new, :contactable => true)
     @sample = Record.find(:first)
     render :layout => "front_page"
     @title = nil
@@ -107,6 +107,7 @@ class RecordsController < ApplicationController
       csv << [
         "Name",
         "Organization",
+        "Contact Permission",
         "Phone",
         "Email",
         "Currency",
@@ -224,6 +225,7 @@ class RecordsController < ApplicationController
         csv << [
           record.name,
           record.organization,
+          record.contactable,
           record.phone,
           record.email,
           record.currency,

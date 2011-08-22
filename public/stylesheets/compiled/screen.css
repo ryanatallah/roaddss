@@ -804,18 +804,26 @@ body#splash .sidebar ul li blockquote {
   height: 40px;
 }
 /* line 38, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li #record_contactable, body#splash form#new_record ul li #record_contactable, #new_support ul li #record_contactable {
+  margin: 8px 0 0 30px;
+}
+/* line 42, ../../../app/stylesheets/partials/_forms.scss */
+.input-form ul li label[for=record_contactable], body#splash form#new_record ul li label[for=record_contactable], #new_support ul li label[for=record_contactable] {
+  width: 300px !important;
+}
+/* line 46, ../../../app/stylesheets/partials/_forms.scss */
 .input-form ul li label, body#splash form#new_record ul li label, #new_support ul li label {
   display: block;
   float: left;
   width: 300px;
   margin-top: 5px;
 }
-/* line 45, ../../../app/stylesheets/partials/_forms.scss */
+/* line 53, ../../../app/stylesheets/partials/_forms.scss */
 .input-form ul li input[type="text"], body#splash form#new_record ul li input[type="text"], #new_support ul li input[type="text"] {
   float: left;
   height: 20px;
 }
-/* line 51, ../../../app/stylesheets/partials/_forms.scss */
+/* line 59, ../../../app/stylesheets/partials/_forms.scss */
 .input-form ul li span, body#splash form#new_record ul li span, #new_support ul li span {
   display: block;
   float: left;
@@ -823,7 +831,7 @@ body#splash .sidebar ul li blockquote {
   color: #666;
 }
 
-/* line 61, ../../../app/stylesheets/partials/_forms.scss */
+/* line 69, ../../../app/stylesheets/partials/_forms.scss */
 select {
   display: block;
   float: left;
@@ -834,13 +842,13 @@ select {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 71, ../../../app/stylesheets/partials/_forms.scss */
+/* line 79, ../../../app/stylesheets/partials/_forms.scss */
 select:focus {
   outline: none;
   border: 1px solid #00728f;
 }
 
-/* line 77, ../../../app/stylesheets/partials/_forms.scss */
+/* line 85, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"], .edit-container #recalc-container a {
   float: right;
   width: 102px;
@@ -850,16 +858,16 @@ input[type="submit"], .edit-container #recalc-container a {
   font-size: 15px;
   color: #00728f;
 }
-/* line 86, ../../../app/stylesheets/partials/_forms.scss */
+/* line 94, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"]:hover, .edit-container #recalc-container a:hover {
   background-position: right -38px;
   cursor: pointer;
 }
-/* line 91, ../../../app/stylesheets/partials/_forms.scss */
+/* line 99, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"]:active, .edit-container #recalc-container a:active {
   background-position: right -76px;
 }
-/* line 95, ../../../app/stylesheets/partials/_forms.scss */
+/* line 103, ../../../app/stylesheets/partials/_forms.scss */
 input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {
   background-image: none;
   background: #e1e1e1;
@@ -871,18 +879,18 @@ input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {
   color: #888;
 }
 
-/* line 110, ../../../app/stylesheets/partials/_forms.scss */
+/* line 118, ../../../app/stylesheets/partials/_forms.scss */
 #new_support span#content-title {
   margin: 30px 20px 10px;
   display: block;
   font-size: 12px;
   color: #666;
 }
-/* line 117, ../../../app/stylesheets/partials/_forms.scss */
+/* line 125, ../../../app/stylesheets/partials/_forms.scss */
 #new_support div.easy-clear, #new_support div.container, #new_support div#tabs-container, #new_support div.column, #new_support div#export-all, #new_support div.list-container, #new_support div.all-table-container, #new_support .edit-container div#recalc-container, .edit-container #new_support div#recalc-container {
   margin-bottom: 30px;
 }
-/* line 121, ../../../app/stylesheets/partials/_forms.scss */
+/* line 129, ../../../app/stylesheets/partials/_forms.scss */
 #new_support textarea {
   margin-left: 20px;
   float: left;
@@ -892,11 +900,11 @@ input[type="submit"][disabled], .edit-container #recalc-container a[disabled] {
   height: 250px;
 }
 
-/* line 133, ../../../app/stylesheets/partials/_forms.scss */
+/* line 141, ../../../app/stylesheets/partials/_forms.scss */
 .field_with_errors label {
   color: #8f0000;
 }
-/* line 137, ../../../app/stylesheets/partials/_forms.scss */
+/* line 145, ../../../app/stylesheets/partials/_forms.scss */
 .field_with_errors input {
   border: 1px solid #8f0000 !important;
 }

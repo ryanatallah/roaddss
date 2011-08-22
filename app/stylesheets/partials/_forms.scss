@@ -35,6 +35,14 @@
       @extend .easy-clear;
       height: 40px;
 
+      #record_contactable {
+        margin: 8px 0 0 30px;
+      }
+
+      label[for=record_contactable] {
+        width: 300px !important;
+      }
+
       label {
         display: block;
         float: left;
