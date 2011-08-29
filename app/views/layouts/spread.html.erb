@@ -4,9 +4,11 @@
 <body id="index">
   <header>
     <h1>
-      <div id="logo">Vaisala</div>
+      <div id="logo">
+        <a href="http://www.vaisala.com" target="_blank" id="logo">Vaisala</a>
+      </div>
       <div id="logo-blue"><%= image_tag("embed/logotype-blue.png", :alt => "Vaisala", :id => "logotype-blue") %></div>
-      <span>/ RoadDSS Value Calculator</span>
+      <span>/ <%= link_to "RoadDSS Value Calculator", root_path %></span>
     </h1>
   </header>
   <% flash.each do |key, value| %>

@@ -5,8 +5,10 @@
   <div id="wrapper">
     <header>
       <h1>
-        <div id="logo">Vaisala</div>
-        <span>/ RoadDSS Value Calculator</span>
+        <div id="logo">
+          <a href="http://www.vaisala.com" target="_blank" id="logo">Vaisala</a>
+        </div>
+        <span>/ <%= link_to "RoadDSS Value Calculator", root_path %></span>
       </h1>
       <div id="road"></div>
       <div id="contact"><%= link_to "Contact Vaisala", contact_path %></div>

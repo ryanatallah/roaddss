@@ -47,7 +47,7 @@
   <div class="table-container">
     <table class="no-alt-colors">
       <tr>
-        <td>Number of Weather Events</td>
+        <td>Weather Events Requiring Treatment</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="events"><%= numf(@record.events) %></td>
         <td>Events</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
@@ -89,7 +89,7 @@
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
-        <td>Cleanup Distance (per Event)</td>
+        <td>Abrasive Cleanup Distance (per Event)</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record" data-attribute="cleanup_miles"><%= numf(@record.cleanup_miles) %></td>
         <td>Lane <%= @distance_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
@@ -218,13 +218,13 @@
       <tr>
         <td>Dry Material Cost</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="dry_material_cost"><%= ccyf(@record.assumptions_setting.dry_material_cost, 2) %></td>
-        <td><%= @currency_unit %> / Hour</td>
+        <td><%= @currency_unit %> / Ton</td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>
         <td>Wet Material Cost</td>
         <td class="rest_in_place" data-url="<%= url_for @record %>" data-object="record[assumptions_setting]" data-object-id="<%= @record.assumptions_setting.id %>" data-attribute="wet_material_cost"><%= ccyf(@record.assumptions_setting.wet_material_cost, 2) %></td>
-        <td><%= @currency_unit %> / Hour</td>
+        <td><%= @currency_unit %> / <%= @volume_unit %></td>
         <td><span class="edit">Click to Edit</span><span class="save">Press 'Enter' to save</span></td>
       </tr>
       <tr>

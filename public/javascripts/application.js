@@ -20,7 +20,7 @@ $(function document() {
     $("#record_currency").val("USD");
     $("#record_events").val("60");
     $("#record_stations").val("12");
-    $("#record_maintenance_budget").val("25000000");
+    $("#record_maintenance_budget").val("2500000");
     $("#record_population").val("320000");
     $("#record_treatment_vehicles").val("22");
     $("#record_treatment_miles").val("530");

@@ -76,8 +76,8 @@ class AssumptionsSetting < ActiveRecord::Base
     self.vehicle_mpg                    = self.record.currency == "USD" ? 4 : self.record.currency == "GBP" ? 5 : 58.8
     self.fuel_cost                      = self.ccy(self.record.currency == "USD" ? 3.50 : self.record.currency == "GBP" ? 11.1 : 1.55 / 0.7)
     self.fleet_cleaning                 = self.ccy(100)
-    self.fleet_servicing                = self.ccy(2000)
-    self.equipment_replacement_costs    = self.ccy(self.record.maintenance_budget * 0.003)
+    self.fleet_servicing                = self.ccy(8000)
+    self.equipment_replacement_costs    = self.ccy(self.record.maintenance_budget * 0.24)
     self.dry_material_cost              = self.ccy(self.record.currency == "USD" ? 69.00 : self.record.currency == "GBP" ? 69.00 / 0.8929 : 69.00 / 0.9072)
     self.wet_material_cost              = self.ccy(self.record.currency == "USD" ? 0.63 : self.record.currency == "GBP" ? 0.63 / 0.8327 : 0.63 / 3.7854)
     self.cleanup_time_per_mile          = self.record.currency == "USD" || self.record.currency == "GBP" ? 10 / 60.to_f : 10 / 60.to_f / 1.6

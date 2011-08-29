@@ -5,9 +5,9 @@
     <div id="wrapper">
       <header>
         <h1>
-          <a href="<%= url_for root_path %>" id="logo">Vaisala</a>
+          <a href="http://www.vaisala.com" target="_blank" id="logo">Vaisala</a>
           <div id="logo-blue"><%= image_tag("embed/logotype-blue.png", :alt => "Vaisala", :id => "logotype-blue") %></div>
-          <span>/ RoadDSS Value Calculator</span>
+          <span>/ <%= link_to "RoadDSS Value Calculator", root_path %></span>
         </h1>
         <div id="road"></div>
       </header>
