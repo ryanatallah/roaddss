@@ -549,6 +549,22 @@ nav.secondary ul li a.current:hover {
   height: 30px;
 }
 
+/* line 548, ../../../app/stylesheets/partials/_layout.scss */
+#legal-container h6 {
+  text-align: center;
+  float: none;
+  border: none;
+  width: auto;
+}
+/* line 555, ../../../app/stylesheets/partials/_layout.scss */
+#legal-container p {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  float: none !important;
+  width: auto !important;
+  margin: 12px 0 !important;
+}
+
 /* line 1, ../../../app/stylesheets/partials/_splash.scss */
 body#splash {
   background: url('/images/embed/bg-splash.png?1309206789') repeat-x;

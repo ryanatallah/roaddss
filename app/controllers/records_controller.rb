@@ -3,8 +3,8 @@ class RecordsController < ApplicationController
   layout "spread", :only => [:index]
   layout "results", :except => [:new, :index, :destroy]
 
-  before_filter :get_units, :except => [:create, :update, :new, :index, :destroy, :export_to_csv]
-  before_filter :get_record, :except => [:create, :new, :index, :destroy, :export_to_csv]
+  before_filter :get_units, :except => [:create, :update, :new, :index, :destroy, :export_to_csv, :legal]
+  before_filter :get_record, :except => [:create, :new, :index, :destroy, :export_to_csv, :legal]
 
   def new
     @record = Record.new(:assumptions_setting => AssumptionsSetting.new, :contactable => true)
@@ -424,5 +424,10 @@ class RecordsController < ApplicationController
       @delimiter = ","
       @separator = "."
     end
+  end
+
+  def legal
+    @title = "Value Calculator Usage and Privacy Agreement"
+    render :layout => "contact"
   end
 end

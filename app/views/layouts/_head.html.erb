@@ -16,5 +16,9 @@
   </script>
   <%= csrf_meta_tag %>
   <%= favicon_link_tag %>
-  <title>RoadDSS</title>
+  <% if @title %>
+  <title>RoadDSS Value Calculator: <%= @title %></title>
+  <% else %>
+  <title>Vaisala RoadDSS Value Calculator</title>
+  <% end %>
 </head>

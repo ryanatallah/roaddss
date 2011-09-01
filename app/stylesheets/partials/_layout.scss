@@ -541,3 +541,23 @@ nav.secondary {
 .footer-spacer {
   height: 30px;
 }
+
+
+
+#legal-container {
+  h6 {
+    text-align: center;
+    float: none;
+    border: none;
+    width: auto;
+  }
+
+  p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    float: none !important;
+    width: auto !important;
+    margin: 12px 0 !important;
+  }
+}
+

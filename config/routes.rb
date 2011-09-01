@@ -25,6 +25,7 @@ Roaddss::Application.routes.draw do
   get "/records/:id/all-report"              => "records#all_report",              :as => :all_report
 
   match "/contact" => "supports#new", :as => :contact
+  match "/legal" => "records#legal", :as => :legal
   resources :supports, :only => [:new, :create]
 
   # The priority is based upon order of creation:
