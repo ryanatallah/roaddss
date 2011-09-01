@@ -794,7 +794,7 @@ body#splash .sidebar ul li blockquote {
 .input-form ul, body#splash form#new_record ul, #new_support ul {
   list-style: none;
   padding-left: 0px;
-  margin: 25px 20px 15px;
+  margin: 25px -10px 20px 15px;
 }
 /* line 26, ../../../app/stylesheets/partials/_forms.scss */
 .input-form ul#customer-input, body#splash form#new_record ul#customer-input, #new_support ul#customer-input, .input-form ul.customer-input, body#splash form#new_record ul.customer-input, #new_support ul.customer-input {
