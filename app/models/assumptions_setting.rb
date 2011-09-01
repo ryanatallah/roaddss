@@ -64,7 +64,7 @@ class AssumptionsSetting < ActiveRecord::Base
   def default_values
     self.treatments_per_year            = self.record.events
     self.decision_maker_rate            = self.ccy(80)
-    self.driver_rate                    = self.ccy(40)
+    self.driver_rate                    = self.ccy(60)
     self.complaint_labor_cost           = self.ccy(10)
     self.regions                        = 5
     self.decision_hrs                   = 3

@@ -50,9 +50,9 @@
       <%= f.select :currency, options_for_select([["Select", ""], "USD", "EUR", "CAD", "GBP"]) %>
     </li>
     <li>
-      <%= f.label :events, "Winter Weather Events (per Season)" %>
+      <%= f.label :events, "Weather Events Requiring Treatment" %>
       <%= f.text_field :events %>
-      <span>Events</span>
+      <span>Events / Season</span>
     </li>
     <li>
       <%= f.label :stations, "Number of RWIS Stations" %>
