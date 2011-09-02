@@ -310,7 +310,12 @@ header h1 span {
   display: block;
   float: left;
 }
-/* line 55, ../../../app/stylesheets/print.scss */
+/* line 53, ../../../app/stylesheets/print.scss */
+header h1 span a {
+  color: #00728f;
+  text-decoration: none;
+}
+/* line 60, ../../../app/stylesheets/print.scss */
 header #record-box {
   float: right;
   width: 160px;
@@ -319,7 +324,7 @@ header #record-box {
   background: #ebebeb;
   text-align: right;
 }
-/* line 63, ../../../app/stylesheets/print.scss */
+/* line 68, ../../../app/stylesheets/print.scss */
 header #record-box span {
   display: block;
   width: 155px;
@@ -328,12 +333,12 @@ header #record-box span {
   white-space: no-wrap;
   line-height: 20px;
 }
-/* line 72, ../../../app/stylesheets/print.scss */
+/* line 77, ../../../app/stylesheets/print.scss */
 header #record-box span#organization {
   color: #000;
   font-size: 14px;
 }
-/* line 77, ../../../app/stylesheets/print.scss */
+/* line 82, ../../../app/stylesheets/print.scss */
 header #record-box span#name {
   color: #00728f;
   text-transform: uppercase;
@@ -341,28 +346,28 @@ header #record-box span#name {
   font-weight: bold;
 }
 
-/* line 86, ../../../app/stylesheets/print.scss */
+/* line 91, ../../../app/stylesheets/print.scss */
 table + table {
   margin-top: 20px;
 }
 
-/* line 90, ../../../app/stylesheets/print.scss */
+/* line 95, ../../../app/stylesheets/print.scss */
 .all-table-container {
   margin: 0;
   width: 640px;
 }
-/* line 94, ../../../app/stylesheets/print.scss */
+/* line 99, ../../../app/stylesheets/print.scss */
 .all-table-container table {
   width: 304px;
   float: left;
   font-size: 9px;
 }
-/* line 99, ../../../app/stylesheets/print.scss */
+/* line 104, ../../../app/stylesheets/print.scss */
 .all-table-container table + table {
   margin-top: 0;
 }
 
-/* line 105, ../../../app/stylesheets/print.scss */
+/* line 110, ../../../app/stylesheets/print.scss */
 h2 {
   border-top: 1px solid #00728f;
   padding-top: 20px;
@@ -372,14 +377,14 @@ h2 {
   color: #003f53;
   font-size: 20px;
 }
-/* line 114, ../../../app/stylesheets/print.scss */
+/* line 119, ../../../app/stylesheets/print.scss */
 h2 span {
   font-size: 10px;
   font-style: italic;
   font-weight: normal;
 }
 
-/* line 121, ../../../app/stylesheets/print.scss */
+/* line 126, ../../../app/stylesheets/print.scss */
 h4 {
   /* Used in table labels, with verital divider, ex: "Efficiency Savings" */
   width: 120px;
@@ -392,7 +397,7 @@ h4 {
   line-height: 24px;
 }
 
-/* line 133, ../../../app/stylesheets/print.scss */
+/* line 138, ../../../app/stylesheets/print.scss */
 h3, h5 {
   /* Used in section titles, blue with horizontal line, ex: Customer Information */
   padding: 0;
@@ -404,14 +409,14 @@ h3, h5 {
   background: url('/images/embed/divider-h.png?1309209197') 0px 9px;
   background-repeat: repeat-x;
 }
-/* line 144, ../../../app/stylesheets/print.scss */
+/* line 149, ../../../app/stylesheets/print.scss */
 h3 span, h5 span {
   /* to white out the horizontal line behind the text */
   padding: 0 10px 0 0;
   background: #fff;
 }
 
-/* line 151, ../../../app/stylesheets/print.scss */
+/* line 156, ../../../app/stylesheets/print.scss */
 h5 {
   /* Same as h3, but bigger. Used in "All Benefits" and "Other Benefits" */
   font-size: 20px;
@@ -420,7 +425,7 @@ h5 {
   margin: 40px 0 20px 0;
 }
 
-/* line 160, ../../../app/stylesheets/print.scss */
+/* line 165, ../../../app/stylesheets/print.scss */
 h6 {
   /* Table titles on "All Benefits" page only. */
   float: left;
@@ -431,12 +436,12 @@ h6 {
   font-size: 13px;
   border-bottom: 1px solid #00728f;
 }
-/* line 170, ../../../app/stylesheets/print.scss */
+/* line 175, ../../../app/stylesheets/print.scss */
 h6 + h6 {
   margin-left: 30px;
 }
 
-/* line 175, ../../../app/stylesheets/print.scss */
-#lightbox, #lightbox-container {
+/* line 180, ../../../app/stylesheets/print.scss */
+#lightbox, #lightbox-container, .lightbox-container {
   display: none;
 }

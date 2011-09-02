@@ -97,6 +97,8 @@ $(function document() {
     $(this).closest("li").css({
       'width': 'auto'
     });
+
+    $("#lightbox, #lightbox-container-pdf").delay(300).fadeIn(800);
   });
   $(".export .email").click(function() {
     $(this).html("<span>Sending…</span>");
@@ -104,7 +106,7 @@ $(function document() {
       'width': 'auto'
     });
     
-    $("#lightbox, #lightbox-container").delay(300).fadeIn(800);
+    $("#lightbox, #lightbox-container-email").delay(300).fadeIn(800);
   });
 });
 

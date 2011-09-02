@@ -1,3 +1,7 @@
+header, section, footer {
+  display: block;
+}
+
 body {
   background: image-url("embed/bg.png") repeat-x;
   margin: 0;
@@ -505,7 +509,7 @@ nav.secondary {
   min-height: 100%;
   z-index: 1000;
 }
-#lightbox-container {
+.lightbox-container {
   display: none;
   position: fixed;
   top: 200px;
